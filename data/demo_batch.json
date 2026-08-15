@@ -1,0 +1,242 @@
+[
+  {
+    "case_type": "big_payer_small_problem",
+    "ticket": {
+      "ticket_id": "TICK-00707",
+      "customer_id": "CUST-0156",
+      "created_at": "2026-03-05 04:50",
+      "issue_type": "slow_performance",
+      "subject": "The platform is very slow",
+      "message": "Hello, Pages take around thirty seconds to load. No rush, whenever you get a chance.",
+      "reported_severity": "Low",
+      "customer_mood": "calm",
+      "times_contacted_about_this": "2"
+    },
+    "customer": {
+      "customer_id": "CUST-0156",
+      "company_name": "Silver Partners",
+      "plan": "Enterprise",
+      "monthly_value_gbp": "39127",
+      "months_as_customer": "10",
+      "promised_response_hours": "2",
+      "has_complained_before": "False"
+    },
+    "telemetry": {
+      "ticket_id": "TICK-00707",
+      "service_name": "web-app",
+      "affected_users": "3",
+      "error_rate_percent": "6.7",
+      "system_load_percent": "90",
+      "work_is_blocked": "False",
+      "observed_severity": "Low"
+    },
+    "sla": {
+      "ticket_id": "TICK-00707",
+      "customer_id": "CUST-0156",
+      "promised_response_hours": "2",
+      "first_reply_hours": "0.9",
+      "hours_left_before_promise_broken": "1.1",
+      "promise_was_broken": "False"
+    }
+  },
+  {
+    "case_type": "free_user_big_problem",
+    "ticket": {
+      "ticket_id": "TICK-00171",
+      "customer_id": "CUST-0012",
+      "created_at": "2026-05-17 03:50",
+      "issue_type": "data_loss",
+      "subject": "Deleted records we did not delete",
+      "message": "Hi there, A folder of client files is gone and nobody on our side removed it. Many thanks.",
+      "reported_severity": "Critical",
+      "customer_mood": "calm",
+      "times_contacted_about_this": "1"
+    },
+    "customer": {
+      "customer_id": "CUST-0012",
+      "company_name": "Blue Retail",
+      "plan": "Free",
+      "monthly_value_gbp": "0",
+      "months_as_customer": "35",
+      "promised_response_hours": "72",
+      "has_complained_before": "False"
+    },
+    "telemetry": {
+      "ticket_id": "TICK-00171",
+      "service_name": "sync-engine",
+      "affected_users": "4940",
+      "error_rate_percent": "20.6",
+      "system_load_percent": "68",
+      "work_is_blocked": "True",
+      "observed_severity": "Critical"
+    },
+    "sla": {
+      "ticket_id": "TICK-00171",
+      "customer_id": "CUST-0012",
+      "promised_response_hours": "72",
+      "first_reply_hours": "42.4",
+      "hours_left_before_promise_broken": "29.6",
+      "promise_was_broken": "False"
+    }
+  },
+  {
+    "case_type": "hidden_problem",
+    "ticket": {
+      "ticket_id": "TICK-00771",
+      "customer_id": "CUST-0198",
+      "created_at": "2026-03-03 05:50",
+      "issue_type": "security_incident",
+      "subject": "Possible breach",
+      "message": "Hi, Someone has changed our admin email address and it was not us. Please could someone look at this.",
+      "reported_severity": "High",
+      "customer_mood": "annoyed",
+      "times_contacted_about_this": "7"
+    },
+    "customer": {
+      "customer_id": "CUST-0198",
+      "company_name": "North Group",
+      "plan": "Basic",
+      "monthly_value_gbp": "55",
+      "months_as_customer": "13",
+      "promised_response_hours": "24",
+      "has_complained_before": "False"
+    },
+    "telemetry": {
+      "ticket_id": "TICK-00771",
+      "service_name": "sync-engine",
+      "affected_users": "1",
+      "error_rate_percent": "2.7",
+      "system_load_percent": "84",
+      "work_is_blocked": "False",
+      "observed_severity": "Low"
+    },
+    "sla": {
+      "ticket_id": "TICK-00771",
+      "customer_id": "CUST-0198",
+      "promised_response_hours": "24",
+      "first_reply_hours": "8.6",
+      "hours_left_before_promise_broken": "15.4",
+      "promise_was_broken": "False"
+    }
+  },
+  {
+    "case_type": "deadline_close",
+    "ticket": {
+      "ticket_id": "TICK-00266",
+      "customer_id": "CUST-0187",
+      "created_at": "2026-04-14 12:50",
+      "issue_type": "feature_request",
+      "subject": "Request for bulk actions",
+      "message": "This is now the third time I am writing. Being able to select several rows at once would save us a lot of time. We expect a reply today.",
+      "reported_severity": "High",
+      "customer_mood": "angry",
+      "times_contacted_about_this": "4"
+    },
+    "customer": {
+      "customer_id": "CUST-0187",
+      "company_name": "Iron Works",
+      "plan": "Enterprise",
+      "monthly_value_gbp": "29044",
+      "months_as_customer": "55",
+      "promised_response_hours": "2",
+      "has_complained_before": "False"
+    },
+    "telemetry": {
+      "ticket_id": "TICK-00266",
+      "service_name": "web-app",
+      "affected_users": "1",
+      "error_rate_percent": "5.5",
+      "system_load_percent": "27",
+      "work_is_blocked": "False",
+      "observed_severity": "Low"
+    },
+    "sla": {
+      "ticket_id": "TICK-00266",
+      "customer_id": "CUST-0187",
+      "promised_response_hours": "2",
+      "first_reply_hours": "1.7",
+      "hours_left_before_promise_broken": "0.3",
+      "promise_was_broken": "False"
+    }
+  },
+  {
+    "case_type": "asked_before",
+    "ticket": {
+      "ticket_id": "TICK-00982",
+      "customer_id": "CUST-0175",
+      "created_at": "2026-06-11 03:50",
+      "issue_type": "data_export_failure",
+      "subject": "Cannot download report",
+      "message": "Hi, The export button spins for a while and then nothing happens. This is holding us up.",
+      "reported_severity": "Medium",
+      "customer_mood": "annoyed",
+      "times_contacted_about_this": "11"
+    },
+    "customer": {
+      "customer_id": "CUST-0175",
+      "company_name": "Clear Labs",
+      "plan": "Basic",
+      "monthly_value_gbp": "106",
+      "months_as_customer": "35",
+      "promised_response_hours": "24",
+      "has_complained_before": "True"
+    },
+    "telemetry": {
+      "ticket_id": "TICK-00982",
+      "service_name": "export-worker",
+      "affected_users": "35",
+      "error_rate_percent": "20.7",
+      "system_load_percent": "66",
+      "work_is_blocked": "False",
+      "observed_severity": "Medium"
+    },
+    "sla": {
+      "ticket_id": "TICK-00982",
+      "customer_id": "CUST-0175",
+      "promised_response_hours": "24",
+      "first_reply_hours": "73.8",
+      "hours_left_before_promise_broken": "-49.8",
+      "promise_was_broken": "True"
+    }
+  },
+  {
+    "case_type": "overstated",
+    "ticket": {
+      "ticket_id": "TICK-00135",
+      "customer_id": "CUST-0105",
+      "created_at": "2026-04-23 12:50",
+      "issue_type": "password_reset",
+      "subject": "Password reset needed",
+      "message": "This is now the third time I am writing. The reset link never arrives in my inbox. Please escalate this immediately.",
+      "reported_severity": "Critical",
+      "customer_mood": "angry",
+      "times_contacted_about_this": "1"
+    },
+    "customer": {
+      "customer_id": "CUST-0105",
+      "company_name": "Green Systems",
+      "plan": "Basic",
+      "monthly_value_gbp": "41",
+      "months_as_customer": "39",
+      "promised_response_hours": "24",
+      "has_complained_before": "False"
+    },
+    "telemetry": {
+      "ticket_id": "TICK-00135",
+      "service_name": "auth-service",
+      "affected_users": "1",
+      "error_rate_percent": "2.5",
+      "system_load_percent": "20",
+      "work_is_blocked": "False",
+      "observed_severity": "Low"
+    },
+    "sla": {
+      "ticket_id": "TICK-00135",
+      "customer_id": "CUST-0105",
+      "promised_response_hours": "24",
+      "first_reply_hours": "4.7",
+      "hours_left_before_promise_broken": "19.3",
+      "promise_was_broken": "False"
+    }
+  }
+]

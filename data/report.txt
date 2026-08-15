@@ -1,0 +1,83 @@
+TICKET PRIORITISATION REPORT
+======================================================================
+
+Tickets in this batch: 6
+Sources used: customer records, monitoring data, contract clock
+Ways of ranking compared: money, damage, deadline, fairness
+
+FINAL ORDER
+----------------------------------------------------------------------
+
+1. TICK-00171  Deleted records we did not delete
+   Blue Retail (Free, £0/month)
+   Reason: the customer describes data going missing that nobody on their side deleted
+
+2. TICK-00982  Cannot download report
+   Clear Labs (Basic, £106/month)
+   Reason: we are 50 hours past the promised reply and they have asked 11 times
+
+3. TICK-00771  Possible breach
+   North Group (Basic, £55/month)
+   Reason: the customer describes a possible break-in, which monitoring cannot measure
+
+4. TICK-00266  Request for bulk actions
+   Iron Works (Enterprise, £29,044/month)
+   Reason: only 0.3 hours remain before we break the promised reply time
+
+5. TICK-00707  The platform is very slow
+   Silver Partners (Enterprise, £39,127/month)
+   Reason: they pay £39,127 a month, but only 3 users are affected and nothing is blocked
+
+6. TICK-00135  Password reset needed
+   Green Systems (Basic, £41/month)
+   Reason: nothing is broken, one person is affected, and no work is blocked
+
+
+THE FOUR WAYS COMPARED
+----------------------------------------------------------------------
+ticket         money  damage  deadline  fairness   subject
+TICK-00707         1       3         4         6   The platform is very slow
+TICK-00171         6       1         3         4   Deleted records we did not delete
+TICK-00771         4       4         5         2   Possible breach
+TICK-00266         2       5         2         3   Request for bulk actions
+TICK-00982         3       2         1         1   Cannot download report
+TICK-00135         5       6         6         5   Password reset needed
+
+No two ways of ranking agree on first place. Two tickets swing
+between first and last depending on which way is believed.
+
+
+THE TRADE-OFF WE MADE
+----------------------------------------------------------------------
+Money was not given the final say.
+TICK-00707 (Silver Partners, £39,127/month) ranks 1st on money alone but finishes 5th,
+because monitoring shows only 3 users affected and no work blocked.
+
+Reading the message changed the outcome.
+TICK-00771 moved up 2 places once we read what the customer wrote.
+On the numbers alone it sat at position 5, behind routine work.
+
+What this costs us.
+Two Enterprise accounts worth £68,171 a month combined sit at positions 4 and 5.
+We accept that risk because the tickets above them involve missing data,
+a possible break-in, and a promise we have already broken by 50 hours.
+
+
+WHAT THE SELF-CHECK CAUGHT
+----------------------------------------------------------------------
+Ranking on numbers alone would have produced this problem:
+  TICK-00771 should move to position 3
+  because monitoring cannot measure this kind of harm, so the numbers will always underrate it
+
+After reading the customer messages, the check found nothing
+that needed changing.
+
+
+ROUTING
+----------------------------------------------------------------------
+ROUTE TICK-00171 -> HUMAN AGENT  (now)
+ROUTE TICK-00982 -> HUMAN AGENT  (next)
+ROUTE TICK-00771 -> HUMAN AGENT  (next)
+ROUTE TICK-00266 -> HUMAN AGENT  (queued)
+ROUTE TICK-00707 -> HUMAN AGENT  (queued)
+ROUTE TICK-00135 -> HUMAN AGENT  (queued)

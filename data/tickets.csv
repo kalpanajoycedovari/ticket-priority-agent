@@ -1,0 +1,1001 @@
+ticket_id,customer_id,created_at,issue_type,subject,message,reported_severity,customer_mood,times_contacted_about_this
+TICK-00001,CUST-0053,2026-08-14 01:50,payment_failure,Payments are not going through,"Hi there, Card charges keep failing at the final step. Thanks for your help.",High,calm,1
+TICK-00002,CUST-0061,2026-07-24 08:50,notification_failure,Alerts stopped,"Good morning, We used to get a notification for every new entry and they have gone quiet. Thanks for your help.",Low,calm,1
+TICK-00003,CUST-0169,2026-07-09 04:50,slow_performance,Search is crawling,This is unacceptable. Running a search takes almost a minute to return anything. We expect a reply today.,Medium,angry,1
+TICK-00004,CUST-0183,2026-07-06 23:50,api_failure,Authentication failing on API,"Hi there, Our key worked yesterday and is now rejected on every call. Thanks for your help.",Critical,calm,1
+TICK-00005,CUST-0110,2026-07-16 21:50,api_failure,API timing out,This is now the third time I am writing. Requests hang for thirty seconds and then fail. We are considering cancelling.,Medium,angry,1
+TICK-00006,CUST-0171,2026-07-10 16:50,password_reset,New password not accepted,"Hello again, I changed my password and now the new one is rejected. Hoping for a quick reply.",Medium,annoyed,1
+TICK-00007,CUST-0058,2026-08-06 01:50,how_to_question,Where do I find my invoices,We need this dealt with today. I have looked in settings and cannot see a billing history anywhere. We expect a reply today.,Low,angry,1
+TICK-00008,CUST-0047,2026-06-02 14:50,how_to_question,Where do I find my invoices,"Hello, I have looked in settings and cannot see a billing history anywhere. Thanks for your help.",Low,calm,1
+TICK-00009,CUST-0194,2026-03-26 16:50,notification_failure,Alerts stopped,"Good morning, We used to get a notification for every new entry and they have gone quiet. No rush, whenever you get a chance.",Medium,calm,1
+TICK-00010,CUST-0057,2026-05-08 05:50,billing_error,Charged the wrong amount,"Hello, The invoice does not match the plan we are on. No rush, whenever you get a chance.",Medium,calm,1
+TICK-00011,CUST-0011,2026-03-25 11:50,slow_performance,Search is crawling,"Good morning, Running a search takes almost a minute to return anything. No rush, whenever you get a chance.",Low,calm,1
+TICK-00012,CUST-0063,2026-04-23 08:50,slow_performance,Slow since the update,"Hi there, Everything has been sluggish since the change you made last week. Thanks for your help.",Low,calm,1
+TICK-00013,CUST-0038,2026-02-27 09:50,data_export_failure,Corrupted export file,"Hello, The file downloads but will not open in Excel. Thanks for your help.",Low,calm,1
+TICK-00014,CUST-0039,2026-02-22 20:50,slow_performance,Slow since the update,"Hi, Everything has been sluggish since the change you made last week. Hoping for a quick reply.",Low,annoyed,1
+TICK-00015,CUST-0119,2026-03-05 16:50,notification_failure,Notifications arriving late,"Hi, Alerts turn up about six hours after the thing happened. Hoping for a quick reply.",Critical,annoyed,1
+TICK-00016,CUST-0113,2026-07-28 04:50,slow_performance,Search is crawling,"Hi there, Running a search takes almost a minute to return anything. No rush, whenever you get a chance.",Medium,calm,1
+TICK-00017,CUST-0037,2026-07-17 02:50,password_reset,Password reset needed,"Following up on this, The reset link never arrives in my inbox. This is holding us up.",Low,annoyed,1
+TICK-00018,CUST-0093,2026-06-23 03:50,security_incident,Suspicious activity on our account,This is now the third time I am writing. There are logins from a country none of our staff are in. We are considering cancelling.,Critical,angry,1
+TICK-00019,CUST-0047,2026-05-25 23:50,how_to_question,How do I do this,This is unacceptable. I cannot work out where to change the account settings. Please escalate this immediately.,Medium,angry,2
+TICK-00020,CUST-0174,2026-03-25 03:50,password_reset,Reset email not arriving,"Good morning, I have requested a new password four times and nothing comes through. Many thanks.",Medium,calm,1
+TICK-00021,CUST-0027,2026-06-25 17:50,dashboard_bug,Numbers do not match,"Hi there, The total on the dashboard is different to the total in the report. Many thanks.",Medium,calm,1
+TICK-00022,CUST-0061,2026-04-22 14:50,billing_error,Charged the wrong amount,"Good morning, The invoice does not match the plan we are on. Many thanks.",Low,calm,2
+TICK-00023,CUST-0056,2026-05-04 05:50,how_to_question,How do I do this,"Hello again, I cannot work out where to change the account settings. Please could someone look at this.",Low,annoyed,1
+TICK-00024,CUST-0132,2026-06-12 02:50,notification_failure,Not receiving emails,"Good morning, Alert emails are not arriving in any of our inboxes. No rush, whenever you get a chance.",High,calm,1
+TICK-00025,CUST-0163,2026-07-10 15:50,billing_error,Charged the wrong amount,"Hello again, The invoice does not match the plan we are on. Please could someone look at this.",Medium,annoyed,1
+TICK-00026,CUST-0047,2026-07-31 17:50,how_to_question,How do I do this,This is now the third time I am writing. I cannot work out where to change the account settings. We are considering cancelling.,Medium,angry,3
+TICK-00027,CUST-0074,2026-03-17 22:50,billing_error,Double charged this month,"Hello again, We have two identical charges on the same date. Hoping for a quick reply.",High,annoyed,1
+TICK-00028,CUST-0155,2026-05-02 10:50,password_reset,Reset email not arriving,"Good morning, I have requested a new password four times and nothing comes through. No rush, whenever you get a chance.",Low,calm,1
+TICK-00029,CUST-0158,2026-03-29 09:50,password_reset,Password reset needed,We need this dealt with today. The reset link never arrives in my inbox. We expect a reply today.,Low,angry,1
+TICK-00030,CUST-0200,2026-04-10 01:50,dashboard_bug,Chart will not load,This is unacceptable. One panel stays blank no matter how many times I refresh. Please escalate this immediately.,Medium,angry,1
+TICK-00031,CUST-0189,2026-05-09 13:50,login_failure,Team cannot log in,"Hello again, Four of my colleagues are getting an invalid credentials message. Please could someone look at this.",High,annoyed,1
+TICK-00032,CUST-0082,2026-06-16 14:50,dashboard_bug,Numbers do not match,"Hello, The total on the dashboard is different to the total in the report. Many thanks.",Medium,calm,1
+TICK-00033,CUST-0095,2026-03-04 15:50,slow_performance,The platform is very slow,"Hi there, Pages take around thirty seconds to load. No rush, whenever you get a chance.",High,calm,1
+TICK-00034,CUST-0089,2026-07-27 03:50,payment_failure,Payments are not going through,"Hi there, Card charges keep failing at the final step. Many thanks.",Critical,calm,1
+TICK-00035,CUST-0163,2026-06-18 11:50,password_reset,Password reset needed,"Following up on this, The reset link never arrives in my inbox. This is holding us up.",Low,annoyed,2
+TICK-00036,CUST-0008,2026-08-04 16:50,payment_failure,Card declined for everyone,"Hello again, Every transaction today has been rejected, including test cards. This is holding us up.",Critical,annoyed,1
+TICK-00037,CUST-0016,2026-04-28 01:50,login_failure,Cannot sign in,"Hi there, The login page rejects our details even after a reset. Many thanks.",Medium,calm,1
+TICK-00038,CUST-0037,2026-04-30 07:50,payment_failure,Payments are not going through,"Hi, Card charges keep failing at the final step. Hoping for a quick reply.",Medium,annoyed,2
+TICK-00039,CUST-0118,2026-03-07 09:50,password_reset,New password not accepted,"Good morning, I changed my password and now the new one is rejected. Many thanks.",Medium,calm,1
+TICK-00040,CUST-0103,2026-05-11 13:50,compliance_request,Subject access request,"Good morning, A customer has asked for a copy of everything you hold on them. No rush, whenever you get a chance.",Medium,calm,1
+TICK-00041,CUST-0011,2026-02-20 01:50,compliance_request,Subject access request,"Hi, A customer has asked for a copy of everything you hold on them. This is holding us up.",Low,annoyed,2
+TICK-00042,CUST-0126,2026-05-02 00:50,dashboard_bug,Chart will not load,"Hi, One panel stays blank no matter how many times I refresh. Hoping for a quick reply.",Low,annoyed,1
+TICK-00043,CUST-0159,2026-08-08 13:50,feature_request,Dark mode request,"Hi, Any chance of a dark theme, we work late most evenings. Please could someone look at this.",High,annoyed,1
+TICK-00044,CUST-0016,2026-04-29 22:50,dashboard_bug,Numbers do not match,"Following up on this, The total on the dashboard is different to the total in the report. Hoping for a quick reply.",Low,annoyed,2
+TICK-00045,CUST-0064,2026-03-01 03:50,account_lockout,Account suspended without warning,We need this dealt with today. We logged in this morning and the account is disabled. We are considering cancelling.,Low,angry,1
+TICK-00046,CUST-0089,2026-03-17 01:50,password_reset,New password not accepted,"Hello, I changed my password and now the new one is rejected. No rush, whenever you get a chance.",Medium,calm,2
+TICK-00047,CUST-0151,2026-04-24 07:50,data_export_failure,Export is broken,"Hi, The CSV download stops halfway and the file is unusable. Hoping for a quick reply.",Medium,annoyed,1
+TICK-00048,CUST-0074,2026-08-02 07:50,api_failure,API returning errors,We need this dealt with today. Our integration is getting 500 errors on most calls. We expect a reply today.,Critical,angry,2
+TICK-00049,CUST-0146,2026-02-27 10:50,notification_failure,Notifications arriving late,"Good morning, Alerts turn up about six hours after the thing happened. Many thanks.",Medium,calm,1
+TICK-00050,CUST-0087,2026-04-25 02:50,feature_request,Request for bulk actions,"Hello again, Being able to select several rows at once would save us a lot of time. This is holding us up.",High,annoyed,1
+TICK-00051,CUST-0115,2026-04-14 07:50,feature_request,Feature suggestion,"Hi there, It would help if we could sort the table by date. Many thanks.",Low,calm,1
+TICK-00052,CUST-0076,2026-03-26 02:50,billing_error,Still being billed after cancelling,We need this dealt with today. We cancelled last month and a payment has gone out again. Please escalate this immediately.,Medium,angry,1
+TICK-00053,CUST-0093,2026-06-24 21:50,payment_failure,Card declined for everyone,"Hello, Every transaction today has been rejected, including test cards. Many thanks.",High,calm,2
+TICK-00054,CUST-0132,2026-04-01 21:50,slow_performance,Search is crawling,"Following up on this, Running a search takes almost a minute to return anything. Please could someone look at this.",Medium,annoyed,2
+TICK-00055,CUST-0018,2026-03-24 13:50,password_reset,Password reset needed,"Good morning, The reset link never arrives in my inbox. Many thanks.",Low,calm,1
+TICK-00056,CUST-0139,2026-05-31 00:50,payment_failure,Checkout is broken,"Good morning, Our customers reach the payment page and then get an error. Thanks for your help.",Critical,calm,1
+TICK-00057,CUST-0071,2026-05-24 21:50,login_failure,Sign in loop,"Following up on this, It accepts my password then sends me straight back to the login screen. Please could someone look at this.",Critical,annoyed,1
+TICK-00058,CUST-0060,2026-04-28 04:50,integration_failure,Integration stopped syncing,"Following up on this, Nothing has come through from the connected tool since Tuesday. This is holding us up.",Critical,annoyed,1
+TICK-00059,CUST-0143,2026-07-30 00:50,password_reset,Reset email not arriving,"Following up on this, I have requested a new password four times and nothing comes through. Hoping for a quick reply.",Medium,annoyed,1
+TICK-00060,CUST-0048,2026-03-27 04:50,feature_request,Feature suggestion,"Hello again, It would help if we could sort the table by date. Please could someone look at this.",High,annoyed,1
+TICK-00061,CUST-0024,2026-07-21 04:50,integration_failure,Duplicate records from sync,"Good morning, The sync is creating three copies of every record. Thanks for your help.",Critical,calm,1
+TICK-00062,CUST-0055,2026-06-06 05:50,password_reset,Reset email not arriving,"Hello, I have requested a new password four times and nothing comes through. Many thanks.",Medium,calm,1
+TICK-00063,CUST-0128,2026-04-30 05:50,slow_performance,Search is crawling,"Hi, Running a search takes almost a minute to return anything. Hoping for a quick reply.",Medium,annoyed,1
+TICK-00064,CUST-0059,2026-03-01 06:50,billing_error,Still being billed after cancelling,"Hi there, We cancelled last month and a payment has gone out again. No rush, whenever you get a chance.",High,calm,1
+TICK-00065,CUST-0165,2026-06-29 02:50,password_reset,Password reset needed,"Hi, The reset link never arrives in my inbox. Hoping for a quick reply.",High,annoyed,1
+TICK-00066,CUST-0158,2026-05-13 06:50,password_reset,Reset email not arriving,"Hello, I have requested a new password four times and nothing comes through. Thanks for your help.",Low,calm,2
+TICK-00067,CUST-0039,2026-03-29 10:50,data_export_failure,Cannot download report,"Hello, The export button spins for a while and then nothing happens. No rush, whenever you get a chance.",Medium,calm,2
+TICK-00068,CUST-0142,2026-07-13 11:50,slow_performance,Slow since the update,"Hello again, Everything has been sluggish since the change you made last week. This is holding us up.",High,annoyed,1
+TICK-00069,CUST-0140,2026-04-01 02:50,integration_failure,Duplicate records from sync,This is now the third time I am writing. The sync is creating three copies of every record. We expect a reply today.,High,angry,1
+TICK-00070,CUST-0177,2026-04-01 15:50,dashboard_bug,Dashboard display problem,This is now the third time I am writing. One of the charts is showing the wrong labels. Please escalate this immediately.,Medium,angry,1
+TICK-00071,CUST-0170,2026-06-23 09:50,billing_error,Charged the wrong amount,"Hello, The invoice does not match the plan we are on. No rush, whenever you get a chance.",Medium,calm,1
+TICK-00072,CUST-0027,2026-07-15 10:50,payment_failure,Checkout is broken,"Hi, Our customers reach the payment page and then get an error. Please could someone look at this.",Medium,annoyed,2
+TICK-00073,CUST-0063,2026-07-24 10:50,integration_failure,Connection keeps dropping,"Hello again, The integration disconnects on its own every few hours. Please could someone look at this.",High,annoyed,2
+TICK-00074,CUST-0028,2026-04-22 18:50,login_failure,Sign in loop,"Hi there, It accepts my password then sends me straight back to the login screen. No rush, whenever you get a chance.",Low,calm,1
+TICK-00075,CUST-0102,2026-04-08 16:50,password_reset,New password not accepted,"Hi, I changed my password and now the new one is rejected. Hoping for a quick reply.",Low,annoyed,1
+TICK-00076,CUST-0187,2026-02-25 14:50,slow_performance,Slow since the update,"Hello, Everything has been sluggish since the change you made last week. No rush, whenever you get a chance.",Medium,calm,1
+TICK-00077,CUST-0150,2026-07-17 00:50,billing_error,Still being billed after cancelling,This is now the third time I am writing. We cancelled last month and a payment has gone out again. Please escalate this immediately.,Medium,angry,1
+TICK-00078,CUST-0111,2026-05-31 14:50,payment_failure,Card declined for everyone,"Good morning, Every transaction today has been rejected, including test cards. Many thanks.",Medium,calm,1
+TICK-00079,CUST-0022,2026-03-03 04:50,payment_failure,Checkout is broken,"Hello, Our customers reach the payment page and then get an error. Many thanks.",Critical,calm,1
+TICK-00080,CUST-0028,2026-03-22 12:50,dashboard_bug,Chart will not load,This is now the third time I am writing. One panel stays blank no matter how many times I refresh. Please escalate this immediately.,Medium,angry,2
+TICK-00081,CUST-0051,2026-07-11 07:50,slow_performance,Search is crawling,"Good morning, Running a search takes almost a minute to return anything. Thanks for your help.",Low,calm,1
+TICK-00082,CUST-0151,2026-07-17 02:50,payment_failure,Card declined for everyone,"Hello again, Every transaction today has been rejected, including test cards. This is holding us up.",Critical,annoyed,2
+TICK-00083,CUST-0099,2026-02-28 21:50,slow_performance,The platform is very slow,"Good morning, Pages take around thirty seconds to load. Thanks for your help.",Low,calm,1
+TICK-00084,CUST-0099,2026-03-01 05:50,password_reset,Reset email not arriving,"Following up on this, I have requested a new password four times and nothing comes through. Hoping for a quick reply.",Low,annoyed,2
+TICK-00085,CUST-0191,2026-07-31 20:50,feature_request,Request for bulk actions,"Good morning, Being able to select several rows at once would save us a lot of time. No rush, whenever you get a chance.",Low,calm,1
+TICK-00086,CUST-0116,2026-04-17 08:50,account_lockout,Locked out of our account,"Hello, We have been shut out and cannot get back in. Thanks for your help.",High,calm,1
+TICK-00087,CUST-0153,2026-06-29 18:50,integration_failure,Duplicate records from sync,"Following up on this, The sync is creating three copies of every record. Please could someone look at this.",Critical,annoyed,1
+TICK-00088,CUST-0195,2026-03-13 18:50,how_to_question,Where do I find my invoices,"Hi there, I have looked in settings and cannot see a billing history anywhere. No rush, whenever you get a chance.",Low,calm,1
+TICK-00089,CUST-0149,2026-04-14 18:50,system_outage,Total outage,"Following up on this, The site has been returning an error page for the last forty minutes. This is holding us up.",Critical,annoyed,1
+TICK-00090,CUST-0145,2026-03-11 04:50,how_to_question,How do I do this,"Hi, I cannot work out where to change the account settings. This is holding us up.",Low,annoyed,1
+TICK-00091,CUST-0034,2026-05-21 13:50,password_reset,Password reset needed,"Following up on this, The reset link never arrives in my inbox. Hoping for a quick reply.",Low,annoyed,1
+TICK-00092,CUST-0025,2026-08-12 06:50,system_outage,Platform unreachable,"Hi there, Every one of our staff is getting a timeout when they try to load it. Thanks for your help.",Critical,calm,1
+TICK-00093,CUST-0081,2026-06-27 06:50,billing_error,Charged the wrong amount,"Good morning, The invoice does not match the plan we are on. Many thanks.",Low,calm,1
+TICK-00094,CUST-0114,2026-04-17 01:50,how_to_question,Where do I find my invoices,"Good morning, I have looked in settings and cannot see a billing history anywhere. No rush, whenever you get a chance.",Low,calm,1
+TICK-00095,CUST-0169,2026-05-25 08:50,password_reset,Reset email not arriving,"Following up on this, I have requested a new password four times and nothing comes through. Please could someone look at this.",Medium,annoyed,2
+TICK-00096,CUST-0034,2026-08-09 08:50,billing_error,Charged the wrong amount,"Hello again, The invoice does not match the plan we are on. Please could someone look at this.",High,annoyed,2
+TICK-00097,CUST-0164,2026-04-25 12:50,integration_failure,Duplicate records from sync,"Hello, The sync is creating three copies of every record. Thanks for your help.",High,calm,1
+TICK-00098,CUST-0112,2026-07-05 06:50,payment_failure,Card declined for everyone,"Good morning, Every transaction today has been rejected, including test cards. Thanks for your help.",High,calm,1
+TICK-00099,CUST-0200,2026-02-17 05:50,how_to_question,Question about permissions,"Hi there, How do I give a colleague access without making them an admin. No rush, whenever you get a chance.",Low,calm,2
+TICK-00100,CUST-0095,2026-02-22 08:50,login_failure,Cannot sign in,This is now the third time I am writing. The login page rejects our details even after a reset. We expect a reply today.,High,angry,2
+TICK-00101,CUST-0010,2026-04-27 20:50,integration_failure,Connection keeps dropping,"Hi, The integration disconnects on its own every few hours. Hoping for a quick reply.",Critical,annoyed,1
+TICK-00102,CUST-0103,2026-03-12 03:50,payment_failure,Checkout is broken,"Hello, Our customers reach the payment page and then get an error. Many thanks.",High,calm,2
+TICK-00103,CUST-0188,2026-04-18 19:50,password_reset,Password reset needed,"Hello, The reset link never arrives in my inbox. Many thanks.",Medium,calm,1
+TICK-00104,CUST-0108,2026-02-18 15:50,slow_performance,The platform is very slow,This is now the third time I am writing. Pages take around thirty seconds to load. We are considering cancelling.,Low,angry,1
+TICK-00105,CUST-0112,2026-04-25 16:50,dashboard_bug,Numbers do not match,"Good morning, The total on the dashboard is different to the total in the report. Many thanks.",Low,calm,2
+TICK-00106,CUST-0120,2026-05-16 14:50,api_failure,API timing out,"Hi there, Requests hang for thirty seconds and then fail. No rush, whenever you get a chance.",Medium,calm,1
+TICK-00107,CUST-0092,2026-03-13 16:50,billing_error,Charged the wrong amount,"Hello, The invoice does not match the plan we are on. No rush, whenever you get a chance.",Low,calm,1
+TICK-00108,CUST-0096,2026-06-08 13:50,dashboard_bug,Dashboard display problem,"Hello, One of the charts is showing the wrong labels. Thanks for your help.",Medium,calm,1
+TICK-00109,CUST-0186,2026-03-15 19:50,billing_error,Charged the wrong amount,"Hello again, The invoice does not match the plan we are on. Hoping for a quick reply.",Medium,annoyed,1
+TICK-00110,CUST-0036,2026-04-14 11:50,slow_performance,The platform is very slow,"Hello again, Pages take around thirty seconds to load. This is holding us up.",Critical,annoyed,1
+TICK-00111,CUST-0200,2026-05-22 10:50,account_lockout,Locked out of our account,This is now the third time I am writing. We have been shut out and cannot get back in. We are considering cancelling.,Critical,angry,3
+TICK-00112,CUST-0045,2026-04-17 00:50,login_failure,Team cannot log in,"Hi, Four of my colleagues are getting an invalid credentials message. This is holding us up.",Medium,annoyed,1
+TICK-00113,CUST-0057,2026-06-15 11:50,security_incident,Suspicious activity on our account,"Hello again, There are logins from a country none of our staff are in. This is holding us up.",High,annoyed,2
+TICK-00114,CUST-0102,2026-03-01 17:50,notification_failure,Notifications arriving late,"Hello again, Alerts turn up about six hours after the thing happened. This is holding us up.",Low,annoyed,2
+TICK-00115,CUST-0076,2026-06-13 21:50,payment_failure,Checkout is broken,We need this dealt with today. Our customers reach the payment page and then get an error. We are considering cancelling.,High,angry,2
+TICK-00116,CUST-0061,2026-04-22 10:50,api_failure,Authentication failing on API,We need this dealt with today. Our key worked yesterday and is now rejected on every call. We expect a reply today.,High,angry,3
+TICK-00117,CUST-0108,2026-03-04 09:50,password_reset,New password not accepted,"Hello again, I changed my password and now the new one is rejected. Please could someone look at this.",Medium,annoyed,2
+TICK-00118,CUST-0027,2026-03-03 06:50,payment_failure,Card declined for everyone,"Hi, Every transaction today has been rejected, including test cards. Hoping for a quick reply.",Medium,annoyed,3
+TICK-00119,CUST-0142,2026-04-02 22:50,dashboard_bug,Dashboard display problem,"Hello, One of the charts is showing the wrong labels. Thanks for your help.",Medium,calm,2
+TICK-00120,CUST-0154,2026-05-01 18:50,slow_performance,The platform is very slow,"Hi there, Pages take around thirty seconds to load. Thanks for your help.",Low,calm,1
+TICK-00121,CUST-0115,2026-07-13 00:50,compliance_request,Retention policy question,"Hello, We need written confirmation of how long you keep our deleted records. Thanks for your help.",Medium,calm,2
+TICK-00122,CUST-0122,2026-02-19 15:50,integration_failure,Duplicate records from sync,"Hello, The sync is creating three copies of every record. Many thanks.",Medium,calm,1
+TICK-00123,CUST-0109,2026-04-27 21:50,payment_failure,Payments are not going through,"Good morning, Card charges keep failing at the final step. No rush, whenever you get a chance.",High,calm,1
+TICK-00124,CUST-0004,2026-07-11 20:50,feature_request,Request for bulk actions,"Hello, Being able to select several rows at once would save us a lot of time. Thanks for your help.",Low,calm,1
+TICK-00125,CUST-0147,2026-03-30 22:50,notification_failure,Notifications arriving late,"Good morning, Alerts turn up about six hours after the thing happened. Many thanks.",Low,calm,1
+TICK-00126,CUST-0078,2026-03-16 19:50,api_failure,API returning errors,"Hi, Our integration is getting 500 errors on most calls. Hoping for a quick reply.",Critical,annoyed,1
+TICK-00127,CUST-0096,2026-02-17 02:50,how_to_question,Where do I find my invoices,"Hi there, I have looked in settings and cannot see a billing history anywhere. Thanks for your help.",Low,calm,2
+TICK-00128,CUST-0051,2026-05-24 11:50,account_lockout,Locked out of our account,"Following up on this, We have been shut out and cannot get back in. Please could someone look at this.",High,annoyed,2
+TICK-00129,CUST-0073,2026-05-30 04:50,data_loss,Our records have disappeared,"Hi, About three weeks of entries are missing from our workspace. This is holding us up.",Medium,annoyed,1
+TICK-00130,CUST-0065,2026-04-18 00:50,notification_failure,Alerts stopped,"Hello again, We used to get a notification for every new entry and they have gone quiet. Hoping for a quick reply.",Medium,annoyed,1
+TICK-00131,CUST-0096,2026-05-12 16:50,integration_failure,Connection keeps dropping,"Hi, The integration disconnects on its own every few hours. Hoping for a quick reply.",High,annoyed,3
+TICK-00132,CUST-0154,2026-03-29 22:50,billing_error,Double charged this month,"Hi there, We have two identical charges on the same date. No rush, whenever you get a chance.",High,calm,2
+TICK-00133,CUST-0130,2026-07-02 08:50,account_lockout,Account suspended without warning,"Hi, We logged in this morning and the account is disabled. Hoping for a quick reply.",Low,annoyed,1
+TICK-00134,CUST-0085,2026-07-21 17:50,billing_error,Charged the wrong amount,"Good morning, The invoice does not match the plan we are on. Many thanks.",Medium,calm,1
+TICK-00135,CUST-0105,2026-04-23 12:50,password_reset,Password reset needed,This is now the third time I am writing. The reset link never arrives in my inbox. Please escalate this immediately.,Critical,angry,1
+TICK-00136,CUST-0196,2026-08-13 10:50,feature_request,Request for bulk actions,"Hi there, Being able to select several rows at once would save us a lot of time. No rush, whenever you get a chance.",Low,calm,1
+TICK-00137,CUST-0188,2026-06-19 00:50,account_lockout,Too many attempts message,"Following up on this, We are stuck on a lockout screen and the timer never clears. Hoping for a quick reply.",High,annoyed,2
+TICK-00138,CUST-0035,2026-05-30 11:50,api_failure,API timing out,"Hello, Requests hang for thirty seconds and then fail. Thanks for your help.",Critical,calm,1
+TICK-00139,CUST-0198,2026-07-06 12:50,integration_failure,Duplicate records from sync,This is now the third time I am writing. The sync is creating three copies of every record. We are considering cancelling.,Medium,angry,1
+TICK-00140,CUST-0170,2026-07-05 20:50,slow_performance,The platform is very slow,"Following up on this, Pages take around thirty seconds to load. This is holding us up.",Medium,annoyed,2
+TICK-00141,CUST-0042,2026-08-10 16:50,data_loss,Missing data after sync,"Hello, Half our project list vanished after the sync ran last night. Thanks for your help.",High,calm,1
+TICK-00142,CUST-0066,2026-05-07 20:50,dashboard_bug,Dashboard display problem,This is now the third time I am writing. One of the charts is showing the wrong labels. We are considering cancelling.,Medium,angry,1
+TICK-00143,CUST-0166,2026-04-20 01:50,login_failure,Team cannot log in,"Hello, Four of my colleagues are getting an invalid credentials message. No rush, whenever you get a chance.",Medium,calm,1
+TICK-00144,CUST-0043,2026-03-03 06:50,payment_failure,Payments are not going through,"Hello, Card charges keep failing at the final step. No rush, whenever you get a chance.",High,calm,1
+TICK-00145,CUST-0106,2026-05-30 14:50,slow_performance,Slow since the update,"Following up on this, Everything has been sluggish since the change you made last week. This is holding us up.",High,annoyed,1
+TICK-00146,CUST-0099,2026-03-07 20:50,login_failure,Team cannot log in,This is now the third time I am writing. Four of my colleagues are getting an invalid credentials message. We expect a reply today.,Critical,angry,3
+TICK-00147,CUST-0097,2026-03-15 10:50,billing_error,Double charged this month,"Hello, We have two identical charges on the same date. No rush, whenever you get a chance.",Low,calm,1
+TICK-00148,CUST-0159,2026-07-27 12:50,notification_failure,Alerts stopped,"Hello again, We used to get a notification for every new entry and they have gone quiet. Hoping for a quick reply.",Medium,annoyed,2
+TICK-00149,CUST-0057,2026-07-09 18:50,system_outage,Platform unreachable,We need this dealt with today. Every one of our staff is getting a timeout when they try to load it. Please escalate this immediately.,Critical,angry,3
+TICK-00150,CUST-0056,2026-07-03 23:50,slow_performance,The platform is very slow,"Following up on this, Pages take around thirty seconds to load. This is holding us up.",High,annoyed,2
+TICK-00151,CUST-0150,2026-07-10 16:50,slow_performance,The platform is very slow,We need this dealt with today. Pages take around thirty seconds to load. We are considering cancelling.,Critical,angry,2
+TICK-00152,CUST-0076,2026-04-29 21:50,slow_performance,Slow since the update,"Following up on this, Everything has been sluggish since the change you made last week. Hoping for a quick reply.",Low,annoyed,3
+TICK-00153,CUST-0046,2026-03-25 13:50,slow_performance,Search is crawling,"Good morning, Running a search takes almost a minute to return anything. No rush, whenever you get a chance.",Medium,calm,1
+TICK-00154,CUST-0193,2026-08-04 00:50,feature_request,Dark mode request,"Hello again, Any chance of a dark theme, we work late most evenings. Please could someone look at this.",Medium,annoyed,1
+TICK-00155,CUST-0061,2026-03-25 20:50,slow_performance,The platform is very slow,This is unacceptable. Pages take around thirty seconds to load. Please escalate this immediately.,Medium,angry,4
+TICK-00156,CUST-0181,2026-05-06 15:50,dashboard_bug,Dashboard display problem,"Good morning, One of the charts is showing the wrong labels. Thanks for your help.",Low,calm,1
+TICK-00157,CUST-0143,2026-06-23 13:50,account_lockout,Too many attempts message,This is now the third time I am writing. We are stuck on a lockout screen and the timer never clears. We are considering cancelling.,Medium,angry,2
+TICK-00158,CUST-0135,2026-03-30 08:50,data_export_failure,Cannot download report,"Good morning, The export button spins for a while and then nothing happens. Many thanks.",Low,calm,1
+TICK-00159,CUST-0167,2026-08-01 10:50,security_incident,Unrecognised device on our account,"Good morning, We can see a session we did not start and cannot end it. Thanks for your help.",Critical,calm,1
+TICK-00160,CUST-0125,2026-08-12 12:50,compliance_request,Data deletion request,"Hello, We need a customer's personal data removed under GDPR. Many thanks.",High,calm,1
+TICK-00161,CUST-0192,2026-07-21 23:50,dashboard_bug,Dashboard display problem,"Hi, One of the charts is showing the wrong labels. Hoping for a quick reply.",Medium,annoyed,1
+TICK-00162,CUST-0031,2026-07-21 06:50,integration_failure,Duplicate records from sync,"Hi, The sync is creating three copies of every record. This is holding us up.",High,annoyed,1
+TICK-00163,CUST-0008,2026-06-26 20:50,slow_performance,Slow since the update,"Hi there, Everything has been sluggish since the change you made last week. Many thanks.",Medium,calm,2
+TICK-00164,CUST-0153,2026-06-03 18:50,billing_error,Still being billed after cancelling,"Good morning, We cancelled last month and a payment has gone out again. No rush, whenever you get a chance.",Medium,calm,2
+TICK-00165,CUST-0014,2026-07-23 01:50,how_to_question,How do I do this,This is unacceptable. I cannot work out where to change the account settings. We expect a reply today.,High,angry,1
+TICK-00166,CUST-0073,2026-06-24 00:50,notification_failure,Notifications arriving late,"Following up on this, Alerts turn up about six hours after the thing happened. Hoping for a quick reply.",Medium,annoyed,2
+TICK-00167,CUST-0071,2026-05-02 18:50,how_to_question,Question about permissions,"Hello again, How do I give a colleague access without making them an admin. Hoping for a quick reply.",Low,annoyed,2
+TICK-00168,CUST-0188,2026-03-29 18:50,password_reset,New password not accepted,"Hello, I changed my password and now the new one is rejected. Many thanks.",High,calm,3
+TICK-00169,CUST-0101,2026-04-01 14:50,data_export_failure,Corrupted export file,"Following up on this, The file downloads but will not open in Excel. Please could someone look at this.",Critical,annoyed,1
+TICK-00170,CUST-0169,2026-05-27 22:50,how_to_question,How do I do this,This is now the third time I am writing. I cannot work out where to change the account settings. Please escalate this immediately.,Low,angry,3
+TICK-00171,CUST-0012,2026-05-17 03:50,data_loss,Deleted records we did not delete,"Hi there, A folder of client files is gone and nobody on our side removed it. Many thanks.",Critical,calm,1
+TICK-00172,CUST-0058,2026-06-28 14:50,slow_performance,Slow since the update,This is now the third time I am writing. Everything has been sluggish since the change you made last week. We expect a reply today.,Medium,angry,2
+TICK-00173,CUST-0170,2026-06-21 00:50,data_export_failure,Cannot download report,This is now the third time I am writing. The export button spins for a while and then nothing happens. We expect a reply today.,Critical,angry,3
+TICK-00174,CUST-0043,2026-05-10 06:50,account_lockout,Too many attempts message,This is now the third time I am writing. We are stuck on a lockout screen and the timer never clears. We expect a reply today.,High,angry,2
+TICK-00175,CUST-0047,2026-07-22 13:50,notification_failure,Alerts stopped,"Following up on this, We used to get a notification for every new entry and they have gone quiet. This is holding us up.",Low,annoyed,4
+TICK-00176,CUST-0046,2026-03-03 10:50,slow_performance,Slow since the update,"Hello, Everything has been sluggish since the change you made last week. Thanks for your help.",Medium,calm,2
+TICK-00177,CUST-0124,2026-03-22 19:50,feature_request,Dark mode request,"Good morning, Any chance of a dark theme, we work late most evenings. Thanks for your help.",Low,calm,1
+TICK-00178,CUST-0191,2026-03-28 11:50,feature_request,Feature suggestion,"Good morning, It would help if we could sort the table by date. No rush, whenever you get a chance.",High,calm,2
+TICK-00179,CUST-0175,2026-03-02 22:50,billing_error,Charged the wrong amount,"Hi there, The invoice does not match the plan we are on. Many thanks.",Low,calm,1
+TICK-00180,CUST-0180,2026-07-28 06:50,password_reset,New password not accepted,"Good morning, I changed my password and now the new one is rejected. Many thanks.",Low,calm,1
+TICK-00181,CUST-0017,2026-02-18 04:50,account_lockout,Account suspended without warning,"Following up on this, We logged in this morning and the account is disabled. This is holding us up.",Medium,annoyed,1
+TICK-00182,CUST-0131,2026-07-16 09:50,slow_performance,Slow since the update,"Hello, Everything has been sluggish since the change you made last week. Thanks for your help.",Medium,calm,1
+TICK-00183,CUST-0186,2026-06-09 15:50,how_to_question,Question about permissions,"Hi, How do I give a colleague access without making them an admin. This is holding us up.",Low,annoyed,2
+TICK-00184,CUST-0088,2026-03-16 21:50,password_reset,New password not accepted,This is unacceptable. I changed my password and now the new one is rejected. We expect a reply today.,Medium,angry,1
+TICK-00185,CUST-0124,2026-04-29 06:50,payment_failure,Card declined for everyone,"Following up on this, Every transaction today has been rejected, including test cards. Please could someone look at this.",Medium,annoyed,2
+TICK-00186,CUST-0122,2026-06-07 21:50,api_failure,Authentication failing on API,"Hi, Our key worked yesterday and is now rejected on every call. Hoping for a quick reply.",Critical,annoyed,2
+TICK-00187,CUST-0021,2026-04-10 08:50,dashboard_bug,Chart will not load,"Hi, One panel stays blank no matter how many times I refresh. Hoping for a quick reply.",Low,annoyed,1
+TICK-00188,CUST-0033,2026-06-16 09:50,compliance_request,Retention policy question,"Hi there, We need written confirmation of how long you keep our deleted records. No rush, whenever you get a chance.",High,calm,1
+TICK-00189,CUST-0067,2026-02-25 19:50,login_failure,Sign in loop,"Hi there, It accepts my password then sends me straight back to the login screen. Thanks for your help.",Medium,calm,1
+TICK-00190,CUST-0176,2026-06-26 06:50,data_export_failure,Cannot download report,"Hi there, The export button spins for a while and then nothing happens. Thanks for your help.",Low,calm,1
+TICK-00191,CUST-0144,2026-07-13 04:50,how_to_question,How do I do this,"Hi there, I cannot work out where to change the account settings. No rush, whenever you get a chance.",Low,calm,1
+TICK-00192,CUST-0090,2026-05-09 21:50,how_to_question,Where do I find my invoices,"Good morning, I have looked in settings and cannot see a billing history anywhere. Thanks for your help.",Low,calm,1
+TICK-00193,CUST-0162,2026-03-29 21:50,password_reset,Reset email not arriving,"Following up on this, I have requested a new password four times and nothing comes through. This is holding us up.",Medium,annoyed,1
+TICK-00194,CUST-0114,2026-06-13 06:50,feature_request,Request for bulk actions,"Hello again, Being able to select several rows at once would save us a lot of time. Please could someone look at this.",Low,annoyed,2
+TICK-00195,CUST-0025,2026-05-17 10:50,compliance_request,Retention policy question,"Hi, We need written confirmation of how long you keep our deleted records. Please could someone look at this.",Critical,annoyed,2
+TICK-00196,CUST-0044,2026-03-16 04:50,data_loss,Missing data after sync,"Following up on this, Half our project list vanished after the sync ran last night. Hoping for a quick reply.",Critical,annoyed,1
+TICK-00197,CUST-0080,2026-06-22 21:50,password_reset,Reset email not arriving,"Hi there, I have requested a new password four times and nothing comes through. No rush, whenever you get a chance.",Medium,calm,1
+TICK-00198,CUST-0194,2026-06-11 16:50,slow_performance,The platform is very slow,"Following up on this, Pages take around thirty seconds to load. Hoping for a quick reply.",Medium,annoyed,2
+TICK-00199,CUST-0161,2026-05-15 06:50,data_export_failure,Corrupted export file,"Hello again, The file downloads but will not open in Excel. Hoping for a quick reply.",High,annoyed,1
+TICK-00200,CUST-0049,2026-03-18 09:50,api_failure,API timing out,This is unacceptable. Requests hang for thirty seconds and then fail. We are considering cancelling.,High,angry,1
+TICK-00201,CUST-0009,2026-06-14 01:50,api_failure,API returning errors,We need this dealt with today. Our integration is getting 500 errors on most calls. Please escalate this immediately.,Critical,angry,1
+TICK-00202,CUST-0064,2026-03-06 15:50,feature_request,Dark mode request,"Following up on this, Any chance of a dark theme, we work late most evenings. Please could someone look at this.",Low,annoyed,2
+TICK-00203,CUST-0051,2026-04-26 06:50,billing_error,Charged the wrong amount,We need this dealt with today. The invoice does not match the plan we are on. Please escalate this immediately.,Low,angry,3
+TICK-00204,CUST-0198,2026-04-15 16:50,payment_failure,Card declined for everyone,"Hello, Every transaction today has been rejected, including test cards. Thanks for your help.",Medium,calm,2
+TICK-00205,CUST-0050,2026-05-06 10:50,security_incident,Possible breach,"Following up on this, Someone has changed our admin email address and it was not us. Hoping for a quick reply.",Critical,annoyed,1
+TICK-00206,CUST-0076,2026-06-12 17:50,how_to_question,Where do I find my invoices,This is unacceptable. I have looked in settings and cannot see a billing history anywhere. We expect a reply today.,Low,angry,4
+TICK-00207,CUST-0197,2026-07-23 06:50,integration_failure,Integration stopped syncing,"Hello, Nothing has come through from the connected tool since Tuesday. Many thanks.",High,calm,1
+TICK-00208,CUST-0169,2026-08-10 13:50,slow_performance,Slow since the update,We need this dealt with today. Everything has been sluggish since the change you made last week. We are considering cancelling.,High,angry,4
+TICK-00209,CUST-0015,2026-07-12 21:50,how_to_question,How do I do this,"Hello, I cannot work out where to change the account settings. Many thanks.",Medium,calm,1
+TICK-00210,CUST-0143,2026-03-22 06:50,feature_request,Request for bulk actions,"Following up on this, Being able to select several rows at once would save us a lot of time. Hoping for a quick reply.",Low,annoyed,3
+TICK-00211,CUST-0091,2026-04-26 15:50,password_reset,Reset email not arriving,We need this dealt with today. I have requested a new password four times and nothing comes through. Please escalate this immediately.,Low,angry,1
+TICK-00212,CUST-0102,2026-05-31 07:50,system_outage,Total outage,"Hi, The site has been returning an error page for the last forty minutes. Hoping for a quick reply.",Critical,annoyed,3
+TICK-00213,CUST-0040,2026-03-31 13:50,login_failure,Sign in loop,"Hello, It accepts my password then sends me straight back to the login screen. Many thanks.",Medium,calm,1
+TICK-00214,CUST-0188,2026-03-25 20:50,how_to_question,Question about permissions,This is unacceptable. How do I give a colleague access without making them an admin. Please escalate this immediately.,Low,angry,4
+TICK-00215,CUST-0082,2026-03-15 22:50,integration_failure,Duplicate records from sync,"Following up on this, The sync is creating three copies of every record. Hoping for a quick reply.",High,annoyed,2
+TICK-00216,CUST-0013,2026-03-03 21:50,integration_failure,Duplicate records from sync,"Hello, The sync is creating three copies of every record. Thanks for your help.",Medium,calm,1
+TICK-00217,CUST-0111,2026-06-11 00:50,api_failure,API timing out,"Hi there, Requests hang for thirty seconds and then fail. No rush, whenever you get a chance.",Critical,calm,2
+TICK-00218,CUST-0060,2026-05-24 01:50,login_failure,Cannot sign in,"Following up on this, The login page rejects our details even after a reset. Please could someone look at this.",Medium,annoyed,2
+TICK-00219,CUST-0190,2026-06-27 19:50,integration_failure,Connection keeps dropping,"Good morning, The integration disconnects on its own every few hours. Many thanks.",Medium,calm,1
+TICK-00220,CUST-0014,2026-07-09 05:50,slow_performance,Slow since the update,"Good morning, Everything has been sluggish since the change you made last week. No rush, whenever you get a chance.",High,calm,2
+TICK-00221,CUST-0153,2026-05-02 23:50,slow_performance,The platform is very slow,This is now the third time I am writing. Pages take around thirty seconds to load. We are considering cancelling.,High,angry,3
+TICK-00222,CUST-0129,2026-05-30 01:50,account_lockout,Locked out of our account,"Good morning, We have been shut out and cannot get back in. No rush, whenever you get a chance.",Low,calm,1
+TICK-00223,CUST-0110,2026-06-06 23:50,password_reset,Password reset needed,"Following up on this, The reset link never arrives in my inbox. Please could someone look at this.",Medium,annoyed,2
+TICK-00224,CUST-0041,2026-04-28 06:50,api_failure,API returning errors,We need this dealt with today. Our integration is getting 500 errors on most calls. We are considering cancelling.,Critical,angry,1
+TICK-00225,CUST-0157,2026-04-14 09:50,notification_failure,Not receiving emails,"Following up on this, Alert emails are not arriving in any of our inboxes. Please could someone look at this.",Medium,annoyed,1
+TICK-00226,CUST-0036,2026-06-06 19:50,login_failure,Sign in loop,"Hello again, It accepts my password then sends me straight back to the login screen. Please could someone look at this.",Medium,annoyed,2
+TICK-00227,CUST-0199,2026-02-16 18:50,compliance_request,Retention policy question,"Good morning, We need written confirmation of how long you keep our deleted records. Many thanks.",High,calm,1
+TICK-00228,CUST-0189,2026-04-01 04:50,data_loss,Our records have disappeared,"Hello again, About three weeks of entries are missing from our workspace. Hoping for a quick reply.",High,annoyed,2
+TICK-00229,CUST-0024,2026-04-02 20:50,dashboard_bug,Chart will not load,"Following up on this, One panel stays blank no matter how many times I refresh. Please could someone look at this.",Low,annoyed,2
+TICK-00230,CUST-0083,2026-03-14 15:50,dashboard_bug,Dashboard display problem,"Hi, One of the charts is showing the wrong labels. Please could someone look at this.",Medium,annoyed,1
+TICK-00231,CUST-0197,2026-07-28 12:50,login_failure,Cannot sign in,This is now the third time I am writing. The login page rejects our details even after a reset. We are considering cancelling.,Medium,angry,2
+TICK-00232,CUST-0196,2026-06-02 00:50,account_lockout,Too many attempts message,This is unacceptable. We are stuck on a lockout screen and the timer never clears. We are considering cancelling.,High,angry,2
+TICK-00233,CUST-0054,2026-05-05 04:50,compliance_request,Retention policy question,"Following up on this, We need written confirmation of how long you keep our deleted records. This is holding us up.",Medium,annoyed,1
+TICK-00234,CUST-0093,2026-07-23 21:50,password_reset,Reset email not arriving,"Hi, I have requested a new password four times and nothing comes through. Hoping for a quick reply.",Low,annoyed,3
+TICK-00235,CUST-0028,2026-05-09 00:50,integration_failure,Duplicate records from sync,We need this dealt with today. The sync is creating three copies of every record. We expect a reply today.,Critical,angry,3
+TICK-00236,CUST-0187,2026-08-14 12:50,notification_failure,Notifications arriving late,"Hi there, Alerts turn up about six hours after the thing happened. Thanks for your help.",Low,calm,2
+TICK-00237,CUST-0164,2026-04-26 11:50,data_export_failure,Cannot download report,"Hello again, The export button spins for a while and then nothing happens. This is holding us up.",High,annoyed,2
+TICK-00238,CUST-0173,2026-04-22 15:50,slow_performance,The platform is very slow,"Good morning, Pages take around thirty seconds to load. No rush, whenever you get a chance.",Low,calm,1
+TICK-00239,CUST-0148,2026-04-21 06:50,dashboard_bug,Dashboard display problem,"Hello again, One of the charts is showing the wrong labels. Please could someone look at this.",Medium,annoyed,1
+TICK-00240,CUST-0181,2026-06-02 06:50,how_to_question,Question about permissions,"Hi there, How do I give a colleague access without making them an admin. No rush, whenever you get a chance.",Medium,calm,2
+TICK-00241,CUST-0124,2026-06-27 03:50,password_reset,New password not accepted,"Hello again, I changed my password and now the new one is rejected. Hoping for a quick reply.",Low,annoyed,3
+TICK-00242,CUST-0002,2026-07-10 20:50,api_failure,API timing out,"Hello again, Requests hang for thirty seconds and then fail. Please could someone look at this.",Medium,annoyed,1
+TICK-00243,CUST-0071,2026-02-20 13:50,slow_performance,Search is crawling,This is now the third time I am writing. Running a search takes almost a minute to return anything. We are considering cancelling.,High,angry,3
+TICK-00244,CUST-0080,2026-04-06 02:50,notification_failure,Notifications arriving late,"Hi, Alerts turn up about six hours after the thing happened. Please could someone look at this.",Medium,annoyed,2
+TICK-00245,CUST-0051,2026-07-14 07:50,dashboard_bug,Numbers do not match,We need this dealt with today. The total on the dashboard is different to the total in the report. We are considering cancelling.,Low,angry,4
+TICK-00246,CUST-0094,2026-08-04 17:50,billing_error,Double charged this month,"Hello again, We have two identical charges on the same date. Hoping for a quick reply.",Medium,annoyed,1
+TICK-00247,CUST-0183,2026-03-26 22:50,how_to_question,Where do I find my invoices,"Hello again, I have looked in settings and cannot see a billing history anywhere. Hoping for a quick reply.",Low,annoyed,2
+TICK-00248,CUST-0111,2026-07-19 10:50,feature_request,Feature suggestion,We need this dealt with today. It would help if we could sort the table by date. We expect a reply today.,Medium,angry,3
+TICK-00249,CUST-0104,2026-07-25 01:50,payment_failure,Checkout is broken,"Hello again, Our customers reach the payment page and then get an error. Hoping for a quick reply.",Medium,annoyed,1
+TICK-00250,CUST-0148,2026-04-19 12:50,slow_performance,Search is crawling,This is unacceptable. Running a search takes almost a minute to return anything. We expect a reply today.,High,angry,2
+TICK-00251,CUST-0014,2026-04-02 11:50,system_outage,Everything is down,This is now the third time I am writing. None of us can reach the platform at all. Please escalate this immediately.,Critical,angry,3
+TICK-00252,CUST-0093,2026-08-09 16:50,how_to_question,How do I do this,This is now the third time I am writing. I cannot work out where to change the account settings. We are considering cancelling.,Low,angry,4
+TICK-00253,CUST-0117,2026-03-14 10:50,password_reset,New password not accepted,This is unacceptable. I changed my password and now the new one is rejected. We expect a reply today.,Medium,angry,1
+TICK-00254,CUST-0140,2026-03-03 16:50,notification_failure,Alerts stopped,"Hello, We used to get a notification for every new entry and they have gone quiet. Many thanks.",Low,calm,2
+TICK-00255,CUST-0170,2026-04-19 18:50,password_reset,Reset email not arriving,We need this dealt with today. I have requested a new password four times and nothing comes through. We are considering cancelling.,Low,angry,4
+TICK-00256,CUST-0076,2026-07-25 01:50,account_lockout,Too many attempts message,We need this dealt with today. We are stuck on a lockout screen and the timer never clears. Please escalate this immediately.,Low,angry,5
+TICK-00257,CUST-0020,2026-07-07 23:50,how_to_question,Question about permissions,"Hello, How do I give a colleague access without making them an admin. Many thanks.",Low,calm,1
+TICK-00258,CUST-0125,2026-02-26 18:50,login_failure,Cannot sign in,"Good morning, The login page rejects our details even after a reset. Thanks for your help.",Medium,calm,2
+TICK-00259,CUST-0030,2026-04-03 21:50,compliance_request,Retention policy question,"Hello, We need written confirmation of how long you keep our deleted records. No rush, whenever you get a chance.",Medium,calm,1
+TICK-00260,CUST-0011,2026-04-22 16:50,payment_failure,Card declined for everyone,"Following up on this, Every transaction today has been rejected, including test cards. Hoping for a quick reply.",High,annoyed,3
+TICK-00261,CUST-0050,2026-08-10 23:50,slow_performance,Slow since the update,This is now the third time I am writing. Everything has been sluggish since the change you made last week. We are considering cancelling.,High,angry,2
+TICK-00262,CUST-0015,2026-07-05 02:50,password_reset,New password not accepted,This is now the third time I am writing. I changed my password and now the new one is rejected. We expect a reply today.,Low,angry,2
+TICK-00263,CUST-0065,2026-04-26 15:50,account_lockout,Account suspended without warning,"Hi there, We logged in this morning and the account is disabled. Many thanks.",Medium,calm,2
+TICK-00264,CUST-0113,2026-06-26 22:50,payment_failure,Card declined for everyone,"Hi there, Every transaction today has been rejected, including test cards. Thanks for your help.",Critical,calm,2
+TICK-00265,CUST-0187,2026-04-03 18:50,account_lockout,Locked out of our account,This is now the third time I am writing. We have been shut out and cannot get back in. We expect a reply today.,Critical,angry,3
+TICK-00266,CUST-0187,2026-04-14 12:50,feature_request,Request for bulk actions,This is now the third time I am writing. Being able to select several rows at once would save us a lot of time. We expect a reply today.,High,angry,4
+TICK-00267,CUST-0088,2026-04-05 21:50,payment_failure,Payments are not going through,"Following up on this, Card charges keep failing at the final step. Please could someone look at this.",High,annoyed,2
+TICK-00268,CUST-0050,2026-02-25 11:50,data_loss,Deleted records we did not delete,"Following up on this, A folder of client files is gone and nobody on our side removed it. Hoping for a quick reply.",Critical,annoyed,3
+TICK-00269,CUST-0168,2026-05-27 12:50,dashboard_bug,Dashboard display problem,"Following up on this, One of the charts is showing the wrong labels. This is holding us up.",Low,annoyed,1
+TICK-00270,CUST-0004,2026-07-24 05:50,login_failure,Sign in loop,"Following up on this, It accepts my password then sends me straight back to the login screen. Please could someone look at this.",Low,annoyed,2
+TICK-00271,CUST-0174,2026-06-16 20:50,billing_error,Double charged this month,"Hi, We have two identical charges on the same date. Please could someone look at this.",Low,annoyed,2
+TICK-00272,CUST-0035,2026-08-12 20:50,payment_failure,Payments are not going through,"Hello again, Card charges keep failing at the final step. Please could someone look at this.",Critical,annoyed,2
+TICK-00273,CUST-0164,2026-02-25 09:50,account_lockout,Locked out of our account,"Following up on this, We have been shut out and cannot get back in. Please could someone look at this.",Critical,annoyed,3
+TICK-00274,CUST-0159,2026-07-27 22:50,billing_error,Still being billed after cancelling,This is now the third time I am writing. We cancelled last month and a payment has gone out again. Please escalate this immediately.,Critical,angry,3
+TICK-00275,CUST-0054,2026-07-28 03:50,slow_performance,The platform is very slow,This is now the third time I am writing. Pages take around thirty seconds to load. We expect a reply today.,Low,angry,2
+TICK-00276,CUST-0051,2026-03-27 05:50,feature_request,Feature suggestion,"Hi, It would help if we could sort the table by date. This is holding us up.",Medium,annoyed,5
+TICK-00277,CUST-0117,2026-07-02 14:50,login_failure,Sign in loop,"Hi, It accepts my password then sends me straight back to the login screen. Hoping for a quick reply.",High,annoyed,2
+TICK-00278,CUST-0076,2026-07-16 12:50,notification_failure,Notifications arriving late,We need this dealt with today. Alerts turn up about six hours after the thing happened. We are considering cancelling.,High,angry,6
+TICK-00279,CUST-0064,2026-03-25 10:50,account_lockout,Locked out of our account,"Following up on this, We have been shut out and cannot get back in. Please could someone look at this.",Medium,annoyed,3
+TICK-00280,CUST-0143,2026-07-15 01:50,feature_request,Request for bulk actions,"Hi, Being able to select several rows at once would save us a lot of time. This is holding us up.",Medium,annoyed,4
+TICK-00281,CUST-0036,2026-07-21 21:50,how_to_question,Where do I find my invoices,We need this dealt with today. I have looked in settings and cannot see a billing history anywhere. We are considering cancelling.,Medium,angry,3
+TICK-00282,CUST-0148,2026-04-12 19:50,how_to_question,Where do I find my invoices,"Hello, I have looked in settings and cannot see a billing history anywhere. Many thanks.",Low,calm,3
+TICK-00283,CUST-0144,2026-06-04 10:50,dashboard_bug,Chart will not load,This is unacceptable. One panel stays blank no matter how many times I refresh. We expect a reply today.,Medium,angry,2
+TICK-00284,CUST-0129,2026-04-11 09:50,slow_performance,Slow since the update,"Hello again, Everything has been sluggish since the change you made last week. Hoping for a quick reply.",Low,annoyed,2
+TICK-00285,CUST-0179,2026-06-30 23:50,login_failure,Cannot sign in,"Hi there, The login page rejects our details even after a reset. No rush, whenever you get a chance.",Low,calm,1
+TICK-00286,CUST-0086,2026-03-16 01:50,slow_performance,Slow since the update,"Following up on this, Everything has been sluggish since the change you made last week. This is holding us up.",High,annoyed,1
+TICK-00287,CUST-0013,2026-06-13 19:50,login_failure,Team cannot log in,We need this dealt with today. Four of my colleagues are getting an invalid credentials message. Please escalate this immediately.,High,angry,2
+TICK-00288,CUST-0095,2026-03-14 23:50,login_failure,Sign in loop,"Hello, It accepts my password then sends me straight back to the login screen. No rush, whenever you get a chance.",Medium,calm,3
+TICK-00289,CUST-0040,2026-06-25 20:50,system_outage,Total outage,This is unacceptable. The site has been returning an error page for the last forty minutes. Please escalate this immediately.,Critical,angry,2
+TICK-00290,CUST-0007,2026-02-16 08:50,billing_error,Still being billed after cancelling,"Good morning, We cancelled last month and a payment has gone out again. Thanks for your help.",Critical,calm,1
+TICK-00291,CUST-0126,2026-03-22 01:50,api_failure,API timing out,This is unacceptable. Requests hang for thirty seconds and then fail. We are considering cancelling.,High,angry,2
+TICK-00292,CUST-0190,2026-06-28 09:50,password_reset,Reset email not arriving,"Good morning, I have requested a new password four times and nothing comes through. No rush, whenever you get a chance.",Medium,calm,2
+TICK-00293,CUST-0194,2026-06-29 07:50,billing_error,Still being billed after cancelling,This is unacceptable. We cancelled last month and a payment has gone out again. We expect a reply today.,Medium,angry,3
+TICK-00294,CUST-0058,2026-05-08 20:50,data_loss,Deleted records we did not delete,"Hello again, A folder of client files is gone and nobody on our side removed it. Please could someone look at this.",Medium,annoyed,3
+TICK-00295,CUST-0191,2026-04-09 15:50,billing_error,Double charged this month,"Following up on this, We have two identical charges on the same date. Please could someone look at this.",Critical,annoyed,3
+TICK-00296,CUST-0093,2026-06-09 21:50,slow_performance,Slow since the update,"Hi, Everything has been sluggish since the change you made last week. This is holding us up.",Critical,annoyed,5
+TICK-00297,CUST-0093,2026-03-27 09:50,payment_failure,Checkout is broken,This is unacceptable. Our customers reach the payment page and then get an error. Please escalate this immediately.,Critical,angry,6
+TICK-00298,CUST-0030,2026-02-17 11:50,how_to_question,How do I do this,"Hello again, I cannot work out where to change the account settings. This is holding us up.",Medium,annoyed,2
+TICK-00299,CUST-0059,2026-03-20 20:50,account_lockout,Locked out of our account,This is now the third time I am writing. We have been shut out and cannot get back in. Please escalate this immediately.,Medium,angry,2
+TICK-00300,CUST-0003,2026-08-05 01:50,feature_request,Feature suggestion,We need this dealt with today. It would help if we could sort the table by date. Please escalate this immediately.,Medium,angry,1
+TICK-00301,CUST-0157,2026-06-10 15:50,account_lockout,Locked out of our account,"Good morning, We have been shut out and cannot get back in. Thanks for your help.",Medium,calm,2
+TICK-00302,CUST-0113,2026-05-29 08:50,dashboard_bug,Numbers do not match,This is now the third time I am writing. The total on the dashboard is different to the total in the report. We expect a reply today.,Low,angry,3
+TICK-00303,CUST-0143,2026-03-16 12:50,dashboard_bug,Chart will not load,We need this dealt with today. One panel stays blank no matter how many times I refresh. Please escalate this immediately.,Medium,angry,5
+TICK-00304,CUST-0004,2026-07-05 08:50,password_reset,New password not accepted,"Following up on this, I changed my password and now the new one is rejected. Please could someone look at this.",Low,annoyed,3
+TICK-00305,CUST-0087,2026-05-13 20:50,data_export_failure,Corrupted export file,"Hello again, The file downloads but will not open in Excel. Hoping for a quick reply.",Critical,annoyed,2
+TICK-00306,CUST-0032,2026-02-26 00:50,account_lockout,Too many attempts message,"Hi, We are stuck on a lockout screen and the timer never clears. Please could someone look at this.",High,annoyed,1
+TICK-00307,CUST-0134,2026-04-19 18:50,feature_request,Request for bulk actions,"Good morning, Being able to select several rows at once would save us a lot of time. No rush, whenever you get a chance.",Low,calm,1
+TICK-00308,CUST-0118,2026-03-21 00:50,data_loss,Deleted records we did not delete,"Hi, A folder of client files is gone and nobody on our side removed it. Hoping for a quick reply.",Medium,annoyed,2
+TICK-00309,CUST-0130,2026-04-27 15:50,compliance_request,Retention policy question,"Hello again, We need written confirmation of how long you keep our deleted records. Hoping for a quick reply.",Medium,annoyed,2
+TICK-00310,CUST-0092,2026-07-23 16:50,slow_performance,Search is crawling,"Good morning, Running a search takes almost a minute to return anything. Thanks for your help.",Low,calm,2
+TICK-00311,CUST-0069,2026-07-12 16:50,security_incident,Unrecognised device on our account,"Hi there, We can see a session we did not start and cannot end it. No rush, whenever you get a chance.",High,calm,1
+TICK-00312,CUST-0112,2026-07-29 19:50,data_export_failure,Export is broken,This is unacceptable. The CSV download stops halfway and the file is unusable. Please escalate this immediately.,Critical,angry,3
+TICK-00313,CUST-0146,2026-05-04 16:50,how_to_question,Where do I find my invoices,"Hi there, I have looked in settings and cannot see a billing history anywhere. Many thanks.",Low,calm,2
+TICK-00314,CUST-0005,2026-05-15 14:50,notification_failure,Notifications arriving late,"Good morning, Alerts turn up about six hours after the thing happened. No rush, whenever you get a chance.",Low,calm,1
+TICK-00315,CUST-0039,2026-05-15 22:50,feature_request,Dark mode request,"This is now the third time I am writing. Any chance of a dark theme, we work late most evenings. Please escalate this immediately.",Medium,angry,3
+TICK-00316,CUST-0080,2026-05-13 22:50,slow_performance,The platform is very slow,"Hi, Pages take around thirty seconds to load. Please could someone look at this.",Medium,annoyed,3
+TICK-00317,CUST-0022,2026-07-15 05:50,api_failure,API timing out,"Good morning, Requests hang for thirty seconds and then fail. Many thanks.",Medium,calm,2
+TICK-00318,CUST-0199,2026-04-03 22:50,password_reset,Reset email not arriving,This is unacceptable. I have requested a new password four times and nothing comes through. We expect a reply today.,Medium,angry,2
+TICK-00319,CUST-0151,2026-05-22 22:50,compliance_request,Subject access request,This is unacceptable. A customer has asked for a copy of everything you hold on them. We expect a reply today.,Critical,angry,3
+TICK-00320,CUST-0014,2026-04-13 04:50,dashboard_bug,Numbers do not match,"Following up on this, The total on the dashboard is different to the total in the report. This is holding us up.",Medium,annoyed,4
+TICK-00321,CUST-0078,2026-04-28 18:50,payment_failure,Payments are not going through,"Hi there, Card charges keep failing at the final step. Many thanks.",Critical,calm,2
+TICK-00322,CUST-0026,2026-04-25 12:50,how_to_question,Where do I find my invoices,"Good morning, I have looked in settings and cannot see a billing history anywhere. Many thanks.",Low,calm,1
+TICK-00323,CUST-0079,2026-03-27 23:50,api_failure,Authentication failing on API,"Hello, Our key worked yesterday and is now rejected on every call. Many thanks.",Medium,calm,1
+TICK-00324,CUST-0107,2026-08-07 04:50,billing_error,Still being billed after cancelling,"Hello, We cancelled last month and a payment has gone out again. Thanks for your help.",Medium,calm,1
+TICK-00325,CUST-0154,2026-02-16 13:50,account_lockout,Locked out of our account,"Hi, We have been shut out and cannot get back in. This is holding us up.",Low,annoyed,3
+TICK-00326,CUST-0069,2026-06-11 09:50,account_lockout,Too many attempts message,"Hello, We are stuck on a lockout screen and the timer never clears. No rush, whenever you get a chance.",Medium,calm,2
+TICK-00327,CUST-0176,2026-06-03 14:50,dashboard_bug,Chart will not load,"Hello again, One panel stays blank no matter how many times I refresh. This is holding us up.",Low,annoyed,2
+TICK-00328,CUST-0121,2026-07-30 12:50,password_reset,New password not accepted,We need this dealt with today. I changed my password and now the new one is rejected. We expect a reply today.,Medium,angry,1
+TICK-00329,CUST-0011,2026-04-28 17:50,notification_failure,Alerts stopped,This is now the third time I am writing. We used to get a notification for every new entry and they have gone quiet. We are considering cancelling.,Low,angry,4
+TICK-00330,CUST-0073,2026-06-19 17:50,password_reset,New password not accepted,This is unacceptable. I changed my password and now the new one is rejected. Please escalate this immediately.,Low,angry,3
+TICK-00331,CUST-0059,2026-03-17 08:50,login_failure,Cannot sign in,"Hello again, The login page rejects our details even after a reset. Please could someone look at this.",Medium,annoyed,3
+TICK-00332,CUST-0073,2026-08-13 15:50,login_failure,Team cannot log in,This is now the third time I am writing. Four of my colleagues are getting an invalid credentials message. We expect a reply today.,High,angry,4
+TICK-00333,CUST-0175,2026-03-10 22:50,payment_failure,Payments are not going through,This is now the third time I am writing. Card charges keep failing at the final step. We are considering cancelling.,Critical,angry,2
+TICK-00334,CUST-0084,2026-05-10 11:50,password_reset,Password reset needed,"Hi, The reset link never arrives in my inbox. Please could someone look at this.",Medium,annoyed,1
+TICK-00335,CUST-0198,2026-06-23 10:50,how_to_question,Question about permissions,We need this dealt with today. How do I give a colleague access without making them an admin. We expect a reply today.,Medium,angry,3
+TICK-00336,CUST-0132,2026-04-11 08:50,login_failure,Sign in loop,"Hi, It accepts my password then sends me straight back to the login screen. Hoping for a quick reply.",Critical,annoyed,3
+TICK-00337,CUST-0127,2026-06-25 07:50,slow_performance,The platform is very slow,"Hi there, Pages take around thirty seconds to load. No rush, whenever you get a chance.",Medium,calm,1
+TICK-00338,CUST-0131,2026-07-18 03:50,slow_performance,Search is crawling,"Hello again, Running a search takes almost a minute to return anything. Hoping for a quick reply.",Low,annoyed,2
+TICK-00339,CUST-0077,2026-06-03 23:50,api_failure,API timing out,"Hello again, Requests hang for thirty seconds and then fail. Please could someone look at this.",High,annoyed,1
+TICK-00340,CUST-0123,2026-04-13 21:50,slow_performance,Slow since the update,"Hello again, Everything has been sluggish since the change you made last week. Hoping for a quick reply.",Low,annoyed,1
+TICK-00341,CUST-0167,2026-05-04 07:50,login_failure,Team cannot log in,This is now the third time I am writing. Four of my colleagues are getting an invalid credentials message. We are considering cancelling.,Medium,angry,2
+TICK-00342,CUST-0116,2026-07-10 23:50,notification_failure,Not receiving emails,"Hello again, Alert emails are not arriving in any of our inboxes. Please could someone look at this.",Low,annoyed,2
+TICK-00343,CUST-0132,2026-07-25 07:50,notification_failure,Alerts stopped,This is now the third time I am writing. We used to get a notification for every new entry and they have gone quiet. We expect a reply today.,Medium,angry,4
+TICK-00344,CUST-0166,2026-03-18 11:50,api_failure,API returning errors,"Hi there, Our integration is getting 500 errors on most calls. No rush, whenever you get a chance.",High,calm,2
+TICK-00345,CUST-0183,2026-06-05 07:50,billing_error,Double charged this month,This is unacceptable. We have two identical charges on the same date. We are considering cancelling.,Medium,angry,3
+TICK-00346,CUST-0127,2026-06-16 09:50,account_lockout,Account suspended without warning,"Good morning, We logged in this morning and the account is disabled. Thanks for your help.",Medium,calm,2
+TICK-00347,CUST-0091,2026-07-10 11:50,feature_request,Dark mode request,"Following up on this, Any chance of a dark theme, we work late most evenings. This is holding us up.",Low,annoyed,2
+TICK-00348,CUST-0027,2026-05-07 07:50,how_to_question,How do I do this,"Hello again, I cannot work out where to change the account settings. Please could someone look at this.",Low,annoyed,4
+TICK-00349,CUST-0107,2026-05-16 05:50,feature_request,Dark mode request,"This is now the third time I am writing. Any chance of a dark theme, we work late most evenings. We are considering cancelling.",Medium,angry,2
+TICK-00350,CUST-0110,2026-03-16 23:50,slow_performance,Slow since the update,This is unacceptable. Everything has been sluggish since the change you made last week. We are considering cancelling.,Low,angry,3
+TICK-00351,CUST-0010,2026-05-06 02:50,dashboard_bug,Chart will not load,We need this dealt with today. One panel stays blank no matter how many times I refresh. We expect a reply today.,High,angry,2
+TICK-00352,CUST-0072,2026-03-17 02:50,password_reset,New password not accepted,"Hello, I changed my password and now the new one is rejected. Many thanks.",Low,calm,1
+TICK-00353,CUST-0186,2026-04-30 11:50,dashboard_bug,Dashboard display problem,We need this dealt with today. One of the charts is showing the wrong labels. We expect a reply today.,High,angry,3
+TICK-00354,CUST-0186,2026-04-16 01:50,slow_performance,Search is crawling,We need this dealt with today. Running a search takes almost a minute to return anything. We expect a reply today.,Medium,angry,4
+TICK-00355,CUST-0191,2026-05-04 21:50,password_reset,New password not accepted,This is now the third time I am writing. I changed my password and now the new one is rejected. Please escalate this immediately.,High,angry,4
+TICK-00356,CUST-0050,2026-07-24 19:50,how_to_question,Question about permissions,"Hello, How do I give a colleague access without making them an admin. Thanks for your help.",Low,calm,4
+TICK-00357,CUST-0102,2026-03-25 17:50,how_to_question,Where do I find my invoices,This is unacceptable. I have looked in settings and cannot see a billing history anywhere. We expect a reply today.,Low,angry,4
+TICK-00358,CUST-0009,2026-07-04 18:50,feature_request,Dark mode request,"Hello again, Any chance of a dark theme, we work late most evenings. Please could someone look at this.",Low,annoyed,2
+TICK-00359,CUST-0037,2026-03-01 04:50,login_failure,Sign in loop,"Hello, It accepts my password then sends me straight back to the login screen. Thanks for your help.",Medium,calm,3
+TICK-00360,CUST-0122,2026-03-14 18:50,how_to_question,Question about permissions,"Hello again, How do I give a colleague access without making them an admin. This is holding us up.",High,annoyed,3
+TICK-00361,CUST-0087,2026-08-06 13:50,integration_failure,Duplicate records from sync,This is now the third time I am writing. The sync is creating three copies of every record. We are considering cancelling.,Critical,angry,3
+TICK-00362,CUST-0148,2026-06-14 16:50,feature_request,Dark mode request,"This is now the third time I am writing. Any chance of a dark theme, we work late most evenings. We are considering cancelling.",Low,angry,4
+TICK-00363,CUST-0083,2026-04-28 17:50,billing_error,Charged the wrong amount,This is unacceptable. The invoice does not match the plan we are on. We are considering cancelling.,Medium,angry,2
+TICK-00364,CUST-0174,2026-04-27 19:50,login_failure,Sign in loop,"Hello again, It accepts my password then sends me straight back to the login screen. Please could someone look at this.",High,annoyed,3
+TICK-00365,CUST-0099,2026-03-28 22:50,password_reset,Password reset needed,"Hello again, The reset link never arrives in my inbox. Please could someone look at this.",Low,annoyed,4
+TICK-00366,CUST-0033,2026-06-18 15:50,account_lockout,Locked out of our account,"Hello, We have been shut out and cannot get back in. No rush, whenever you get a chance.",Medium,calm,2
+TICK-00367,CUST-0016,2026-06-03 10:50,password_reset,Reset email not arriving,This is unacceptable. I have requested a new password four times and nothing comes through. We expect a reply today.,Low,angry,3
+TICK-00368,CUST-0032,2026-04-28 09:50,how_to_question,How do I do this,We need this dealt with today. I cannot work out where to change the account settings. We expect a reply today.,Low,angry,2
+TICK-00369,CUST-0154,2026-08-11 18:50,api_failure,Authentication failing on API,"Hello again, Our key worked yesterday and is now rejected on every call. Please could someone look at this.",Critical,annoyed,4
+TICK-00370,CUST-0172,2026-08-12 03:50,slow_performance,Search is crawling,This is unacceptable. Running a search takes almost a minute to return anything. We are considering cancelling.,High,angry,1
+TICK-00371,CUST-0050,2026-08-02 11:50,payment_failure,Payments are not going through,"Hello again, Card charges keep failing at the final step. Hoping for a quick reply.",High,annoyed,5
+TICK-00372,CUST-0129,2026-07-23 17:50,slow_performance,Slow since the update,We need this dealt with today. Everything has been sluggish since the change you made last week. We are considering cancelling.,Critical,angry,3
+TICK-00373,CUST-0178,2026-07-28 08:50,dashboard_bug,Dashboard display problem,"Hello again, One of the charts is showing the wrong labels. This is holding us up.",Low,annoyed,1
+TICK-00374,CUST-0185,2026-04-22 19:50,data_export_failure,Export is broken,"Hi there, The CSV download stops halfway and the file is unusable. Thanks for your help.",Medium,calm,1
+TICK-00375,CUST-0085,2026-04-22 22:50,api_failure,API returning errors,"Good morning, Our integration is getting 500 errors on most calls. Many thanks.",High,calm,2
+TICK-00376,CUST-0159,2026-07-23 20:50,slow_performance,The platform is very slow,"Hello again, Pages take around thirty seconds to load. Hoping for a quick reply.",Medium,annoyed,4
+TICK-00377,CUST-0076,2026-03-13 06:50,how_to_question,Where do I find my invoices,We need this dealt with today. I have looked in settings and cannot see a billing history anywhere. We are considering cancelling.,High,angry,7
+TICK-00378,CUST-0050,2026-02-22 08:50,payment_failure,Card declined for everyone,"This is now the third time I am writing. Every transaction today has been rejected, including test cards. We expect a reply today.",High,angry,6
+TICK-00379,CUST-0112,2026-03-07 18:50,slow_performance,Slow since the update,"Hi, Everything has been sluggish since the change you made last week. Please could someone look at this.",Medium,annoyed,4
+TICK-00380,CUST-0144,2026-03-05 15:50,how_to_question,How do I do this,"Hello again, I cannot work out where to change the account settings. Please could someone look at this.",Medium,annoyed,3
+TICK-00381,CUST-0117,2026-05-28 10:50,password_reset,New password not accepted,This is now the third time I am writing. I changed my password and now the new one is rejected. We expect a reply today.,Medium,angry,3
+TICK-00382,CUST-0103,2026-05-07 20:50,login_failure,Team cannot log in,"Hi, Four of my colleagues are getting an invalid credentials message. Please could someone look at this.",Critical,annoyed,3
+TICK-00383,CUST-0185,2026-08-07 21:50,login_failure,Cannot sign in,"Hi there, The login page rejects our details even after a reset. Thanks for your help.",High,calm,2
+TICK-00384,CUST-0044,2026-06-26 17:50,password_reset,New password not accepted,This is now the third time I am writing. I changed my password and now the new one is rejected. We are considering cancelling.,Medium,angry,2
+TICK-00385,CUST-0012,2026-05-11 10:50,feature_request,Request for bulk actions,This is now the third time I am writing. Being able to select several rows at once would save us a lot of time. We are considering cancelling.,Medium,angry,2
+TICK-00386,CUST-0043,2026-04-27 04:50,slow_performance,Slow since the update,This is unacceptable. Everything has been sluggish since the change you made last week. We are considering cancelling.,High,angry,3
+TICK-00387,CUST-0116,2026-05-20 03:50,how_to_question,Where do I find my invoices,"Hi, I have looked in settings and cannot see a billing history anywhere. Hoping for a quick reply.",Low,annoyed,3
+TICK-00388,CUST-0110,2026-06-14 17:50,slow_performance,Search is crawling,"Hello again, Running a search takes almost a minute to return anything. Please could someone look at this.",Low,annoyed,4
+TICK-00389,CUST-0026,2026-05-13 08:50,payment_failure,Checkout is broken,"Hello again, Our customers reach the payment page and then get an error. Hoping for a quick reply.",Critical,annoyed,2
+TICK-00390,CUST-0104,2026-05-29 08:50,password_reset,New password not accepted,"Hi, I changed my password and now the new one is rejected. Hoping for a quick reply.",Critical,annoyed,2
+TICK-00391,CUST-0022,2026-08-04 18:50,api_failure,API returning errors,This is unacceptable. Our integration is getting 500 errors on most calls. Please escalate this immediately.,Medium,angry,3
+TICK-00392,CUST-0176,2026-06-28 13:50,feature_request,Feature suggestion,We need this dealt with today. It would help if we could sort the table by date. We are considering cancelling.,High,angry,3
+TICK-00393,CUST-0101,2026-06-17 12:50,compliance_request,Retention policy question,"Hello again, We need written confirmation of how long you keep our deleted records. Please could someone look at this.",High,annoyed,2
+TICK-00394,CUST-0053,2026-03-27 19:50,data_export_failure,Export is broken,"Hello, The CSV download stops halfway and the file is unusable. No rush, whenever you get a chance.",Critical,calm,2
+TICK-00395,CUST-0111,2026-02-24 12:50,how_to_question,Question about permissions,"Following up on this, How do I give a colleague access without making them an admin. Please could someone look at this.",Low,annoyed,4
+TICK-00396,CUST-0126,2026-05-05 12:50,slow_performance,Search is crawling,We need this dealt with today. Running a search takes almost a minute to return anything. We expect a reply today.,High,angry,3
+TICK-00397,CUST-0047,2026-05-07 09:50,dashboard_bug,Numbers do not match,We need this dealt with today. The total on the dashboard is different to the total in the report. We expect a reply today.,Medium,angry,5
+TICK-00398,CUST-0027,2026-08-05 22:50,slow_performance,Slow since the update,"Hi, Everything has been sluggish since the change you made last week. Hoping for a quick reply.",High,annoyed,5
+TICK-00399,CUST-0030,2026-05-24 08:50,dashboard_bug,Dashboard display problem,This is now the third time I am writing. One of the charts is showing the wrong labels. We expect a reply today.,Medium,angry,3
+TICK-00400,CUST-0190,2026-06-15 07:50,billing_error,Charged the wrong amount,This is unacceptable. The invoice does not match the plan we are on. Please escalate this immediately.,Low,angry,3
+TICK-00401,CUST-0014,2026-07-14 20:50,notification_failure,Alerts stopped,"Hi, We used to get a notification for every new entry and they have gone quiet. Please could someone look at this.",Medium,annoyed,5
+TICK-00402,CUST-0043,2026-06-11 08:50,dashboard_bug,Numbers do not match,We need this dealt with today. The total on the dashboard is different to the total in the report. We expect a reply today.,Low,angry,4
+TICK-00403,CUST-0004,2026-04-11 02:50,billing_error,Charged the wrong amount,"Following up on this, The invoice does not match the plan we are on. Hoping for a quick reply.",Medium,annoyed,4
+TICK-00404,CUST-0084,2026-06-16 04:50,password_reset,New password not accepted,"Hi, I changed my password and now the new one is rejected. Hoping for a quick reply.",Low,annoyed,2
+TICK-00405,CUST-0060,2026-03-21 18:50,slow_performance,Search is crawling,"Hello, Running a search takes almost a minute to return anything. Many thanks.",High,calm,3
+TICK-00406,CUST-0186,2026-02-18 06:50,notification_failure,Alerts stopped,We need this dealt with today. We used to get a notification for every new entry and they have gone quiet. We are considering cancelling.,High,angry,5
+TICK-00407,CUST-0171,2026-03-17 01:50,password_reset,New password not accepted,"Hello again, I changed my password and now the new one is rejected. Please could someone look at this.",High,annoyed,2
+TICK-00408,CUST-0045,2026-04-30 17:50,notification_failure,Alerts stopped,We need this dealt with today. We used to get a notification for every new entry and they have gone quiet. Please escalate this immediately.,High,angry,2
+TICK-00409,CUST-0124,2026-03-20 02:50,payment_failure,Checkout is broken,"Following up on this, Our customers reach the payment page and then get an error. This is holding us up.",Critical,annoyed,4
+TICK-00410,CUST-0187,2026-04-23 07:50,login_failure,Team cannot log in,"Hello again, Four of my colleagues are getting an invalid credentials message. Please could someone look at this.",Critical,annoyed,5
+TICK-00411,CUST-0102,2026-07-03 13:50,password_reset,Password reset needed,This is unacceptable. The reset link never arrives in my inbox. We are considering cancelling.,High,angry,5
+TICK-00412,CUST-0177,2026-08-03 06:50,billing_error,Charged the wrong amount,"Hi, The invoice does not match the plan we are on. Hoping for a quick reply.",Low,annoyed,2
+TICK-00413,CUST-0170,2026-07-18 14:50,how_to_question,Question about permissions,We need this dealt with today. How do I give a colleague access without making them an admin. We expect a reply today.,Medium,angry,5
+TICK-00414,CUST-0098,2026-04-19 11:50,notification_failure,Not receiving emails,"Hi, Alert emails are not arriving in any of our inboxes. This is holding us up.",Medium,annoyed,1
+TICK-00415,CUST-0018,2026-06-12 10:50,feature_request,Feature suggestion,"Hi, It would help if we could sort the table by date. Hoping for a quick reply.",Medium,annoyed,2
+TICK-00416,CUST-0047,2026-07-08 18:50,how_to_question,Question about permissions,We need this dealt with today. How do I give a colleague access without making them an admin. We expect a reply today.,Low,angry,6
+TICK-00417,CUST-0173,2026-07-12 23:50,feature_request,Dark mode request,"Good morning, Any chance of a dark theme, we work late most evenings. Thanks for your help.",Low,calm,2
+TICK-00418,CUST-0087,2026-04-01 00:50,notification_failure,Not receiving emails,This is unacceptable. Alert emails are not arriving in any of our inboxes. We expect a reply today.,Medium,angry,4
+TICK-00419,CUST-0036,2026-03-05 20:50,data_loss,Our records have disappeared,This is unacceptable. About three weeks of entries are missing from our workspace. Please escalate this immediately.,Medium,angry,4
+TICK-00420,CUST-0174,2026-03-05 12:50,slow_performance,The platform is very slow,"Hello again, Pages take around thirty seconds to load. Hoping for a quick reply.",Medium,annoyed,4
+TICK-00421,CUST-0078,2026-05-24 19:50,how_to_question,How do I do this,This is unacceptable. I cannot work out where to change the account settings. We expect a reply today.,Medium,angry,3
+TICK-00422,CUST-0099,2026-06-29 16:50,feature_request,Dark mode request,"Hi, Any chance of a dark theme, we work late most evenings. This is holding us up.",Low,annoyed,5
+TICK-00423,CUST-0154,2026-03-18 21:50,compliance_request,Retention policy question,This is unacceptable. We need written confirmation of how long you keep our deleted records. We expect a reply today.,Medium,angry,5
+TICK-00424,CUST-0095,2026-06-11 05:50,payment_failure,Checkout is broken,"Hi, Our customers reach the payment page and then get an error. This is holding us up.",High,annoyed,4
+TICK-00425,CUST-0118,2026-05-10 07:50,api_failure,API timing out,"Hi, Requests hang for thirty seconds and then fail. This is holding us up.",Critical,annoyed,3
+TICK-00426,CUST-0147,2026-06-23 22:50,slow_performance,Search is crawling,"Hi, Running a search takes almost a minute to return anything. Hoping for a quick reply.",Medium,annoyed,2
+TICK-00427,CUST-0169,2026-04-18 03:50,password_reset,Reset email not arriving,"Good morning, I have requested a new password four times and nothing comes through. No rush, whenever you get a chance.",Low,calm,5
+TICK-00428,CUST-0149,2026-03-17 05:50,how_to_question,How do I do this,We need this dealt with today. I cannot work out where to change the account settings. We are considering cancelling.,High,angry,2
+TICK-00429,CUST-0027,2026-07-26 19:50,dashboard_bug,Numbers do not match,"Following up on this, The total on the dashboard is different to the total in the report. Please could someone look at this.",Medium,annoyed,6
+TICK-00430,CUST-0161,2026-06-17 03:50,dashboard_bug,Numbers do not match,"Good morning, The total on the dashboard is different to the total in the report. Many thanks.",Low,calm,2
+TICK-00431,CUST-0095,2026-03-04 08:50,security_incident,Unrecognised device on our account,"Hi, We can see a session we did not start and cannot end it. Please could someone look at this.",Medium,annoyed,5
+TICK-00432,CUST-0084,2026-03-01 06:50,compliance_request,Data deletion request,This is unacceptable. We need a customer's personal data removed under GDPR. We expect a reply today.,Critical,angry,3
+TICK-00433,CUST-0047,2026-07-16 01:50,system_outage,Everything is down,"Following up on this, None of us can reach the platform at all. Please could someone look at this.",Critical,annoyed,7
+TICK-00434,CUST-0001,2026-03-16 04:50,account_lockout,Account suspended without warning,We need this dealt with today. We logged in this morning and the account is disabled. We expect a reply today.,Low,angry,1
+TICK-00435,CUST-0010,2026-04-14 11:50,login_failure,Team cannot log in,We need this dealt with today. Four of my colleagues are getting an invalid credentials message. We are considering cancelling.,Medium,angry,3
+TICK-00436,CUST-0066,2026-06-10 06:50,dashboard_bug,Chart will not load,"Good morning, One panel stays blank no matter how many times I refresh. No rush, whenever you get a chance.",Medium,calm,2
+TICK-00437,CUST-0098,2026-03-29 04:50,data_loss,Our records have disappeared,"Good morning, About three weeks of entries are missing from our workspace. Many thanks.",Critical,calm,2
+TICK-00438,CUST-0057,2026-07-13 10:50,billing_error,Double charged this month,We need this dealt with today. We have two identical charges on the same date. Please escalate this immediately.,High,angry,4
+TICK-00439,CUST-0047,2026-07-02 11:50,api_failure,API timing out,This is unacceptable. Requests hang for thirty seconds and then fail. We expect a reply today.,Critical,angry,8
+TICK-00440,CUST-0095,2026-03-08 01:50,dashboard_bug,Dashboard display problem,This is unacceptable. One of the charts is showing the wrong labels. Please escalate this immediately.,Low,angry,6
+TICK-00441,CUST-0079,2026-07-26 10:50,billing_error,Charged the wrong amount,"Hello, The invoice does not match the plan we are on. Thanks for your help.",Critical,calm,2
+TICK-00442,CUST-0174,2026-03-22 23:50,password_reset,New password not accepted,"Hi, I changed my password and now the new one is rejected. This is holding us up.",Low,annoyed,5
+TICK-00443,CUST-0196,2026-03-23 18:50,slow_performance,Slow since the update,"Hi there, Everything has been sluggish since the change you made last week. Thanks for your help.",Low,calm,3
+TICK-00444,CUST-0068,2026-08-02 22:50,data_export_failure,Cannot download report,"Good morning, The export button spins for a while and then nothing happens. Many thanks.",High,calm,1
+TICK-00445,CUST-0185,2026-06-23 13:50,login_failure,Cannot sign in,"Following up on this, The login page rejects our details even after a reset. This is holding us up.",Medium,annoyed,3
+TICK-00446,CUST-0138,2026-03-19 21:50,how_to_question,How do I do this,"Hello, I cannot work out where to change the account settings. No rush, whenever you get a chance.",Low,calm,1
+TICK-00447,CUST-0009,2026-03-01 02:50,login_failure,Sign in loop,This is now the third time I am writing. It accepts my password then sends me straight back to the login screen. Please escalate this immediately.,Low,angry,3
+TICK-00448,CUST-0100,2026-05-26 07:50,payment_failure,Card declined for everyone,"Hi, Every transaction today has been rejected, including test cards. This is holding us up.",Critical,annoyed,1
+TICK-00449,CUST-0159,2026-03-21 13:50,login_failure,Sign in loop,"Following up on this, It accepts my password then sends me straight back to the login screen. Please could someone look at this.",Medium,annoyed,5
+TICK-00450,CUST-0010,2026-03-29 00:50,account_lockout,Locked out of our account,"Hi, We have been shut out and cannot get back in. Hoping for a quick reply.",Medium,annoyed,4
+TICK-00451,CUST-0069,2026-07-28 05:50,billing_error,Charged the wrong amount,This is now the third time I am writing. The invoice does not match the plan we are on. We are considering cancelling.,Critical,angry,3
+TICK-00452,CUST-0025,2026-04-10 04:50,dashboard_bug,Chart will not load,This is unacceptable. One panel stays blank no matter how many times I refresh. We expect a reply today.,Medium,angry,3
+TICK-00453,CUST-0011,2026-04-19 23:50,notification_failure,Alerts stopped,This is now the third time I am writing. We used to get a notification for every new entry and they have gone quiet. We are considering cancelling.,Critical,angry,5
+TICK-00454,CUST-0195,2026-07-05 23:50,how_to_question,Question about permissions,We need this dealt with today. How do I give a colleague access without making them an admin. We expect a reply today.,Low,angry,2
+TICK-00455,CUST-0034,2026-02-27 01:50,account_lockout,Locked out of our account,"Good morning, We have been shut out and cannot get back in. No rush, whenever you get a chance.",High,calm,3
+TICK-00456,CUST-0048,2026-02-16 19:50,system_outage,Total outage,"Following up on this, The site has been returning an error page for the last forty minutes. This is holding us up.",Critical,annoyed,2
+TICK-00457,CUST-0164,2026-07-06 09:50,login_failure,Team cannot log in,This is now the third time I am writing. Four of my colleagues are getting an invalid credentials message. We are considering cancelling.,Critical,angry,4
+TICK-00458,CUST-0157,2026-06-15 17:50,account_lockout,Locked out of our account,We need this dealt with today. We have been shut out and cannot get back in. Please escalate this immediately.,Critical,angry,3
+TICK-00459,CUST-0142,2026-05-27 22:50,data_export_failure,Cannot download report,"Hi, The export button spins for a while and then nothing happens. Hoping for a quick reply.",Critical,annoyed,3
+TICK-00460,CUST-0187,2026-06-11 22:50,login_failure,Sign in loop,"Following up on this, It accepts my password then sends me straight back to the login screen. This is holding us up.",Medium,annoyed,6
+TICK-00461,CUST-0006,2026-05-15 16:50,payment_failure,Payments are not going through,"Hi, Card charges keep failing at the final step. Please could someone look at this.",Medium,annoyed,1
+TICK-00462,CUST-0145,2026-05-15 17:50,password_reset,Password reset needed,"Hi, The reset link never arrives in my inbox. This is holding us up.",Medium,annoyed,2
+TICK-00463,CUST-0007,2026-07-07 16:50,data_export_failure,Cannot download report,"Following up on this, The export button spins for a while and then nothing happens. This is holding us up.",Critical,annoyed,2
+TICK-00464,CUST-0022,2026-03-22 21:50,password_reset,New password not accepted,"Hi, I changed my password and now the new one is rejected. This is holding us up.",Low,annoyed,4
+TICK-00465,CUST-0095,2026-04-27 17:50,password_reset,Password reset needed,We need this dealt with today. The reset link never arrives in my inbox. We are considering cancelling.,High,angry,7
+TICK-00466,CUST-0024,2026-03-26 17:50,api_failure,API timing out,This is unacceptable. Requests hang for thirty seconds and then fail. We expect a reply today.,High,angry,3
+TICK-00467,CUST-0099,2026-07-16 06:50,payment_failure,Card declined for everyone,"This is now the third time I am writing. Every transaction today has been rejected, including test cards. We expect a reply today.",High,angry,6
+TICK-00468,CUST-0200,2026-05-30 09:50,how_to_question,Question about permissions,"Hi, How do I give a colleague access without making them an admin. Please could someone look at this.",Low,annoyed,4
+TICK-00469,CUST-0170,2026-05-23 09:50,notification_failure,Alerts stopped,This is now the third time I am writing. We used to get a notification for every new entry and they have gone quiet. We are considering cancelling.,Medium,angry,6
+TICK-00470,CUST-0077,2026-06-22 19:50,slow_performance,The platform is very slow,"Hello again, Pages take around thirty seconds to load. Please could someone look at this.",Medium,annoyed,2
+TICK-00471,CUST-0142,2026-07-14 15:50,dashboard_bug,Numbers do not match,This is now the third time I am writing. The total on the dashboard is different to the total in the report. Please escalate this immediately.,Medium,angry,4
+TICK-00472,CUST-0144,2026-06-19 18:50,notification_failure,Notifications arriving late,This is unacceptable. Alerts turn up about six hours after the thing happened. Please escalate this immediately.,High,angry,4
+TICK-00473,CUST-0139,2026-08-03 23:50,payment_failure,Payments are not going through,"Good morning, Card charges keep failing at the final step. Thanks for your help.",Medium,calm,2
+TICK-00474,CUST-0080,2026-04-15 13:50,security_incident,Suspicious activity on our account,"Hello again, There are logins from a country none of our staff are in. Hoping for a quick reply.",High,annoyed,4
+TICK-00475,CUST-0123,2026-07-14 04:50,notification_failure,Alerts stopped,"Hello, We used to get a notification for every new entry and they have gone quiet. Many thanks.",Medium,calm,2
+TICK-00476,CUST-0075,2026-06-04 18:50,billing_error,Still being billed after cancelling,"Hi there, We cancelled last month and a payment has gone out again. Thanks for your help.",High,calm,1
+TICK-00477,CUST-0023,2026-04-13 00:50,slow_performance,The platform is very slow,"Hi there, Pages take around thirty seconds to load. Many thanks.",Low,calm,1
+TICK-00478,CUST-0032,2026-03-17 13:50,password_reset,New password not accepted,"Following up on this, I changed my password and now the new one is rejected. Please could someone look at this.",Medium,annoyed,3
+TICK-00479,CUST-0175,2026-06-23 06:50,compliance_request,Retention policy question,"Good morning, We need written confirmation of how long you keep our deleted records. Thanks for your help.",High,calm,3
+TICK-00480,CUST-0137,2026-03-30 23:50,password_reset,Reset email not arriving,"Hi there, I have requested a new password four times and nothing comes through. Thanks for your help.",Low,calm,1
+TICK-00481,CUST-0140,2026-04-13 15:50,login_failure,Team cannot log in,This is unacceptable. Four of my colleagues are getting an invalid credentials message. We are considering cancelling.,High,angry,3
+TICK-00482,CUST-0037,2026-05-18 11:50,payment_failure,Checkout is broken,"Following up on this, Our customers reach the payment page and then get an error. Please could someone look at this.",High,annoyed,4
+TICK-00483,CUST-0122,2026-06-08 06:50,integration_failure,Duplicate records from sync,This is unacceptable. The sync is creating three copies of every record. We are considering cancelling.,Critical,angry,4
+TICK-00484,CUST-0038,2026-08-13 18:50,slow_performance,Search is crawling,"Following up on this, Running a search takes almost a minute to return anything. This is holding us up.",Low,annoyed,2
+TICK-00485,CUST-0108,2026-08-10 03:50,dashboard_bug,Dashboard display problem,We need this dealt with today. One of the charts is showing the wrong labels. We expect a reply today.,High,angry,3
+TICK-00486,CUST-0117,2026-03-21 19:50,slow_performance,The platform is very slow,This is now the third time I am writing. Pages take around thirty seconds to load. Please escalate this immediately.,Medium,angry,4
+TICK-00487,CUST-0026,2026-02-26 14:50,password_reset,New password not accepted,"Hello again, I changed my password and now the new one is rejected. Please could someone look at this.",Medium,annoyed,3
+TICK-00488,CUST-0199,2026-03-27 02:50,slow_performance,The platform is very slow,"Hello again, Pages take around thirty seconds to load. Hoping for a quick reply.",Low,annoyed,3
+TICK-00489,CUST-0107,2026-04-28 16:50,dashboard_bug,Dashboard display problem,This is unacceptable. One of the charts is showing the wrong labels. We expect a reply today.,Medium,angry,3
+TICK-00490,CUST-0014,2026-04-28 10:50,how_to_question,Where do I find my invoices,"Hi, I have looked in settings and cannot see a billing history anywhere. Hoping for a quick reply.",Low,annoyed,6
+TICK-00491,CUST-0196,2026-08-06 06:50,notification_failure,Not receiving emails,This is now the third time I am writing. Alert emails are not arriving in any of our inboxes. We are considering cancelling.,Low,angry,4
+TICK-00492,CUST-0188,2026-06-09 21:50,payment_failure,Card declined for everyone,"This is now the third time I am writing. Every transaction today has been rejected, including test cards. Please escalate this immediately.",Critical,angry,5
+TICK-00493,CUST-0149,2026-07-14 08:50,how_to_question,Question about permissions,This is unacceptable. How do I give a colleague access without making them an admin. We are considering cancelling.,Medium,angry,3
+TICK-00494,CUST-0161,2026-08-11 13:50,payment_failure,Payments are not going through,"Hi, Card charges keep failing at the final step. Hoping for a quick reply.",Critical,annoyed,3
+TICK-00495,CUST-0002,2026-02-21 08:50,login_failure,Team cannot log in,This is now the third time I am writing. Four of my colleagues are getting an invalid credentials message. We expect a reply today.,Critical,angry,2
+TICK-00496,CUST-0024,2026-03-31 12:50,api_failure,API timing out,"Hello again, Requests hang for thirty seconds and then fail. This is holding us up.",High,annoyed,4
+TICK-00497,CUST-0185,2026-04-06 07:50,slow_performance,Search is crawling,"Following up on this, Running a search takes almost a minute to return anything. Please could someone look at this.",High,annoyed,4
+TICK-00498,CUST-0166,2026-05-23 07:50,password_reset,Reset email not arriving,"Hi, I have requested a new password four times and nothing comes through. Hoping for a quick reply.",Medium,annoyed,3
+TICK-00499,CUST-0085,2026-06-03 14:50,data_export_failure,Cannot download report,"Hello again, The export button spins for a while and then nothing happens. This is holding us up.",High,annoyed,3
+TICK-00500,CUST-0175,2026-03-24 06:50,feature_request,Request for bulk actions,"Hi, Being able to select several rows at once would save us a lot of time. Hoping for a quick reply.",Medium,annoyed,4
+TICK-00501,CUST-0148,2026-08-01 16:50,password_reset,Reset email not arriving,"Hi, I have requested a new password four times and nothing comes through. This is holding us up.",Medium,annoyed,5
+TICK-00502,CUST-0103,2026-07-04 14:50,payment_failure,Card declined for everyone,"This is unacceptable. Every transaction today has been rejected, including test cards. Please escalate this immediately.",Critical,angry,4
+TICK-00503,CUST-0058,2026-05-18 09:50,login_failure,Cannot sign in,We need this dealt with today. The login page rejects our details even after a reset. We are considering cancelling.,High,angry,4
+TICK-00504,CUST-0036,2026-07-04 06:50,notification_failure,Alerts stopped,"Following up on this, We used to get a notification for every new entry and they have gone quiet. Hoping for a quick reply.",High,annoyed,5
+TICK-00505,CUST-0076,2026-07-19 09:50,dashboard_bug,Chart will not load,This is now the third time I am writing. One panel stays blank no matter how many times I refresh. We expect a reply today.,High,angry,8
+TICK-00506,CUST-0054,2026-06-23 11:50,how_to_question,Where do I find my invoices,This is unacceptable. I have looked in settings and cannot see a billing history anywhere. We expect a reply today.,Medium,angry,3
+TICK-00507,CUST-0200,2026-06-25 18:50,billing_error,Still being billed after cancelling,"Following up on this, We cancelled last month and a payment has gone out again. Please could someone look at this.",Low,annoyed,5
+TICK-00508,CUST-0141,2026-03-17 09:50,payment_failure,Card declined for everyone,"Hi there, Every transaction today has been rejected, including test cards. Thanks for your help.",High,calm,1
+TICK-00509,CUST-0127,2026-07-27 21:50,slow_performance,The platform is very slow,"Hello, Pages take around thirty seconds to load. Thanks for your help.",Low,calm,3
+TICK-00510,CUST-0188,2026-05-08 17:50,how_to_question,Question about permissions,We need this dealt with today. How do I give a colleague access without making them an admin. Please escalate this immediately.,Medium,angry,6
+TICK-00511,CUST-0043,2026-06-15 10:50,login_failure,Sign in loop,"Hello again, It accepts my password then sends me straight back to the login screen. Please could someone look at this.",Critical,annoyed,5
+TICK-00512,CUST-0029,2026-06-26 00:50,compliance_request,Retention policy question,"Following up on this, We need written confirmation of how long you keep our deleted records. Please could someone look at this.",Medium,annoyed,1
+TICK-00513,CUST-0091,2026-05-14 21:50,account_lockout,Too many attempts message,This is unacceptable. We are stuck on a lockout screen and the timer never clears. We are considering cancelling.,Medium,angry,3
+TICK-00514,CUST-0179,2026-03-14 16:50,password_reset,New password not accepted,"Hi, I changed my password and now the new one is rejected. Hoping for a quick reply.",Medium,annoyed,2
+TICK-00515,CUST-0049,2026-04-18 14:50,data_loss,Missing data after sync,"Hello again, Half our project list vanished after the sync ran last night. This is holding us up.",High,annoyed,2
+TICK-00516,CUST-0078,2026-07-03 21:50,slow_performance,The platform is very slow,"Hello again, Pages take around thirty seconds to load. This is holding us up.",Low,annoyed,4
+TICK-00517,CUST-0197,2026-07-18 11:50,integration_failure,Integration stopped syncing,This is unacceptable. Nothing has come through from the connected tool since Tuesday. We expect a reply today.,Critical,angry,3
+TICK-00518,CUST-0067,2026-06-07 22:50,password_reset,Reset email not arriving,"Good morning, I have requested a new password four times and nothing comes through. Thanks for your help.",Low,calm,2
+TICK-00519,CUST-0112,2026-04-16 03:50,payment_failure,Card declined for everyone,"This is unacceptable. Every transaction today has been rejected, including test cards. Please escalate this immediately.",Critical,angry,5
+TICK-00520,CUST-0078,2026-04-03 00:50,feature_request,Dark mode request,"Hello again, Any chance of a dark theme, we work late most evenings. Please could someone look at this.",Low,annoyed,5
+TICK-00521,CUST-0070,2026-04-23 22:50,how_to_question,Where do I find my invoices,"Hi there, I have looked in settings and cannot see a billing history anywhere. Many thanks.",Medium,calm,1
+TICK-00522,CUST-0127,2026-03-02 12:50,login_failure,Sign in loop,We need this dealt with today. It accepts my password then sends me straight back to the login screen. We are considering cancelling.,Critical,angry,4
+TICK-00523,CUST-0007,2026-05-26 20:50,how_to_question,Question about permissions,"Hi there, How do I give a colleague access without making them an admin. Thanks for your help.",Low,calm,3
+TICK-00524,CUST-0037,2026-03-04 01:50,how_to_question,Where do I find my invoices,"Hi, I have looked in settings and cannot see a billing history anywhere. Hoping for a quick reply.",Low,annoyed,5
+TICK-00525,CUST-0119,2026-05-03 16:50,slow_performance,Slow since the update,"Hi there, Everything has been sluggish since the change you made last week. Thanks for your help.",Low,calm,2
+TICK-00526,CUST-0071,2026-02-16 19:50,security_incident,Suspicious activity on our account,This is unacceptable. There are logins from a country none of our staff are in. We expect a reply today.,Medium,angry,4
+TICK-00527,CUST-0078,2026-02-22 23:50,password_reset,New password not accepted,We need this dealt with today. I changed my password and now the new one is rejected. We are considering cancelling.,Medium,angry,6
+TICK-00528,CUST-0188,2026-05-26 06:50,login_failure,Sign in loop,"Hello again, It accepts my password then sends me straight back to the login screen. Please could someone look at this.",Low,annoyed,7
+TICK-00529,CUST-0019,2026-03-14 14:50,slow_performance,Search is crawling,"Hi, Running a search takes almost a minute to return anything. This is holding us up.",Medium,annoyed,1
+TICK-00530,CUST-0112,2026-06-06 13:50,how_to_question,Where do I find my invoices,"Following up on this, I have looked in settings and cannot see a billing history anywhere. Please could someone look at this.",Low,annoyed,6
+TICK-00531,CUST-0187,2026-06-28 23:50,dashboard_bug,Chart will not load,This is unacceptable. One panel stays blank no matter how many times I refresh. Please escalate this immediately.,Medium,angry,7
+TICK-00532,CUST-0031,2026-04-14 21:50,slow_performance,Search is crawling,"Hello again, Running a search takes almost a minute to return anything. This is holding us up.",Medium,annoyed,2
+TICK-00533,CUST-0179,2026-04-21 15:50,password_reset,New password not accepted,This is now the third time I am writing. I changed my password and now the new one is rejected. We are considering cancelling.,Low,angry,3
+TICK-00534,CUST-0016,2026-07-21 21:50,data_export_failure,Corrupted export file,This is now the third time I am writing. The file downloads but will not open in Excel. Please escalate this immediately.,Low,angry,4
+TICK-00535,CUST-0058,2026-08-06 01:50,dashboard_bug,Dashboard display problem,"Hi, One of the charts is showing the wrong labels. Please could someone look at this.",Low,annoyed,5
+TICK-00536,CUST-0110,2026-04-19 22:50,integration_failure,Connection keeps dropping,"Hello again, The integration disconnects on its own every few hours. Please could someone look at this.",Medium,annoyed,5
+TICK-00537,CUST-0185,2026-04-17 16:50,account_lockout,Account suspended without warning,"Hello, We logged in this morning and the account is disabled. No rush, whenever you get a chance.",Low,calm,5
+TICK-00538,CUST-0140,2026-05-03 17:50,data_export_failure,Export is broken,This is unacceptable. The CSV download stops halfway and the file is unusable. We expect a reply today.,High,angry,4
+TICK-00539,CUST-0181,2026-06-04 02:50,password_reset,New password not accepted,"Hello, I changed my password and now the new one is rejected. No rush, whenever you get a chance.",Low,calm,3
+TICK-00540,CUST-0009,2026-04-05 23:50,account_lockout,Locked out of our account,"Hello again, We have been shut out and cannot get back in. This is holding us up.",Medium,annoyed,4
+TICK-00541,CUST-0009,2026-06-02 03:50,integration_failure,Connection keeps dropping,"Hi there, The integration disconnects on its own every few hours. Many thanks.",High,calm,5
+TICK-00542,CUST-0185,2026-02-18 22:50,password_reset,New password not accepted,We need this dealt with today. I changed my password and now the new one is rejected. We expect a reply today.,Medium,angry,6
+TICK-00543,CUST-0175,2026-08-01 20:50,password_reset,Reset email not arriving,"Following up on this, I have requested a new password four times and nothing comes through. Hoping for a quick reply.",Low,annoyed,5
+TICK-00544,CUST-0083,2026-03-04 03:50,how_to_question,Question about permissions,"Hi, How do I give a colleague access without making them an admin. Hoping for a quick reply.",Medium,annoyed,3
+TICK-00545,CUST-0067,2026-07-29 02:50,feature_request,Feature suggestion,This is now the third time I am writing. It would help if we could sort the table by date. We expect a reply today.,High,angry,3
+TICK-00546,CUST-0016,2026-05-26 22:50,password_reset,New password not accepted,We need this dealt with today. I changed my password and now the new one is rejected. We are considering cancelling.,High,angry,5
+TICK-00547,CUST-0175,2026-03-28 17:50,slow_performance,Slow since the update,This is unacceptable. Everything has been sluggish since the change you made last week. Please escalate this immediately.,High,angry,6
+TICK-00548,CUST-0156,2026-06-02 16:50,data_export_failure,Corrupted export file,"Following up on this, The file downloads but will not open in Excel. Hoping for a quick reply.",Medium,annoyed,1
+TICK-00549,CUST-0058,2026-07-28 11:50,integration_failure,Duplicate records from sync,We need this dealt with today. The sync is creating three copies of every record. We are considering cancelling.,Critical,angry,6
+TICK-00550,CUST-0093,2026-04-13 12:50,data_export_failure,Cannot download report,We need this dealt with today. The export button spins for a while and then nothing happens. Please escalate this immediately.,Medium,angry,7
+TICK-00551,CUST-0033,2026-05-18 04:50,password_reset,New password not accepted,This is now the third time I am writing. I changed my password and now the new one is rejected. We expect a reply today.,Low,angry,3
+TICK-00552,CUST-0198,2026-03-07 15:50,login_failure,Sign in loop,We need this dealt with today. It accepts my password then sends me straight back to the login screen. We expect a reply today.,Medium,angry,4
+TICK-00553,CUST-0100,2026-04-22 01:50,password_reset,New password not accepted,"Hello again, I changed my password and now the new one is rejected. Please could someone look at this.",Low,annoyed,2
+TICK-00554,CUST-0162,2026-02-22 04:50,slow_performance,The platform is very slow,"Good morning, Pages take around thirty seconds to load. Thanks for your help.",Medium,calm,2
+TICK-00555,CUST-0151,2026-02-16 18:50,account_lockout,Locked out of our account,"Following up on this, We have been shut out and cannot get back in. This is holding us up.",Medium,annoyed,4
+TICK-00556,CUST-0188,2026-07-05 13:50,data_export_failure,Cannot download report,This is unacceptable. The export button spins for a while and then nothing happens. We are considering cancelling.,High,angry,8
+TICK-00557,CUST-0037,2026-06-09 10:50,payment_failure,Payments are not going through,We need this dealt with today. Card charges keep failing at the final step. We expect a reply today.,Critical,angry,6
+TICK-00558,CUST-0117,2026-05-17 06:50,account_lockout,Account suspended without warning,This is unacceptable. We logged in this morning and the account is disabled. Please escalate this immediately.,Low,angry,5
+TICK-00559,CUST-0130,2026-04-29 14:50,api_failure,API returning errors,We need this dealt with today. Our integration is getting 500 errors on most calls. We expect a reply today.,High,angry,3
+TICK-00560,CUST-0063,2026-03-02 15:50,login_failure,Sign in loop,This is unacceptable. It accepts my password then sends me straight back to the login screen. We are considering cancelling.,Medium,angry,3
+TICK-00561,CUST-0143,2026-05-26 22:50,notification_failure,Notifications arriving late,"Hi there, Alerts turn up about six hours after the thing happened. Many thanks.",Medium,calm,6
+TICK-00562,CUST-0154,2026-04-25 23:50,billing_error,Double charged this month,"Hi there, We have two identical charges on the same date. No rush, whenever you get a chance.",Medium,calm,6
+TICK-00563,CUST-0126,2026-04-26 17:50,notification_failure,Not receiving emails,"Hi there, Alert emails are not arriving in any of our inboxes. Thanks for your help.",Medium,calm,4
+TICK-00564,CUST-0163,2026-07-08 09:50,how_to_question,How do I do this,"Following up on this, I cannot work out where to change the account settings. Please could someone look at this.",Low,annoyed,3
+TICK-00565,CUST-0181,2026-06-08 07:50,api_failure,Authentication failing on API,This is now the third time I am writing. Our key worked yesterday and is now rejected on every call. Please escalate this immediately.,Critical,angry,4
+TICK-00566,CUST-0188,2026-04-01 05:50,account_lockout,Too many attempts message,This is now the third time I am writing. We are stuck on a lockout screen and the timer never clears. We expect a reply today.,Low,angry,9
+TICK-00567,CUST-0097,2026-03-26 06:50,dashboard_bug,Dashboard display problem,"Hi, One of the charts is showing the wrong labels. This is holding us up.",Medium,annoyed,2
+TICK-00568,CUST-0080,2026-03-07 03:50,feature_request,Feature suggestion,This is now the third time I am writing. It would help if we could sort the table by date. Please escalate this immediately.,Medium,angry,5
+TICK-00569,CUST-0130,2026-03-13 16:50,account_lockout,Too many attempts message,We need this dealt with today. We are stuck on a lockout screen and the timer never clears. We are considering cancelling.,Medium,angry,4
+TICK-00570,CUST-0022,2026-03-06 09:50,payment_failure,Payments are not going through,This is now the third time I am writing. Card charges keep failing at the final step. Please escalate this immediately.,High,angry,5
+TICK-00571,CUST-0010,2026-02-25 10:50,api_failure,API returning errors,"Following up on this, Our integration is getting 500 errors on most calls. Hoping for a quick reply.",Critical,annoyed,5
+TICK-00572,CUST-0020,2026-07-07 05:50,billing_error,Charged the wrong amount,"Hello, The invoice does not match the plan we are on. No rush, whenever you get a chance.",Medium,calm,2
+TICK-00573,CUST-0112,2026-06-19 09:50,password_reset,New password not accepted,This is unacceptable. I changed my password and now the new one is rejected. We expect a reply today.,Medium,angry,7
+TICK-00574,CUST-0119,2026-03-06 07:50,data_export_failure,Export is broken,This is now the third time I am writing. The CSV download stops halfway and the file is unusable. We expect a reply today.,Medium,angry,3
+TICK-00575,CUST-0118,2026-04-19 07:50,api_failure,Authentication failing on API,We need this dealt with today. Our key worked yesterday and is now rejected on every call. We are considering cancelling.,High,angry,4
+TICK-00576,CUST-0165,2026-07-11 02:50,dashboard_bug,Numbers do not match,"Hello, The total on the dashboard is different to the total in the report. No rush, whenever you get a chance.",Low,calm,2
+TICK-00577,CUST-0158,2026-06-26 00:50,dashboard_bug,Dashboard display problem,"Hi, One of the charts is showing the wrong labels. This is holding us up.",Low,annoyed,3
+TICK-00578,CUST-0171,2026-03-06 02:50,slow_performance,Search is crawling,This is unacceptable. Running a search takes almost a minute to return anything. We expect a reply today.,Medium,angry,3
+TICK-00579,CUST-0183,2026-03-19 10:50,login_failure,Sign in loop,"Following up on this, It accepts my password then sends me straight back to the login screen. Please could someone look at this.",Medium,annoyed,4
+TICK-00580,CUST-0192,2026-04-11 03:50,password_reset,Reset email not arriving,"Hello again, I have requested a new password four times and nothing comes through. Please could someone look at this.",High,annoyed,2
+TICK-00581,CUST-0181,2026-03-12 21:50,account_lockout,Too many attempts message,This is unacceptable. We are stuck on a lockout screen and the timer never clears. We expect a reply today.,Medium,angry,5
+TICK-00582,CUST-0181,2026-07-24 18:50,feature_request,Feature suggestion,"Hi, It would help if we could sort the table by date. Hoping for a quick reply.",Low,annoyed,6
+TICK-00583,CUST-0082,2026-03-30 10:50,password_reset,Reset email not arriving,We need this dealt with today. I have requested a new password four times and nothing comes through. We are considering cancelling.,Low,angry,3
+TICK-00584,CUST-0114,2026-05-13 14:50,compliance_request,Retention policy question,This is now the third time I am writing. We need written confirmation of how long you keep our deleted records. Please escalate this immediately.,Critical,angry,3
+TICK-00585,CUST-0023,2026-04-09 04:50,login_failure,Cannot sign in,This is now the third time I am writing. The login page rejects our details even after a reset. We expect a reply today.,Medium,angry,2
+TICK-00586,CUST-0080,2026-05-13 22:50,compliance_request,Subject access request,"Hi, A customer has asked for a copy of everything you hold on them. Please could someone look at this.",Critical,annoyed,6
+TICK-00587,CUST-0116,2026-06-04 03:50,how_to_question,Where do I find my invoices,"Hello again, I have looked in settings and cannot see a billing history anywhere. Please could someone look at this.",Low,annoyed,4
+TICK-00588,CUST-0067,2026-03-08 13:50,data_export_failure,Export is broken,This is unacceptable. The CSV download stops halfway and the file is unusable. We are considering cancelling.,Critical,angry,4
+TICK-00589,CUST-0003,2026-06-20 11:50,login_failure,Cannot sign in,"Hello again, The login page rejects our details even after a reset. Hoping for a quick reply.",Medium,annoyed,2
+TICK-00590,CUST-0063,2026-02-22 23:50,account_lockout,Account suspended without warning,"Hi, We logged in this morning and the account is disabled. Please could someone look at this.",Medium,annoyed,4
+TICK-00591,CUST-0179,2026-07-27 16:50,password_reset,Password reset needed,We need this dealt with today. The reset link never arrives in my inbox. Please escalate this immediately.,Low,angry,4
+TICK-00592,CUST-0045,2026-04-09 07:50,account_lockout,Too many attempts message,"Hi, We are stuck on a lockout screen and the timer never clears. Please could someone look at this.",Medium,annoyed,3
+TICK-00593,CUST-0181,2026-03-23 02:50,account_lockout,Account suspended without warning,"Hello again, We logged in this morning and the account is disabled. Hoping for a quick reply.",Critical,annoyed,7
+TICK-00594,CUST-0088,2026-02-25 09:50,slow_performance,Slow since the update,This is now the third time I am writing. Everything has been sluggish since the change you made last week. We are considering cancelling.,Medium,angry,3
+TICK-00595,CUST-0124,2026-07-17 20:50,data_loss,Deleted records we did not delete,"Hi, A folder of client files is gone and nobody on our side removed it. Hoping for a quick reply.",Critical,annoyed,5
+TICK-00596,CUST-0168,2026-03-14 08:50,password_reset,New password not accepted,"Following up on this, I changed my password and now the new one is rejected. Please could someone look at this.",Medium,annoyed,2
+TICK-00597,CUST-0137,2026-02-20 06:50,feature_request,Dark mode request,"Hi there, Any chance of a dark theme, we work late most evenings. Thanks for your help.",High,calm,2
+TICK-00598,CUST-0013,2026-06-15 00:50,password_reset,Password reset needed,"Following up on this, The reset link never arrives in my inbox. Hoping for a quick reply.",Medium,annoyed,3
+TICK-00599,CUST-0190,2026-05-13 06:50,billing_error,Still being billed after cancelling,This is unacceptable. We cancelled last month and a payment has gone out again. Please escalate this immediately.,Medium,angry,4
+TICK-00600,CUST-0186,2026-05-03 23:50,notification_failure,Not receiving emails,"Hello again, Alert emails are not arriving in any of our inboxes. This is holding us up.",Medium,annoyed,6
+TICK-00601,CUST-0030,2026-04-09 07:50,how_to_question,How do I do this,We need this dealt with today. I cannot work out where to change the account settings. We are considering cancelling.,High,angry,4
+TICK-00602,CUST-0103,2026-07-01 17:50,password_reset,Password reset needed,"Hello again, The reset link never arrives in my inbox. This is holding us up.",Low,annoyed,5
+TICK-00603,CUST-0187,2026-08-10 18:50,dashboard_bug,Chart will not load,This is unacceptable. One panel stays blank no matter how many times I refresh. Please escalate this immediately.,High,angry,8
+TICK-00604,CUST-0173,2026-04-19 04:50,billing_error,Still being billed after cancelling,This is unacceptable. We cancelled last month and a payment has gone out again. We expect a reply today.,High,angry,3
+TICK-00605,CUST-0091,2026-02-28 12:50,integration_failure,Connection keeps dropping,We need this dealt with today. The integration disconnects on its own every few hours. We expect a reply today.,High,angry,4
+TICK-00606,CUST-0147,2026-04-16 21:50,account_lockout,Account suspended without warning,We need this dealt with today. We logged in this morning and the account is disabled. Please escalate this immediately.,High,angry,3
+TICK-00607,CUST-0058,2026-03-31 11:50,how_to_question,Question about permissions,This is now the third time I am writing. How do I give a colleague access without making them an admin. We are considering cancelling.,Low,angry,7
+TICK-00608,CUST-0108,2026-03-28 12:50,slow_performance,Slow since the update,This is now the third time I am writing. Everything has been sluggish since the change you made last week. We expect a reply today.,Critical,angry,4
+TICK-00609,CUST-0168,2026-05-25 08:50,billing_error,Double charged this month,"Hello again, We have two identical charges on the same date. This is holding us up.",Medium,annoyed,3
+TICK-00610,CUST-0176,2026-04-23 23:50,notification_failure,Notifications arriving late,We need this dealt with today. Alerts turn up about six hours after the thing happened. We are considering cancelling.,Medium,angry,4
+TICK-00611,CUST-0099,2026-08-06 22:50,payment_failure,Payments are not going through,"Following up on this, Card charges keep failing at the final step. This is holding us up.",High,annoyed,7
+TICK-00612,CUST-0131,2026-06-18 08:50,notification_failure,Notifications arriving late,This is now the third time I am writing. Alerts turn up about six hours after the thing happened. We expect a reply today.,Medium,angry,3
+TICK-00613,CUST-0193,2026-05-13 01:50,account_lockout,Account suspended without warning,"Good morning, We logged in this morning and the account is disabled. No rush, whenever you get a chance.",Low,calm,2
+TICK-00614,CUST-0184,2026-07-02 03:50,login_failure,Sign in loop,"Hello, It accepts my password then sends me straight back to the login screen. Many thanks.",Medium,calm,1
+TICK-00615,CUST-0094,2026-06-22 20:50,dashboard_bug,Dashboard display problem,This is unacceptable. One of the charts is showing the wrong labels. We expect a reply today.,Critical,angry,2
+TICK-00616,CUST-0124,2026-06-05 13:50,login_failure,Sign in loop,"Hello, It accepts my password then sends me straight back to the login screen. No rush, whenever you get a chance.",High,calm,6
+TICK-00617,CUST-0004,2026-08-03 19:50,how_to_question,Where do I find my invoices,This is now the third time I am writing. I have looked in settings and cannot see a billing history anywhere. Please escalate this immediately.,Medium,angry,5
+TICK-00618,CUST-0146,2026-03-12 08:50,slow_performance,The platform is very slow,This is now the third time I am writing. Pages take around thirty seconds to load. We expect a reply today.,High,angry,3
+TICK-00619,CUST-0078,2026-04-28 04:50,compliance_request,Data deletion request,We need this dealt with today. We need a customer's personal data removed under GDPR. We are considering cancelling.,High,angry,7
+TICK-00620,CUST-0111,2026-03-12 07:50,how_to_question,How do I do this,We need this dealt with today. I cannot work out where to change the account settings. We expect a reply today.,Low,angry,5
+TICK-00621,CUST-0166,2026-03-17 20:50,account_lockout,Too many attempts message,"Hello again, We are stuck on a lockout screen and the timer never clears. This is holding us up.",Critical,annoyed,4
+TICK-00622,CUST-0195,2026-06-09 23:50,slow_performance,Slow since the update,We need this dealt with today. Everything has been sluggish since the change you made last week. We are considering cancelling.,High,angry,3
+TICK-00623,CUST-0054,2026-06-22 09:50,integration_failure,Integration stopped syncing,"Hi, Nothing has come through from the connected tool since Tuesday. This is holding us up.",Medium,annoyed,4
+TICK-00624,CUST-0078,2026-03-22 20:50,billing_error,Double charged this month,This is unacceptable. We have two identical charges on the same date. Please escalate this immediately.,Medium,angry,8
+TICK-00625,CUST-0005,2026-04-06 12:50,how_to_question,How do I do this,"Hello again, I cannot work out where to change the account settings. Hoping for a quick reply.",Medium,annoyed,2
+TICK-00626,CUST-0063,2026-03-01 19:50,login_failure,Team cannot log in,This is unacceptable. Four of my colleagues are getting an invalid credentials message. We expect a reply today.,Critical,angry,5
+TICK-00627,CUST-0073,2026-05-05 00:50,payment_failure,Checkout is broken,This is now the third time I am writing. Our customers reach the payment page and then get an error. We are considering cancelling.,Critical,angry,5
+TICK-00628,CUST-0177,2026-04-13 17:50,security_incident,Unrecognised device on our account,"Good morning, We can see a session we did not start and cannot end it. No rush, whenever you get a chance.",Critical,calm,3
+TICK-00629,CUST-0006,2026-02-21 04:50,login_failure,Cannot sign in,"Following up on this, The login page rejects our details even after a reset. Please could someone look at this.",Medium,annoyed,2
+TICK-00630,CUST-0018,2026-07-16 02:50,feature_request,Dark mode request,"This is now the third time I am writing. Any chance of a dark theme, we work late most evenings. We expect a reply today.",Low,angry,3
+TICK-00631,CUST-0190,2026-03-20 10:50,login_failure,Sign in loop,"Following up on this, It accepts my password then sends me straight back to the login screen. This is holding us up.",Medium,annoyed,5
+TICK-00632,CUST-0150,2026-06-23 22:50,dashboard_bug,Chart will not load,This is unacceptable. One panel stays blank no matter how many times I refresh. We expect a reply today.,Low,angry,3
+TICK-00633,CUST-0018,2026-05-27 12:50,api_failure,API returning errors,"Hello again, Our integration is getting 500 errors on most calls. Hoping for a quick reply.",Critical,annoyed,4
+TICK-00634,CUST-0054,2026-06-16 06:50,billing_error,Still being billed after cancelling,"Hi, We cancelled last month and a payment has gone out again. Please could someone look at this.",High,annoyed,5
+TICK-00635,CUST-0049,2026-08-12 13:50,data_export_failure,Export is broken,This is unacceptable. The CSV download stops halfway and the file is unusable. We are considering cancelling.,High,angry,3
+TICK-00636,CUST-0077,2026-04-26 16:50,data_export_failure,Cannot download report,This is now the third time I am writing. The export button spins for a while and then nothing happens. Please escalate this immediately.,High,angry,3
+TICK-00637,CUST-0054,2026-06-16 10:50,how_to_question,How do I do this,"Hello again, I cannot work out where to change the account settings. Please could someone look at this.",Low,annoyed,6
+TICK-00638,CUST-0104,2026-08-03 08:50,notification_failure,Alerts stopped,"Hi, We used to get a notification for every new entry and they have gone quiet. Hoping for a quick reply.",High,annoyed,3
+TICK-00639,CUST-0024,2026-08-14 19:50,slow_performance,Slow since the update,This is unacceptable. Everything has been sluggish since the change you made last week. We are considering cancelling.,Medium,angry,5
+TICK-00640,CUST-0147,2026-07-13 16:50,login_failure,Cannot sign in,"Following up on this, The login page rejects our details even after a reset. Please could someone look at this.",Medium,annoyed,4
+TICK-00641,CUST-0172,2026-06-26 11:50,notification_failure,Alerts stopped,This is unacceptable. We used to get a notification for every new entry and they have gone quiet. Please escalate this immediately.,Medium,angry,2
+TICK-00642,CUST-0061,2026-03-29 13:50,login_failure,Cannot sign in,We need this dealt with today. The login page rejects our details even after a reset. We expect a reply today.,High,angry,5
+TICK-00643,CUST-0066,2026-05-17 07:50,api_failure,Authentication failing on API,This is unacceptable. Our key worked yesterday and is now rejected on every call. We expect a reply today.,Critical,angry,3
+TICK-00644,CUST-0183,2026-04-01 08:50,account_lockout,Locked out of our account,"Following up on this, We have been shut out and cannot get back in. Please could someone look at this.",High,annoyed,5
+TICK-00645,CUST-0013,2026-06-21 20:50,how_to_question,Where do I find my invoices,"Hi, I have looked in settings and cannot see a billing history anywhere. Hoping for a quick reply.",Low,annoyed,4
+TICK-00646,CUST-0109,2026-03-24 06:50,how_to_question,Question about permissions,This is unacceptable. How do I give a colleague access without making them an admin. We expect a reply today.,Low,angry,2
+TICK-00647,CUST-0153,2026-03-25 00:50,password_reset,Password reset needed,"Hello again, The reset link never arrives in my inbox. Please could someone look at this.",Medium,annoyed,4
+TICK-00648,CUST-0186,2026-08-11 08:50,feature_request,Dark mode request,"Hello again, Any chance of a dark theme, we work late most evenings. Hoping for a quick reply.",Low,annoyed,7
+TICK-00649,CUST-0032,2026-08-01 01:50,integration_failure,Duplicate records from sync,"Hello again, The sync is creating three copies of every record. Hoping for a quick reply.",High,annoyed,4
+TICK-00650,CUST-0027,2026-03-20 10:50,payment_failure,Payments are not going through,We need this dealt with today. Card charges keep failing at the final step. Please escalate this immediately.,High,angry,7
+TICK-00651,CUST-0092,2026-05-16 07:50,payment_failure,Payments are not going through,We need this dealt with today. Card charges keep failing at the final step. Please escalate this immediately.,High,angry,3
+TICK-00652,CUST-0165,2026-03-24 01:50,password_reset,Reset email not arriving,"Following up on this, I have requested a new password four times and nothing comes through. This is holding us up.",Low,annoyed,3
+TICK-00653,CUST-0103,2026-06-14 08:50,how_to_question,How do I do this,This is now the third time I am writing. I cannot work out where to change the account settings. We expect a reply today.,Low,angry,6
+TICK-00654,CUST-0065,2026-04-26 06:50,billing_error,Double charged this month,"Hello again, We have two identical charges on the same date. Please could someone look at this.",Medium,annoyed,3
+TICK-00655,CUST-0200,2026-04-28 23:50,how_to_question,Where do I find my invoices,We need this dealt with today. I have looked in settings and cannot see a billing history anywhere. We are considering cancelling.,High,angry,6
+TICK-00656,CUST-0052,2026-04-26 20:50,account_lockout,Account suspended without warning,"Hello, We logged in this morning and the account is disabled. Thanks for your help.",Medium,calm,1
+TICK-00657,CUST-0051,2026-04-20 22:50,payment_failure,Checkout is broken,This is now the third time I am writing. Our customers reach the payment page and then get an error. We expect a reply today.,High,angry,6
+TICK-00658,CUST-0083,2026-02-27 06:50,password_reset,New password not accepted,"Hi there, I changed my password and now the new one is rejected. Thanks for your help.",Low,calm,4
+TICK-00659,CUST-0006,2026-06-12 12:50,how_to_question,Where do I find my invoices,"Hi, I have looked in settings and cannot see a billing history anywhere. Hoping for a quick reply.",Low,annoyed,3
+TICK-00660,CUST-0068,2026-06-30 03:50,slow_performance,Search is crawling,This is now the third time I am writing. Running a search takes almost a minute to return anything. We expect a reply today.,High,angry,2
+TICK-00661,CUST-0155,2026-07-27 21:50,data_export_failure,Export is broken,"Hello again, The CSV download stops halfway and the file is unusable. Hoping for a quick reply.",Medium,annoyed,2
+TICK-00662,CUST-0089,2026-05-21 00:50,slow_performance,Slow since the update,"Hi there, Everything has been sluggish since the change you made last week. Many thanks.",Medium,calm,3
+TICK-00663,CUST-0078,2026-04-29 16:50,api_failure,API returning errors,We need this dealt with today. Our integration is getting 500 errors on most calls. We expect a reply today.,High,angry,9
+TICK-00664,CUST-0188,2026-02-27 02:50,login_failure,Cannot sign in,This is now the third time I am writing. The login page rejects our details even after a reset. We expect a reply today.,High,angry,10
+TICK-00665,CUST-0088,2026-06-13 01:50,login_failure,Sign in loop,"Hello again, It accepts my password then sends me straight back to the login screen. Please could someone look at this.",Medium,annoyed,4
+TICK-00666,CUST-0143,2026-04-25 11:50,compliance_request,Retention policy question,"Hi, We need written confirmation of how long you keep our deleted records. Please could someone look at this.",Medium,annoyed,7
+TICK-00667,CUST-0025,2026-06-25 05:50,how_to_question,Where do I find my invoices,This is now the third time I am writing. I have looked in settings and cannot see a billing history anywhere. We expect a reply today.,Medium,angry,4
+TICK-00668,CUST-0075,2026-06-23 01:50,payment_failure,Checkout is broken,"Hi, Our customers reach the payment page and then get an error. This is holding us up.",Critical,annoyed,2
+TICK-00669,CUST-0064,2026-03-04 01:50,billing_error,Charged the wrong amount,This is unacceptable. The invoice does not match the plan we are on. We are considering cancelling.,Medium,angry,4
+TICK-00670,CUST-0073,2026-04-08 08:50,api_failure,API timing out,"Hello again, Requests hang for thirty seconds and then fail. Hoping for a quick reply.",High,annoyed,6
+TICK-00671,CUST-0198,2026-06-16 20:50,dashboard_bug,Numbers do not match,We need this dealt with today. The total on the dashboard is different to the total in the report. We expect a reply today.,Medium,angry,5
+TICK-00672,CUST-0176,2026-06-02 19:50,how_to_question,Where do I find my invoices,We need this dealt with today. I have looked in settings and cannot see a billing history anywhere. We are considering cancelling.,Medium,angry,5
+TICK-00673,CUST-0157,2026-04-24 03:50,security_incident,Possible breach,"Hi, Someone has changed our admin email address and it was not us. Please could someone look at this.",Critical,annoyed,4
+TICK-00674,CUST-0147,2026-03-28 08:50,dashboard_bug,Chart will not load,"Following up on this, One panel stays blank no matter how many times I refresh. Hoping for a quick reply.",Medium,annoyed,5
+TICK-00675,CUST-0178,2026-07-06 23:50,billing_error,Charged the wrong amount,"Hi, The invoice does not match the plan we are on. This is holding us up.",Medium,annoyed,2
+TICK-00676,CUST-0146,2026-02-26 01:50,account_lockout,Locked out of our account,"Hi, We have been shut out and cannot get back in. This is holding us up.",Medium,annoyed,4
+TICK-00677,CUST-0018,2026-06-11 12:50,account_lockout,Locked out of our account,"Following up on this, We have been shut out and cannot get back in. This is holding us up.",Critical,annoyed,5
+TICK-00678,CUST-0165,2026-04-22 09:50,compliance_request,Data deletion request,We need this dealt with today. We need a customer's personal data removed under GDPR. We are considering cancelling.,High,angry,4
+TICK-00679,CUST-0029,2026-04-10 14:50,dashboard_bug,Dashboard display problem,"Following up on this, One of the charts is showing the wrong labels. Hoping for a quick reply.",Low,annoyed,2
+TICK-00680,CUST-0031,2026-04-05 06:50,how_to_question,How do I do this,"Good morning, I cannot work out where to change the account settings. No rush, whenever you get a chance.",Low,calm,3
+TICK-00681,CUST-0163,2026-05-09 03:50,slow_performance,Search is crawling,"Hi, Running a search takes almost a minute to return anything. Please could someone look at this.",High,annoyed,4
+TICK-00682,CUST-0011,2026-06-05 00:50,slow_performance,The platform is very slow,We need this dealt with today. Pages take around thirty seconds to load. Please escalate this immediately.,High,angry,6
+TICK-00683,CUST-0035,2026-04-12 23:50,dashboard_bug,Chart will not load,"Following up on this, One panel stays blank no matter how many times I refresh. This is holding us up.",Medium,annoyed,3
+TICK-00684,CUST-0116,2026-06-22 13:50,account_lockout,Locked out of our account,This is now the third time I am writing. We have been shut out and cannot get back in. Please escalate this immediately.,Critical,angry,5
+TICK-00685,CUST-0145,2026-03-08 02:50,feature_request,Feature suggestion,This is unacceptable. It would help if we could sort the table by date. Please escalate this immediately.,Low,angry,3
+TICK-00686,CUST-0022,2026-06-24 15:50,security_incident,Possible breach,This is unacceptable. Someone has changed our admin email address and it was not us. We are considering cancelling.,Critical,angry,6
+TICK-00687,CUST-0026,2026-06-22 00:50,how_to_question,Where do I find my invoices,We need this dealt with today. I have looked in settings and cannot see a billing history anywhere. Please escalate this immediately.,Medium,angry,4
+TICK-00688,CUST-0114,2026-04-13 08:50,payment_failure,Payments are not going through,This is now the third time I am writing. Card charges keep failing at the final step. We expect a reply today.,High,angry,4
+TICK-00689,CUST-0018,2026-04-27 13:50,login_failure,Cannot sign in,We need this dealt with today. The login page rejects our details even after a reset. We are considering cancelling.,Medium,angry,6
+TICK-00690,CUST-0044,2026-06-19 01:50,billing_error,Charged the wrong amount,This is unacceptable. The invoice does not match the plan we are on. Please escalate this immediately.,Low,angry,3
+TICK-00691,CUST-0009,2026-06-07 21:50,payment_failure,Payments are not going through,This is unacceptable. Card charges keep failing at the final step. Please escalate this immediately.,Critical,angry,6
+TICK-00692,CUST-0089,2026-04-28 06:50,dashboard_bug,Chart will not load,This is now the third time I am writing. One panel stays blank no matter how many times I refresh. We expect a reply today.,Medium,angry,4
+TICK-00693,CUST-0147,2026-07-22 00:50,how_to_question,Where do I find my invoices,This is unacceptable. I have looked in settings and cannot see a billing history anywhere. We expect a reply today.,Medium,angry,6
+TICK-00694,CUST-0191,2026-07-28 23:50,password_reset,New password not accepted,This is now the third time I am writing. I changed my password and now the new one is rejected. We are considering cancelling.,Medium,angry,5
+TICK-00695,CUST-0074,2026-06-08 13:50,feature_request,Feature suggestion,This is now the third time I am writing. It would help if we could sort the table by date. We are considering cancelling.,High,angry,3
+TICK-00696,CUST-0194,2026-05-09 14:50,password_reset,Reset email not arriving,We need this dealt with today. I have requested a new password four times and nothing comes through. We expect a reply today.,High,angry,4
+TICK-00697,CUST-0016,2026-03-15 19:50,compliance_request,Data deletion request,We need this dealt with today. We need a customer's personal data removed under GDPR. We expect a reply today.,High,angry,6
+TICK-00698,CUST-0082,2026-06-11 02:50,slow_performance,Search is crawling,We need this dealt with today. Running a search takes almost a minute to return anything. We expect a reply today.,High,angry,4
+TICK-00699,CUST-0116,2026-06-25 01:50,login_failure,Cannot sign in,"Hello again, The login page rejects our details even after a reset. Hoping for a quick reply.",High,annoyed,6
+TICK-00700,CUST-0039,2026-03-01 23:50,account_lockout,Account suspended without warning,This is now the third time I am writing. We logged in this morning and the account is disabled. We are considering cancelling.,High,angry,4
+TICK-00701,CUST-0123,2026-05-01 21:50,notification_failure,Alerts stopped,This is unacceptable. We used to get a notification for every new entry and they have gone quiet. We are considering cancelling.,Medium,angry,3
+TICK-00702,CUST-0177,2026-06-04 13:50,how_to_question,Question about permissions,This is unacceptable. How do I give a colleague access without making them an admin. We are considering cancelling.,Medium,angry,4
+TICK-00703,CUST-0083,2026-03-01 06:50,feature_request,Dark mode request,"This is now the third time I am writing. Any chance of a dark theme, we work late most evenings. We are considering cancelling.",Low,angry,5
+TICK-00704,CUST-0126,2026-06-10 02:50,slow_performance,The platform is very slow,This is unacceptable. Pages take around thirty seconds to load. Please escalate this immediately.,High,angry,5
+TICK-00705,CUST-0144,2026-06-11 19:50,login_failure,Team cannot log in,"Following up on this, Four of my colleagues are getting an invalid credentials message. Please could someone look at this.",Medium,annoyed,5
+TICK-00706,CUST-0003,2026-03-09 08:50,account_lockout,Account suspended without warning,"Hi, We logged in this morning and the account is disabled. Hoping for a quick reply.",High,annoyed,3
+TICK-00707,CUST-0156,2026-03-05 04:50,slow_performance,The platform is very slow,"Hello, Pages take around thirty seconds to load. No rush, whenever you get a chance.",Low,calm,2
+TICK-00708,CUST-0195,2026-07-01 00:50,data_loss,Our records have disappeared,We need this dealt with today. About three weeks of entries are missing from our workspace. We expect a reply today.,Critical,angry,4
+TICK-00709,CUST-0092,2026-04-01 21:50,api_failure,API returning errors,We need this dealt with today. Our integration is getting 500 errors on most calls. Please escalate this immediately.,Critical,angry,4
+TICK-00710,CUST-0175,2026-06-23 22:50,integration_failure,Integration stopped syncing,This is now the third time I am writing. Nothing has come through from the connected tool since Tuesday. We are considering cancelling.,High,angry,7
+TICK-00711,CUST-0107,2026-07-18 12:50,integration_failure,Connection keeps dropping,This is now the third time I am writing. The integration disconnects on its own every few hours. Please escalate this immediately.,Critical,angry,4
+TICK-00712,CUST-0100,2026-05-09 15:50,login_failure,Sign in loop,This is unacceptable. It accepts my password then sends me straight back to the login screen. We are considering cancelling.,High,angry,3
+TICK-00713,CUST-0191,2026-06-02 21:50,password_reset,Reset email not arriving,We need this dealt with today. I have requested a new password four times and nothing comes through. We expect a reply today.,Low,angry,6
+TICK-00714,CUST-0004,2026-04-25 07:50,data_export_failure,Corrupted export file,"Hello again, The file downloads but will not open in Excel. This is holding us up.",Low,annoyed,6
+TICK-00715,CUST-0001,2026-04-06 20:50,how_to_question,How do I do this,This is unacceptable. I cannot work out where to change the account settings. Please escalate this immediately.,Low,angry,2
+TICK-00716,CUST-0072,2026-03-12 01:50,slow_performance,Search is crawling,"Hi, Running a search takes almost a minute to return anything. Hoping for a quick reply.",Low,annoyed,2
+TICK-00717,CUST-0061,2026-07-24 10:50,slow_performance,Slow since the update,We need this dealt with today. Everything has been sluggish since the change you made last week. Please escalate this immediately.,Critical,angry,6
+TICK-00718,CUST-0148,2026-03-04 11:50,password_reset,New password not accepted,This is unacceptable. I changed my password and now the new one is rejected. We expect a reply today.,Low,angry,6
+TICK-00719,CUST-0012,2026-07-29 21:50,how_to_question,Question about permissions,"Hi, How do I give a colleague access without making them an admin. This is holding us up.",Low,annoyed,3
+TICK-00720,CUST-0186,2026-03-08 11:50,integration_failure,Duplicate records from sync,This is unacceptable. The sync is creating three copies of every record. Please escalate this immediately.,High,angry,8
+TICK-00721,CUST-0036,2026-04-19 19:50,api_failure,Authentication failing on API,This is now the third time I am writing. Our key worked yesterday and is now rejected on every call. We are considering cancelling.,High,angry,6
+TICK-00722,CUST-0053,2026-02-18 16:50,how_to_question,Where do I find my invoices,We need this dealt with today. I have looked in settings and cannot see a billing history anywhere. We are considering cancelling.,Low,angry,3
+TICK-00723,CUST-0126,2026-06-01 06:50,payment_failure,Card declined for everyone,"We need this dealt with today. Every transaction today has been rejected, including test cards. Please escalate this immediately.",Critical,angry,6
+TICK-00724,CUST-0130,2026-05-03 15:50,how_to_question,Question about permissions,This is now the third time I am writing. How do I give a colleague access without making them an admin. Please escalate this immediately.,Low,angry,5
+TICK-00725,CUST-0175,2026-05-04 13:50,payment_failure,Card declined for everyone,"This is unacceptable. Every transaction today has been rejected, including test cards. We are considering cancelling.",High,angry,8
+TICK-00726,CUST-0128,2026-03-23 18:50,api_failure,API timing out,"Following up on this, Requests hang for thirty seconds and then fail. Please could someone look at this.",Medium,annoyed,2
+TICK-00727,CUST-0065,2026-04-21 21:50,integration_failure,Integration stopped syncing,This is unacceptable. Nothing has come through from the connected tool since Tuesday. Please escalate this immediately.,Medium,angry,4
+TICK-00728,CUST-0003,2026-06-14 04:50,dashboard_bug,Numbers do not match,This is now the third time I am writing. The total on the dashboard is different to the total in the report. We expect a reply today.,High,angry,4
+TICK-00729,CUST-0133,2026-03-22 09:50,slow_performance,Search is crawling,"Good morning, Running a search takes almost a minute to return anything. No rush, whenever you get a chance.",High,calm,1
+TICK-00730,CUST-0046,2026-03-16 06:50,feature_request,Dark mode request,"Hello again, Any chance of a dark theme, we work late most evenings. Please could someone look at this.",High,annoyed,3
+TICK-00731,CUST-0179,2026-08-03 14:50,slow_performance,The platform is very slow,This is unacceptable. Pages take around thirty seconds to load. Please escalate this immediately.,Critical,angry,5
+TICK-00732,CUST-0063,2026-03-15 18:50,password_reset,Password reset needed,"Following up on this, The reset link never arrives in my inbox. Please could someone look at this.",Critical,annoyed,6
+TICK-00733,CUST-0011,2026-02-21 21:50,data_export_failure,Export is broken,"Hello again, The CSV download stops halfway and the file is unusable. Please could someone look at this.",Low,annoyed,7
+TICK-00734,CUST-0123,2026-07-21 20:50,how_to_question,How do I do this,This is unacceptable. I cannot work out where to change the account settings. We expect a reply today.,Medium,angry,4
+TICK-00735,CUST-0193,2026-07-31 09:50,slow_performance,Search is crawling,This is now the third time I am writing. Running a search takes almost a minute to return anything. Please escalate this immediately.,Medium,angry,3
+TICK-00736,CUST-0158,2026-02-18 02:50,password_reset,New password not accepted,"Hi, I changed my password and now the new one is rejected. Please could someone look at this.",Low,annoyed,4
+TICK-00737,CUST-0198,2026-04-25 09:50,notification_failure,Alerts stopped,"Hello again, We used to get a notification for every new entry and they have gone quiet. This is holding us up.",Low,annoyed,6
+TICK-00738,CUST-0126,2026-02-20 18:50,password_reset,Reset email not arriving,This is unacceptable. I have requested a new password four times and nothing comes through. Please escalate this immediately.,High,angry,7
+TICK-00739,CUST-0174,2026-05-06 08:50,slow_performance,Slow since the update,"Hi, Everything has been sluggish since the change you made last week. This is holding us up.",Low,annoyed,6
+TICK-00740,CUST-0075,2026-04-09 01:50,notification_failure,Not receiving emails,We need this dealt with today. Alert emails are not arriving in any of our inboxes. Please escalate this immediately.,Low,angry,3
+TICK-00741,CUST-0141,2026-05-12 11:50,password_reset,Reset email not arriving,"Hi there, I have requested a new password four times and nothing comes through. Many thanks.",Low,calm,2
+TICK-00742,CUST-0100,2026-05-12 08:50,api_failure,API returning errors,"Hi, Our integration is getting 500 errors on most calls. Please could someone look at this.",Medium,annoyed,4
+TICK-00743,CUST-0160,2026-04-16 08:50,dashboard_bug,Chart will not load,"Good morning, One panel stays blank no matter how many times I refresh. No rush, whenever you get a chance.",Low,calm,1
+TICK-00744,CUST-0042,2026-03-29 07:50,payment_failure,Payments are not going through,This is now the third time I am writing. Card charges keep failing at the final step. We are considering cancelling.,Critical,angry,2
+TICK-00745,CUST-0099,2026-04-05 19:50,slow_performance,Search is crawling,This is now the third time I am writing. Running a search takes almost a minute to return anything. We expect a reply today.,Medium,angry,8
+TICK-00746,CUST-0158,2026-04-08 03:50,billing_error,Still being billed after cancelling,"Following up on this, We cancelled last month and a payment has gone out again. This is holding us up.",High,annoyed,5
+TICK-00747,CUST-0007,2026-04-19 05:50,dashboard_bug,Dashboard display problem,This is unacceptable. One of the charts is showing the wrong labels. We expect a reply today.,High,angry,4
+TICK-00748,CUST-0069,2026-06-09 05:50,billing_error,Still being billed after cancelling,We need this dealt with today. We cancelled last month and a payment has gone out again. We expect a reply today.,Critical,angry,4
+TICK-00749,CUST-0066,2026-06-19 03:50,slow_performance,The platform is very slow,This is unacceptable. Pages take around thirty seconds to load. Please escalate this immediately.,Medium,angry,4
+TICK-00750,CUST-0109,2026-05-15 04:50,password_reset,Password reset needed,This is now the third time I am writing. The reset link never arrives in my inbox. We are considering cancelling.,High,angry,3
+TICK-00751,CUST-0003,2026-04-02 14:50,api_failure,Authentication failing on API,"Following up on this, Our key worked yesterday and is now rejected on every call. Please could someone look at this.",Medium,annoyed,5
+TICK-00752,CUST-0182,2026-08-14 20:50,payment_failure,Payments are not going through,"Hello again, Card charges keep failing at the final step. Please could someone look at this.",Medium,annoyed,1
+TICK-00753,CUST-0091,2026-02-24 07:50,feature_request,Dark mode request,"This is unacceptable. Any chance of a dark theme, we work late most evenings. We are considering cancelling.",Medium,angry,5
+TICK-00754,CUST-0098,2026-06-25 19:50,billing_error,Charged the wrong amount,"Hello again, The invoice does not match the plan we are on. This is holding us up.",High,annoyed,3
+TICK-00755,CUST-0103,2026-07-11 11:50,slow_performance,The platform is very slow,This is now the third time I am writing. Pages take around thirty seconds to load. We are considering cancelling.,Medium,angry,7
+TICK-00756,CUST-0123,2026-05-15 00:50,payment_failure,Payments are not going through,"Hi, Card charges keep failing at the final step. Please could someone look at this.",High,annoyed,5
+TICK-00757,CUST-0095,2026-08-02 16:50,compliance_request,Subject access request,"Hello again, A customer has asked for a copy of everything you hold on them. This is holding us up.",Medium,annoyed,8
+TICK-00758,CUST-0051,2026-03-25 05:50,payment_failure,Payments are not going through,"Hi, Card charges keep failing at the final step. Please could someone look at this.",Critical,annoyed,7
+TICK-00759,CUST-0010,2026-07-07 01:50,account_lockout,Locked out of our account,"Good morning, We have been shut out and cannot get back in. No rush, whenever you get a chance.",Medium,calm,6
+TICK-00760,CUST-0143,2026-02-18 12:50,integration_failure,Duplicate records from sync,This is now the third time I am writing. The sync is creating three copies of every record. We expect a reply today.,Critical,angry,8
+TICK-00761,CUST-0128,2026-05-30 17:50,password_reset,Reset email not arriving,"Hello, I have requested a new password four times and nothing comes through. Thanks for your help.",Medium,calm,3
+TICK-00762,CUST-0146,2026-07-26 14:50,api_failure,Authentication failing on API,"Hi, Our key worked yesterday and is now rejected on every call. Hoping for a quick reply.",Medium,annoyed,5
+TICK-00763,CUST-0126,2026-06-19 18:50,password_reset,Password reset needed,"Hello again, The reset link never arrives in my inbox. Please could someone look at this.",Low,annoyed,8
+TICK-00764,CUST-0039,2026-07-28 12:50,integration_failure,Duplicate records from sync,"Good morning, The sync is creating three copies of every record. Thanks for your help.",High,calm,5
+TICK-00765,CUST-0043,2026-06-10 10:50,password_reset,Password reset needed,"Good morning, The reset link never arrives in my inbox. Thanks for your help.",Low,calm,6
+TICK-00766,CUST-0017,2026-05-30 15:50,slow_performance,Slow since the update,"Hello, Everything has been sluggish since the change you made last week. No rush, whenever you get a chance.",High,calm,2
+TICK-00767,CUST-0168,2026-05-24 21:50,dashboard_bug,Chart will not load,This is unacceptable. One panel stays blank no matter how many times I refresh. We are considering cancelling.,Medium,angry,4
+TICK-00768,CUST-0033,2026-03-03 15:50,login_failure,Team cannot log in,This is now the third time I am writing. Four of my colleagues are getting an invalid credentials message. We expect a reply today.,Low,angry,4
+TICK-00769,CUST-0094,2026-03-09 19:50,login_failure,Sign in loop,"Hello, It accepts my password then sends me straight back to the login screen. No rush, whenever you get a chance.",Medium,calm,3
+TICK-00770,CUST-0193,2026-03-01 20:50,integration_failure,Connection keeps dropping,"Hi there, The integration disconnects on its own every few hours. Thanks for your help.",High,calm,4
+TICK-00771,CUST-0198,2026-03-03 05:50,security_incident,Possible breach,"Hi, Someone has changed our admin email address and it was not us. Please could someone look at this.",High,annoyed,7
+TICK-00772,CUST-0011,2026-08-08 22:50,slow_performance,The platform is very slow,This is unacceptable. Pages take around thirty seconds to load. Please escalate this immediately.,High,angry,8
+TICK-00773,CUST-0060,2026-05-20 07:50,password_reset,Password reset needed,"Hi, The reset link never arrives in my inbox. This is holding us up.",Critical,annoyed,4
+TICK-00774,CUST-0013,2026-02-24 18:50,password_reset,New password not accepted,"Hello again, I changed my password and now the new one is rejected. Please could someone look at this.",Medium,annoyed,5
+TICK-00775,CUST-0100,2026-05-23 05:50,integration_failure,Connection keeps dropping,This is now the third time I am writing. The integration disconnects on its own every few hours. Please escalate this immediately.,Critical,angry,5
+TICK-00776,CUST-0053,2026-07-22 15:50,feature_request,Dark mode request,"We need this dealt with today. Any chance of a dark theme, we work late most evenings. We expect a reply today.",High,angry,4
+TICK-00777,CUST-0116,2026-05-12 01:50,api_failure,API returning errors,This is unacceptable. Our integration is getting 500 errors on most calls. We expect a reply today.,Critical,angry,7
+TICK-00778,CUST-0159,2026-06-09 18:50,how_to_question,Question about permissions,"Hello, How do I give a colleague access without making them an admin. Many thanks.",Medium,calm,6
+TICK-00779,CUST-0104,2026-05-29 15:50,data_export_failure,Corrupted export file,We need this dealt with today. The file downloads but will not open in Excel. We are considering cancelling.,Low,angry,4
+TICK-00780,CUST-0005,2026-06-30 06:50,password_reset,Reset email not arriving,This is unacceptable. I have requested a new password four times and nothing comes through. We are considering cancelling.,High,angry,3
+TICK-00781,CUST-0164,2026-06-29 07:50,api_failure,API returning errors,This is unacceptable. Our integration is getting 500 errors on most calls. We expect a reply today.,Critical,angry,5
+TICK-00782,CUST-0128,2026-07-14 06:50,api_failure,API timing out,"Hello, Requests hang for thirty seconds and then fail. Many thanks.",Medium,calm,4
+TICK-00783,CUST-0148,2026-05-05 14:50,data_export_failure,Corrupted export file,"Hi, The file downloads but will not open in Excel. This is holding us up.",Critical,annoyed,7
+TICK-00784,CUST-0014,2026-03-29 11:50,login_failure,Cannot sign in,This is unacceptable. The login page rejects our details even after a reset. Please escalate this immediately.,Medium,angry,7
+TICK-00785,CUST-0056,2026-03-28 19:50,feature_request,Dark mode request,"We need this dealt with today. Any chance of a dark theme, we work late most evenings. We are considering cancelling.",Low,angry,3
+TICK-00786,CUST-0111,2026-03-27 13:50,data_export_failure,Cannot download report,"Hi, The export button spins for a while and then nothing happens. Hoping for a quick reply.",Medium,annoyed,6
+TICK-00787,CUST-0049,2026-05-22 02:50,feature_request,Dark mode request,"This is now the third time I am writing. Any chance of a dark theme, we work late most evenings. We expect a reply today.",Low,angry,4
+TICK-00788,CUST-0029,2026-04-20 12:50,integration_failure,Integration stopped syncing,This is unacceptable. Nothing has come through from the connected tool since Tuesday. We are considering cancelling.,High,angry,3
+TICK-00789,CUST-0071,2026-05-24 04:50,slow_performance,The platform is very slow,We need this dealt with today. Pages take around thirty seconds to load. We expect a reply today.,Medium,angry,5
+TICK-00790,CUST-0192,2026-06-15 14:50,slow_performance,The platform is very slow,"Hello again, Pages take around thirty seconds to load. Hoping for a quick reply.",Low,annoyed,3
+TICK-00791,CUST-0071,2026-05-27 00:50,how_to_question,Question about permissions,"Hi, How do I give a colleague access without making them an admin. Please could someone look at this.",Low,annoyed,6
+TICK-00792,CUST-0177,2026-07-09 11:50,payment_failure,Payments are not going through,This is now the third time I am writing. Card charges keep failing at the final step. We expect a reply today.,Critical,angry,5
+TICK-00793,CUST-0001,2026-08-14 13:50,login_failure,Sign in loop,We need this dealt with today. It accepts my password then sends me straight back to the login screen. Please escalate this immediately.,Low,angry,3
+TICK-00794,CUST-0155,2026-04-22 07:50,integration_failure,Integration stopped syncing,"Hello again, Nothing has come through from the connected tool since Tuesday. Please could someone look at this.",High,annoyed,3
+TICK-00795,CUST-0036,2026-03-17 10:50,data_export_failure,Corrupted export file,"Hi, The file downloads but will not open in Excel. Please could someone look at this.",High,annoyed,7
+TICK-00796,CUST-0151,2026-05-21 14:50,password_reset,New password not accepted,"Hello, I changed my password and now the new one is rejected. Thanks for your help.",Medium,calm,5
+TICK-00797,CUST-0002,2026-02-24 02:50,password_reset,Reset email not arriving,This is now the third time I am writing. I have requested a new password four times and nothing comes through. We are considering cancelling.,Low,angry,3
+TICK-00798,CUST-0043,2026-05-27 02:50,data_loss,Our records have disappeared,This is now the third time I am writing. About three weeks of entries are missing from our workspace. We are considering cancelling.,High,angry,7
+TICK-00799,CUST-0031,2026-06-23 12:50,feature_request,Request for bulk actions,"Following up on this, Being able to select several rows at once would save us a lot of time. Hoping for a quick reply.",Low,annoyed,4
+TICK-00800,CUST-0108,2026-06-19 07:50,payment_failure,Checkout is broken,"Hi, Our customers reach the payment page and then get an error. This is holding us up.",Critical,annoyed,5
+TICK-00801,CUST-0153,2026-05-18 05:50,slow_performance,Search is crawling,This is unacceptable. Running a search takes almost a minute to return anything. Please escalate this immediately.,Critical,angry,5
+TICK-00802,CUST-0030,2026-03-04 10:50,how_to_question,Where do I find my invoices,"Hello, I have looked in settings and cannot see a billing history anywhere. Many thanks.",Low,calm,5
+TICK-00803,CUST-0013,2026-07-14 02:50,slow_performance,The platform is very slow,This is unacceptable. Pages take around thirty seconds to load. We expect a reply today.,Critical,angry,6
+TICK-00804,CUST-0179,2026-04-27 04:50,notification_failure,Notifications arriving late,We need this dealt with today. Alerts turn up about six hours after the thing happened. We are considering cancelling.,High,angry,6
+TICK-00805,CUST-0186,2026-06-11 01:50,data_loss,Deleted records we did not delete,This is now the third time I am writing. A folder of client files is gone and nobody on our side removed it. We are considering cancelling.,High,angry,9
+TICK-00806,CUST-0081,2026-06-25 13:50,billing_error,Double charged this month,This is now the third time I am writing. We have two identical charges on the same date. We are considering cancelling.,Medium,angry,2
+TICK-00807,CUST-0160,2026-07-29 08:50,feature_request,Request for bulk actions,"Hi, Being able to select several rows at once would save us a lot of time. Please could someone look at this.",Low,annoyed,2
+TICK-00808,CUST-0039,2026-04-10 21:50,billing_error,Still being billed after cancelling,"Hi, We cancelled last month and a payment has gone out again. Hoping for a quick reply.",High,annoyed,6
+TICK-00809,CUST-0106,2026-02-16 13:50,notification_failure,Not receiving emails,"Following up on this, Alert emails are not arriving in any of our inboxes. This is holding us up.",Medium,annoyed,2
+TICK-00810,CUST-0190,2026-02-25 21:50,system_outage,Everything is down,"Following up on this, None of us can reach the platform at all. Hoping for a quick reply.",Critical,annoyed,6
+TICK-00811,CUST-0179,2026-05-02 01:50,billing_error,Still being billed after cancelling,We need this dealt with today. We cancelled last month and a payment has gone out again. We expect a reply today.,Critical,angry,7
+TICK-00812,CUST-0200,2026-04-15 23:50,account_lockout,Too many attempts message,"Hi there, We are stuck on a lockout screen and the timer never clears. Thanks for your help.",Medium,calm,7
+TICK-00813,CUST-0076,2026-03-27 16:50,login_failure,Sign in loop,This is unacceptable. It accepts my password then sends me straight back to the login screen. Please escalate this immediately.,High,angry,9
+TICK-00814,CUST-0143,2026-07-25 00:50,dashboard_bug,Dashboard display problem,This is unacceptable. One of the charts is showing the wrong labels. We expect a reply today.,High,angry,9
+TICK-00815,CUST-0196,2026-05-31 07:50,how_to_question,How do I do this,This is unacceptable. I cannot work out where to change the account settings. We expect a reply today.,High,angry,5
+TICK-00816,CUST-0140,2026-06-30 01:50,compliance_request,Data deletion request,"Hello again, We need a customer's personal data removed under GDPR. Please could someone look at this.",Critical,annoyed,5
+TICK-00817,CUST-0100,2026-08-11 09:50,payment_failure,Card declined for everyone,"We need this dealt with today. Every transaction today has been rejected, including test cards. We are considering cancelling.",Critical,angry,6
+TICK-00818,CUST-0135,2026-05-10 05:50,password_reset,New password not accepted,"Hello again, I changed my password and now the new one is rejected. Hoping for a quick reply.",Low,annoyed,2
+TICK-00819,CUST-0089,2026-05-09 03:50,login_failure,Team cannot log in,"Following up on this, Four of my colleagues are getting an invalid credentials message. This is holding us up.",Medium,annoyed,5
+TICK-00820,CUST-0044,2026-03-14 00:50,how_to_question,How do I do this,"Hi, I cannot work out where to change the account settings. Please could someone look at this.",Low,annoyed,4
+TICK-00821,CUST-0192,2026-03-21 17:50,compliance_request,Data deletion request,"Hi there, We need a customer's personal data removed under GDPR. No rush, whenever you get a chance.",Medium,calm,4
+TICK-00822,CUST-0015,2026-06-23 11:50,slow_performance,The platform is very slow,"Hi, Pages take around thirty seconds to load. Hoping for a quick reply.",Low,annoyed,3
+TICK-00823,CUST-0111,2026-06-27 08:50,slow_performance,Search is crawling,We need this dealt with today. Running a search takes almost a minute to return anything. We expect a reply today.,Medium,angry,7
+TICK-00824,CUST-0136,2026-06-29 10:50,password_reset,New password not accepted,"Good morning, I changed my password and now the new one is rejected. Many thanks.",Low,calm,1
+TICK-00825,CUST-0178,2026-05-08 06:50,security_incident,Unrecognised device on our account,We need this dealt with today. We can see a session we did not start and cannot end it. We are considering cancelling.,Critical,angry,3
+TICK-00826,CUST-0097,2026-03-12 07:50,how_to_question,Where do I find my invoices,We need this dealt with today. I have looked in settings and cannot see a billing history anywhere. We expect a reply today.,High,angry,3
+TICK-00827,CUST-0038,2026-06-09 16:50,api_failure,API timing out,"Good morning, Requests hang for thirty seconds and then fail. Many thanks.",Medium,calm,3
+TICK-00828,CUST-0015,2026-03-25 11:50,billing_error,Still being billed after cancelling,This is now the third time I am writing. We cancelled last month and a payment has gone out again. Please escalate this immediately.,High,angry,4
+TICK-00829,CUST-0093,2026-08-13 23:50,dashboard_bug,Chart will not load,This is now the third time I am writing. One panel stays blank no matter how many times I refresh. Please escalate this immediately.,Medium,angry,8
+TICK-00830,CUST-0038,2026-04-06 12:50,billing_error,Double charged this month,This is now the third time I am writing. We have two identical charges on the same date. We expect a reply today.,Critical,angry,4
+TICK-00831,CUST-0038,2026-03-31 23:50,feature_request,Request for bulk actions,"Hi, Being able to select several rows at once would save us a lot of time. Hoping for a quick reply.",Medium,annoyed,5
+TICK-00832,CUST-0043,2026-04-04 03:50,slow_performance,Search is crawling,"Good morning, Running a search takes almost a minute to return anything. No rush, whenever you get a chance.",Low,calm,8
+TICK-00833,CUST-0007,2026-07-21 01:50,compliance_request,Data deletion request,This is unacceptable. We need a customer's personal data removed under GDPR. We expect a reply today.,Medium,angry,5
+TICK-00834,CUST-0013,2026-05-10 22:50,feature_request,Request for bulk actions,"Hello again, Being able to select several rows at once would save us a lot of time. This is holding us up.",Medium,annoyed,7
+TICK-00835,CUST-0089,2026-06-21 02:50,security_incident,Possible breach,This is unacceptable. Someone has changed our admin email address and it was not us. We are considering cancelling.,Critical,angry,6
+TICK-00836,CUST-0052,2026-06-06 21:50,slow_performance,Search is crawling,"Good morning, Running a search takes almost a minute to return anything. Thanks for your help.",Low,calm,2
+TICK-00837,CUST-0043,2026-02-20 20:50,dashboard_bug,Dashboard display problem,"Hello again, One of the charts is showing the wrong labels. Please could someone look at this.",Low,annoyed,9
+TICK-00838,CUST-0171,2026-07-29 17:50,integration_failure,Integration stopped syncing,We need this dealt with today. Nothing has come through from the connected tool since Tuesday. Please escalate this immediately.,High,angry,4
+TICK-00839,CUST-0065,2026-02-20 19:50,how_to_question,Question about permissions,We need this dealt with today. How do I give a colleague access without making them an admin. Please escalate this immediately.,Low,angry,5
+TICK-00840,CUST-0047,2026-04-20 22:50,payment_failure,Payments are not going through,We need this dealt with today. Card charges keep failing at the final step. We expect a reply today.,Medium,angry,9
+TICK-00841,CUST-0030,2026-03-14 13:50,how_to_question,Question about permissions,This is now the third time I am writing. How do I give a colleague access without making them an admin. We expect a reply today.,Medium,angry,6
+TICK-00842,CUST-0117,2026-04-12 10:50,slow_performance,Slow since the update,This is now the third time I am writing. Everything has been sluggish since the change you made last week. We are considering cancelling.,Medium,angry,6
+TICK-00843,CUST-0101,2026-05-16 14:50,dashboard_bug,Numbers do not match,"Hello, The total on the dashboard is different to the total in the report. Many thanks.",Low,calm,3
+TICK-00844,CUST-0084,2026-05-15 09:50,integration_failure,Duplicate records from sync,We need this dealt with today. The sync is creating three copies of every record. We expect a reply today.,Critical,angry,4
+TICK-00845,CUST-0085,2026-05-21 10:50,how_to_question,Question about permissions,We need this dealt with today. How do I give a colleague access without making them an admin. We expect a reply today.,High,angry,4
+TICK-00846,CUST-0116,2026-03-17 09:50,notification_failure,Not receiving emails,We need this dealt with today. Alert emails are not arriving in any of our inboxes. We expect a reply today.,Low,angry,8
+TICK-00847,CUST-0071,2026-02-27 22:50,billing_error,Still being billed after cancelling,This is unacceptable. We cancelled last month and a payment has gone out again. Please escalate this immediately.,Low,angry,7
+TICK-00848,CUST-0127,2026-06-12 11:50,password_reset,Password reset needed,This is unacceptable. The reset link never arrives in my inbox. We expect a reply today.,High,angry,5
+TICK-00849,CUST-0187,2026-06-15 23:50,notification_failure,Not receiving emails,This is unacceptable. Alert emails are not arriving in any of our inboxes. We expect a reply today.,High,angry,9
+TICK-00850,CUST-0157,2026-04-03 10:50,account_lockout,Too many attempts message,We need this dealt with today. We are stuck on a lockout screen and the timer never clears. Please escalate this immediately.,Critical,angry,5
+TICK-00851,CUST-0048,2026-06-17 09:50,slow_performance,Search is crawling,This is now the third time I am writing. Running a search takes almost a minute to return anything. We expect a reply today.,Medium,angry,3
+TICK-00852,CUST-0130,2026-04-05 04:50,payment_failure,Checkout is broken,"Following up on this, Our customers reach the payment page and then get an error. Hoping for a quick reply.",Critical,annoyed,6
+TICK-00853,CUST-0173,2026-06-19 18:50,password_reset,Reset email not arriving,"Good morning, I have requested a new password four times and nothing comes through. No rush, whenever you get a chance.",Medium,calm,4
+TICK-00854,CUST-0101,2026-06-16 19:50,account_lockout,Locked out of our account,This is now the third time I am writing. We have been shut out and cannot get back in. We are considering cancelling.,High,angry,4
+TICK-00855,CUST-0082,2026-05-10 06:50,compliance_request,Retention policy question,"Following up on this, We need written confirmation of how long you keep our deleted records. Please could someone look at this.",High,annoyed,5
+TICK-00856,CUST-0034,2026-03-30 18:50,feature_request,Dark mode request,"Following up on this, Any chance of a dark theme, we work late most evenings. Hoping for a quick reply.",High,annoyed,4
+TICK-00857,CUST-0198,2026-02-27 20:50,notification_failure,Alerts stopped,This is now the third time I am writing. We used to get a notification for every new entry and they have gone quiet. We are considering cancelling.,Medium,angry,8
+TICK-00858,CUST-0082,2026-07-17 17:50,feature_request,Request for bulk actions,"Following up on this, Being able to select several rows at once would save us a lot of time. Please could someone look at this.",Low,annoyed,6
+TICK-00859,CUST-0096,2026-04-25 18:50,notification_failure,Not receiving emails,We need this dealt with today. Alert emails are not arriving in any of our inboxes. We are considering cancelling.,Medium,angry,4
+TICK-00860,CUST-0026,2026-02-28 13:50,account_lockout,Too many attempts message,We need this dealt with today. We are stuck on a lockout screen and the timer never clears. We expect a reply today.,Medium,angry,5
+TICK-00861,CUST-0106,2026-04-11 03:50,login_failure,Team cannot log in,"Following up on this, Four of my colleagues are getting an invalid credentials message. Please could someone look at this.",Low,annoyed,3
+TICK-00862,CUST-0017,2026-07-25 21:50,payment_failure,Checkout is broken,We need this dealt with today. Our customers reach the payment page and then get an error. We are considering cancelling.,Critical,angry,3
+TICK-00863,CUST-0007,2026-06-14 08:50,slow_performance,Slow since the update,"Hello again, Everything has been sluggish since the change you made last week. Please could someone look at this.",Medium,annoyed,6
+TICK-00864,CUST-0009,2026-04-06 12:50,api_failure,Authentication failing on API,We need this dealt with today. Our key worked yesterday and is now rejected on every call. Please escalate this immediately.,High,angry,7
+TICK-00865,CUST-0045,2026-06-12 12:50,compliance_request,Retention policy question,"Hi, We need written confirmation of how long you keep our deleted records. This is holding us up.",Medium,annoyed,4
+TICK-00866,CUST-0084,2026-04-26 01:50,dashboard_bug,Dashboard display problem,This is now the third time I am writing. One of the charts is showing the wrong labels. We are considering cancelling.,High,angry,5
+TICK-00867,CUST-0107,2026-04-02 20:50,payment_failure,Checkout is broken,This is now the third time I am writing. Our customers reach the payment page and then get an error. We are considering cancelling.,High,angry,5
+TICK-00868,CUST-0047,2026-03-17 19:50,password_reset,Password reset needed,We need this dealt with today. The reset link never arrives in my inbox. We are considering cancelling.,Medium,angry,10
+TICK-00869,CUST-0182,2026-06-25 02:50,password_reset,New password not accepted,"Hi, I changed my password and now the new one is rejected. Please could someone look at this.",Low,annoyed,2
+TICK-00870,CUST-0012,2026-02-23 08:50,account_lockout,Account suspended without warning,We need this dealt with today. We logged in this morning and the account is disabled. We expect a reply today.,Medium,angry,4
+TICK-00871,CUST-0016,2026-05-12 02:50,how_to_question,How do I do this,This is now the third time I am writing. I cannot work out where to change the account settings. We are considering cancelling.,Low,angry,7
+TICK-00872,CUST-0042,2026-06-18 21:50,password_reset,Password reset needed,This is now the third time I am writing. The reset link never arrives in my inbox. We are considering cancelling.,Medium,angry,3
+TICK-00873,CUST-0050,2026-02-25 10:50,compliance_request,Data deletion request,This is now the third time I am writing. We need a customer's personal data removed under GDPR. We expect a reply today.,Critical,angry,7
+TICK-00874,CUST-0180,2026-07-15 13:50,password_reset,New password not accepted,"Following up on this, I changed my password and now the new one is rejected. This is holding us up.",Medium,annoyed,2
+TICK-00875,CUST-0035,2026-06-02 23:50,dashboard_bug,Dashboard display problem,This is now the third time I am writing. One of the charts is showing the wrong labels. We expect a reply today.,Low,angry,4
+TICK-00876,CUST-0171,2026-07-15 06:50,how_to_question,Question about permissions,"Hi, How do I give a colleague access without making them an admin. Please could someone look at this.",Low,annoyed,5
+TICK-00877,CUST-0084,2026-04-17 14:50,password_reset,Password reset needed,"Following up on this, The reset link never arrives in my inbox. Hoping for a quick reply.",High,annoyed,6
+TICK-00878,CUST-0128,2026-03-23 08:50,how_to_question,How do I do this,"Hello again, I cannot work out where to change the account settings. Please could someone look at this.",Low,annoyed,5
+TICK-00879,CUST-0020,2026-04-13 12:50,password_reset,Password reset needed,"Hi there, The reset link never arrives in my inbox. Thanks for your help.",Low,calm,3
+TICK-00880,CUST-0022,2026-07-09 12:50,slow_performance,The platform is very slow,"Hi there, Pages take around thirty seconds to load. Many thanks.",High,calm,7
+TICK-00881,CUST-0005,2026-03-23 14:50,notification_failure,Notifications arriving late,"Hello again, Alerts turn up about six hours after the thing happened. Hoping for a quick reply.",Medium,annoyed,4
+TICK-00882,CUST-0028,2026-02-20 12:50,login_failure,Team cannot log in,This is now the third time I am writing. Four of my colleagues are getting an invalid credentials message. We are considering cancelling.,Critical,angry,4
+TICK-00883,CUST-0126,2026-07-09 09:50,login_failure,Team cannot log in,This is unacceptable. Four of my colleagues are getting an invalid credentials message. Please escalate this immediately.,Critical,angry,9
+TICK-00884,CUST-0027,2026-05-12 23:50,account_lockout,Account suspended without warning,"Hello again, We logged in this morning and the account is disabled. This is holding us up.",High,annoyed,8
+TICK-00885,CUST-0136,2026-07-04 21:50,dashboard_bug,Numbers do not match,"Hi, The total on the dashboard is different to the total in the report. Please could someone look at this.",Low,annoyed,2
+TICK-00886,CUST-0101,2026-08-08 13:50,slow_performance,The platform is very slow,"Following up on this, Pages take around thirty seconds to load. Hoping for a quick reply.",Medium,annoyed,5
+TICK-00887,CUST-0013,2026-05-17 09:50,slow_performance,The platform is very slow,This is now the third time I am writing. Pages take around thirty seconds to load. We expect a reply today.,Low,angry,8
+TICK-00888,CUST-0171,2026-05-05 10:50,password_reset,New password not accepted,We need this dealt with today. I changed my password and now the new one is rejected. We are considering cancelling.,High,angry,6
+TICK-00889,CUST-0152,2026-03-27 19:50,slow_performance,Slow since the update,"Hi there, Everything has been sluggish since the change you made last week. Thanks for your help.",Low,calm,1
+TICK-00890,CUST-0196,2026-05-08 08:50,api_failure,Authentication failing on API,We need this dealt with today. Our key worked yesterday and is now rejected on every call. We expect a reply today.,Medium,angry,6
+TICK-00891,CUST-0170,2026-07-15 15:50,login_failure,Team cannot log in,"Hello, Four of my colleagues are getting an invalid credentials message. Thanks for your help.",Medium,calm,7
+TICK-00892,CUST-0140,2026-02-23 20:50,password_reset,New password not accepted,"Following up on this, I changed my password and now the new one is rejected. This is holding us up.",Low,annoyed,6
+TICK-00893,CUST-0161,2026-05-03 05:50,notification_failure,Notifications arriving late,This is unacceptable. Alerts turn up about six hours after the thing happened. Please escalate this immediately.,Medium,angry,4
+TICK-00894,CUST-0130,2026-03-25 02:50,billing_error,Double charged this month,We need this dealt with today. We have two identical charges on the same date. We are considering cancelling.,Critical,angry,7
+TICK-00895,CUST-0022,2026-03-23 11:50,password_reset,Reset email not arriving,This is now the third time I am writing. I have requested a new password four times and nothing comes through. We expect a reply today.,Low,angry,8
+TICK-00896,CUST-0012,2026-07-07 15:50,notification_failure,Not receiving emails,"Following up on this, Alert emails are not arriving in any of our inboxes. Hoping for a quick reply.",Low,annoyed,5
+TICK-00897,CUST-0028,2026-06-14 00:50,feature_request,Dark mode request,"We need this dealt with today. Any chance of a dark theme, we work late most evenings. Please escalate this immediately.",Low,angry,5
+TICK-00898,CUST-0068,2026-08-11 01:50,password_reset,Password reset needed,"Hi, The reset link never arrives in my inbox. Hoping for a quick reply.",Low,annoyed,3
+TICK-00899,CUST-0162,2026-03-31 11:50,billing_error,Still being billed after cancelling,"Hi, We cancelled last month and a payment has gone out again. Hoping for a quick reply.",Medium,annoyed,3
+TICK-00900,CUST-0114,2026-06-02 20:50,notification_failure,Not receiving emails,"Hi there, Alert emails are not arriving in any of our inboxes. Thanks for your help.",Low,calm,5
+TICK-00901,CUST-0183,2026-07-31 02:50,billing_error,Double charged this month,This is now the third time I am writing. We have two identical charges on the same date. We are considering cancelling.,Medium,angry,6
+TICK-00902,CUST-0068,2026-08-05 09:50,payment_failure,Card declined for everyone,"Hello again, Every transaction today has been rejected, including test cards. Hoping for a quick reply.",High,annoyed,4
+TICK-00903,CUST-0067,2026-03-10 10:50,notification_failure,Notifications arriving late,This is now the third time I am writing. Alerts turn up about six hours after the thing happened. Please escalate this immediately.,High,angry,5
+TICK-00904,CUST-0160,2026-05-22 01:50,login_failure,Team cannot log in,"Following up on this, Four of my colleagues are getting an invalid credentials message. This is holding us up.",High,annoyed,3
+TICK-00905,CUST-0084,2026-06-30 00:50,api_failure,API returning errors,"Hi, Our integration is getting 500 errors on most calls. This is holding us up.",Medium,annoyed,7
+TICK-00906,CUST-0030,2026-06-05 08:50,payment_failure,Card declined for everyone,"We need this dealt with today. Every transaction today has been rejected, including test cards. Please escalate this immediately.",Critical,angry,7
+TICK-00907,CUST-0125,2026-05-21 15:50,system_outage,Total outage,We need this dealt with today. The site has been returning an error page for the last forty minutes. We expect a reply today.,Critical,angry,3
+TICK-00908,CUST-0084,2026-04-12 17:50,feature_request,Request for bulk actions,"Hi there, Being able to select several rows at once would save us a lot of time. No rush, whenever you get a chance.",Low,calm,8
+TICK-00909,CUST-0050,2026-04-06 21:50,feature_request,Request for bulk actions,"Hi there, Being able to select several rows at once would save us a lot of time. No rush, whenever you get a chance.",Low,calm,8
+TICK-00910,CUST-0156,2026-07-05 14:50,api_failure,API timing out,"Hello, Requests hang for thirty seconds and then fail. Thanks for your help.",Critical,calm,3
+TICK-00911,CUST-0081,2026-02-24 05:50,notification_failure,Not receiving emails,"Hi, Alert emails are not arriving in any of our inboxes. Hoping for a quick reply.",High,annoyed,3
+TICK-00912,CUST-0102,2026-04-14 17:50,slow_performance,The platform is very slow,We need this dealt with today. Pages take around thirty seconds to load. We expect a reply today.,Medium,angry,6
+TICK-00913,CUST-0109,2026-03-04 15:50,payment_failure,Checkout is broken,This is now the third time I am writing. Our customers reach the payment page and then get an error. We expect a reply today.,Critical,angry,4
+TICK-00914,CUST-0163,2026-05-27 15:50,login_failure,Cannot sign in,We need this dealt with today. The login page rejects our details even after a reset. We expect a reply today.,Critical,angry,5
+TICK-00915,CUST-0167,2026-06-09 23:50,slow_performance,The platform is very slow,This is now the third time I am writing. Pages take around thirty seconds to load. We are considering cancelling.,Medium,angry,3
+TICK-00916,CUST-0022,2026-06-19 06:50,slow_performance,Search is crawling,"Following up on this, Running a search takes almost a minute to return anything. This is holding us up.",Critical,annoyed,9
+TICK-00917,CUST-0004,2026-04-24 18:50,dashboard_bug,Dashboard display problem,This is now the third time I am writing. One of the charts is showing the wrong labels. Please escalate this immediately.,Medium,angry,7
+TICK-00918,CUST-0085,2026-07-10 14:50,how_to_question,Where do I find my invoices,"Good morning, I have looked in settings and cannot see a billing history anywhere. Many thanks.",Low,calm,5
+TICK-00919,CUST-0045,2026-06-04 06:50,account_lockout,Account suspended without warning,This is now the third time I am writing. We logged in this morning and the account is disabled. We expect a reply today.,Medium,angry,5
+TICK-00920,CUST-0194,2026-03-12 05:50,password_reset,Password reset needed,"Hi, The reset link never arrives in my inbox. This is holding us up.",Low,annoyed,5
+TICK-00921,CUST-0199,2026-06-30 16:50,login_failure,Sign in loop,We need this dealt with today. It accepts my password then sends me straight back to the login screen. We expect a reply today.,Critical,angry,4
+TICK-00922,CUST-0139,2026-03-14 14:50,feature_request,Dark mode request,"Following up on this, Any chance of a dark theme, we work late most evenings. Please could someone look at this.",Medium,annoyed,3
+TICK-00923,CUST-0128,2026-02-20 08:50,data_loss,Our records have disappeared,"Hi, About three weeks of entries are missing from our workspace. This is holding us up.",Critical,annoyed,6
+TICK-00924,CUST-0001,2026-02-22 16:50,security_incident,Suspicious activity on our account,"Hi, There are logins from a country none of our staff are in. Please could someone look at this.",Critical,annoyed,4
+TICK-00925,CUST-0024,2026-07-17 00:50,account_lockout,Account suspended without warning,"Following up on this, We logged in this morning and the account is disabled. Please could someone look at this.",High,annoyed,6
+TICK-00926,CUST-0151,2026-06-13 18:50,api_failure,API returning errors,"Hi there, Our integration is getting 500 errors on most calls. No rush, whenever you get a chance.",Critical,calm,6
+TICK-00927,CUST-0112,2026-04-10 10:50,slow_performance,The platform is very slow,"Following up on this, Pages take around thirty seconds to load. Hoping for a quick reply.",Critical,annoyed,8
+TICK-00928,CUST-0158,2026-08-09 21:50,how_to_question,How do I do this,"Following up on this, I cannot work out where to change the account settings. This is holding us up.",Low,annoyed,6
+TICK-00929,CUST-0145,2026-03-20 02:50,notification_failure,Notifications arriving late,This is now the third time I am writing. Alerts turn up about six hours after the thing happened. We expect a reply today.,Low,angry,4
+TICK-00930,CUST-0008,2026-04-08 08:50,billing_error,Charged the wrong amount,"Following up on this, The invoice does not match the plan we are on. Hoping for a quick reply.",Medium,annoyed,3
+TICK-00931,CUST-0134,2026-04-11 05:50,notification_failure,Notifications arriving late,"Hello, Alerts turn up about six hours after the thing happened. Many thanks.",High,calm,2
+TICK-00932,CUST-0181,2026-06-26 15:50,payment_failure,Payments are not going through,This is now the third time I am writing. Card charges keep failing at the final step. We expect a reply today.,Critical,angry,8
+TICK-00933,CUST-0132,2026-04-11 23:50,notification_failure,Alerts stopped,We need this dealt with today. We used to get a notification for every new entry and they have gone quiet. We expect a reply today.,Low,angry,5
+TICK-00934,CUST-0033,2026-08-08 21:50,system_outage,Total outage,"Hi, The site has been returning an error page for the last forty minutes. This is holding us up.",Critical,annoyed,5
+TICK-00935,CUST-0072,2026-05-11 11:50,how_to_question,Where do I find my invoices,"Hello again, I have looked in settings and cannot see a billing history anywhere. This is holding us up.",High,annoyed,3
+TICK-00936,CUST-0116,2026-03-03 16:50,data_export_failure,Corrupted export file,"Hello again, The file downloads but will not open in Excel. Please could someone look at this.",Low,annoyed,9
+TICK-00937,CUST-0028,2026-04-13 05:50,password_reset,New password not accepted,"Hi, I changed my password and now the new one is rejected. This is holding us up.",Low,annoyed,6
+TICK-00938,CUST-0111,2026-02-23 22:50,notification_failure,Notifications arriving late,"Good morning, Alerts turn up about six hours after the thing happened. Thanks for your help.",Medium,calm,8
+TICK-00939,CUST-0055,2026-07-15 23:50,how_to_question,Question about permissions,"Hello, How do I give a colleague access without making them an admin. No rush, whenever you get a chance.",Low,calm,2
+TICK-00940,CUST-0198,2026-03-30 09:50,feature_request,Dark mode request,"Following up on this, Any chance of a dark theme, we work late most evenings. This is holding us up.",Medium,annoyed,9
+TICK-00941,CUST-0062,2026-03-21 12:50,api_failure,Authentication failing on API,"Hi there, Our key worked yesterday and is now rejected on every call. Thanks for your help.",Critical,calm,1
+TICK-00942,CUST-0082,2026-07-29 20:50,how_to_question,Question about permissions,This is unacceptable. How do I give a colleague access without making them an admin. We are considering cancelling.,Low,angry,7
+TICK-00943,CUST-0091,2026-08-03 10:50,payment_failure,Card declined for everyone,"Hi, Every transaction today has been rejected, including test cards. This is holding us up.",Critical,annoyed,6
+TICK-00944,CUST-0154,2026-07-13 16:50,payment_failure,Checkout is broken,We need this dealt with today. Our customers reach the payment page and then get an error. Please escalate this immediately.,Medium,angry,7
+TICK-00945,CUST-0044,2026-07-17 15:50,notification_failure,Alerts stopped,This is unacceptable. We used to get a notification for every new entry and they have gone quiet. We expect a reply today.,Low,angry,5
+TICK-00946,CUST-0041,2026-06-13 13:50,how_to_question,How do I do this,"Hello again, I cannot work out where to change the account settings. Please could someone look at this.",Medium,annoyed,2
+TICK-00947,CUST-0127,2026-04-12 01:50,payment_failure,Card declined for everyone,"Hi, Every transaction today has been rejected, including test cards. Hoping for a quick reply.",Critical,annoyed,6
+TICK-00948,CUST-0004,2026-07-30 11:50,data_export_failure,Export is broken,"Hi, The CSV download stops halfway and the file is unusable. Hoping for a quick reply.",Critical,annoyed,8
+TICK-00949,CUST-0087,2026-04-20 19:50,password_reset,Reset email not arriving,"Hi, I have requested a new password four times and nothing comes through. Hoping for a quick reply.",Low,annoyed,5
+TICK-00950,CUST-0165,2026-04-04 23:50,security_incident,Unrecognised device on our account,This is now the third time I am writing. We can see a session we did not start and cannot end it. We are considering cancelling.,High,angry,5
+TICK-00951,CUST-0170,2026-08-14 02:50,login_failure,Sign in loop,"Hi, It accepts my password then sends me straight back to the login screen. Please could someone look at this.",High,annoyed,8
+TICK-00952,CUST-0055,2026-05-20 01:50,password_reset,Reset email not arriving,"Hi, I have requested a new password four times and nothing comes through. Hoping for a quick reply.",Low,annoyed,3
+TICK-00953,CUST-0085,2026-07-30 04:50,how_to_question,Where do I find my invoices,This is unacceptable. I have looked in settings and cannot see a billing history anywhere. We expect a reply today.,Medium,angry,6
+TICK-00954,CUST-0030,2026-03-12 05:50,payment_failure,Checkout is broken,"Following up on this, Our customers reach the payment page and then get an error. Hoping for a quick reply.",Critical,annoyed,8
+TICK-00955,CUST-0152,2026-08-12 03:50,feature_request,Request for bulk actions,"Following up on this, Being able to select several rows at once would save us a lot of time. Please could someone look at this.",Medium,annoyed,2
+TICK-00956,CUST-0033,2026-08-12 22:50,system_outage,Everything is down,"Hello, None of us can reach the platform at all. Many thanks.",Critical,calm,6
+TICK-00957,CUST-0135,2026-07-13 19:50,feature_request,Dark mode request,"This is unacceptable. Any chance of a dark theme, we work late most evenings. We expect a reply today.",Low,angry,3
+TICK-00958,CUST-0151,2026-07-13 21:50,password_reset,Password reset needed,We need this dealt with today. The reset link never arrives in my inbox. We expect a reply today.,Low,angry,7
+TICK-00959,CUST-0180,2026-06-17 04:50,notification_failure,Notifications arriving late,We need this dealt with today. Alerts turn up about six hours after the thing happened. Please escalate this immediately.,Medium,angry,3
+TICK-00960,CUST-0042,2026-06-22 23:50,system_outage,Platform unreachable,"Hi, Every one of our staff is getting a timeout when they try to load it. Please could someone look at this.",Critical,annoyed,4
+TICK-00961,CUST-0093,2026-08-10 14:50,notification_failure,Notifications arriving late,We need this dealt with today. Alerts turn up about six hours after the thing happened. We expect a reply today.,Medium,angry,9
+TICK-00962,CUST-0113,2026-06-09 20:50,slow_performance,The platform is very slow,"Hello again, Pages take around thirty seconds to load. This is holding us up.",High,annoyed,4
+TICK-00963,CUST-0175,2026-04-01 05:50,password_reset,Reset email not arriving,This is unacceptable. I have requested a new password four times and nothing comes through. Please escalate this immediately.,Medium,angry,9
+TICK-00964,CUST-0023,2026-08-01 02:50,slow_performance,Search is crawling,This is unacceptable. Running a search takes almost a minute to return anything. Please escalate this immediately.,High,angry,3
+TICK-00965,CUST-0071,2026-03-01 20:50,payment_failure,Payments are not going through,"Hi, Card charges keep failing at the final step. Hoping for a quick reply.",High,annoyed,8
+TICK-00966,CUST-0011,2026-07-25 09:50,billing_error,Double charged this month,This is unacceptable. We have two identical charges on the same date. Please escalate this immediately.,Critical,angry,9
+TICK-00967,CUST-0049,2026-06-11 06:50,dashboard_bug,Numbers do not match,"Hi, The total on the dashboard is different to the total in the report. Hoping for a quick reply.",High,annoyed,5
+TICK-00968,CUST-0056,2026-04-27 14:50,feature_request,Dark mode request,"We need this dealt with today. Any chance of a dark theme, we work late most evenings. We expect a reply today.",Low,angry,4
+TICK-00969,CUST-0153,2026-04-30 20:50,password_reset,Password reset needed,We need this dealt with today. The reset link never arrives in my inbox. We are considering cancelling.,Low,angry,6
+TICK-00970,CUST-0185,2026-07-26 09:50,password_reset,Password reset needed,This is unacceptable. The reset link never arrives in my inbox. We expect a reply today.,Medium,angry,7
+TICK-00971,CUST-0021,2026-05-15 21:50,dashboard_bug,Dashboard display problem,"Hello again, One of the charts is showing the wrong labels. This is holding us up.",Low,annoyed,2
+TICK-00972,CUST-0103,2026-05-25 03:50,notification_failure,Alerts stopped,This is now the third time I am writing. We used to get a notification for every new entry and they have gone quiet. Please escalate this immediately.,Critical,angry,8
+TICK-00973,CUST-0054,2026-04-23 16:50,password_reset,New password not accepted,"Following up on this, I changed my password and now the new one is rejected. Please could someone look at this.",Medium,annoyed,7
+TICK-00974,CUST-0096,2026-06-29 09:50,notification_failure,Not receiving emails,This is unacceptable. Alert emails are not arriving in any of our inboxes. Please escalate this immediately.,Medium,angry,5
+TICK-00975,CUST-0068,2026-04-28 22:50,dashboard_bug,Numbers do not match,"Hi, The total on the dashboard is different to the total in the report. Hoping for a quick reply.",Low,annoyed,5
+TICK-00976,CUST-0175,2026-06-19 00:50,password_reset,Reset email not arriving,We need this dealt with today. I have requested a new password four times and nothing comes through. Please escalate this immediately.,Low,angry,10
+TICK-00977,CUST-0169,2026-02-26 00:50,account_lockout,Account suspended without warning,"Hello again, We logged in this morning and the account is disabled. Hoping for a quick reply.",High,annoyed,6
+TICK-00978,CUST-0057,2026-06-11 18:50,password_reset,New password not accepted,"Hello again, I changed my password and now the new one is rejected. Hoping for a quick reply.",Low,annoyed,5
+TICK-00979,CUST-0092,2026-07-30 11:50,how_to_question,Question about permissions,We need this dealt with today. How do I give a colleague access without making them an admin. We expect a reply today.,Medium,angry,5
+TICK-00980,CUST-0119,2026-07-03 21:50,dashboard_bug,Dashboard display problem,"Following up on this, One of the charts is showing the wrong labels. This is holding us up.",High,annoyed,4
+TICK-00981,CUST-0160,2026-06-12 09:50,api_failure,API returning errors,We need this dealt with today. Our integration is getting 500 errors on most calls. We expect a reply today.,Critical,angry,4
+TICK-00982,CUST-0175,2026-06-11 03:50,data_export_failure,Cannot download report,"Hi, The export button spins for a while and then nothing happens. This is holding us up.",Medium,annoyed,11
+TICK-00983,CUST-0059,2026-03-11 07:50,slow_performance,The platform is very slow,"Hi, Pages take around thirty seconds to load. This is holding us up.",Medium,annoyed,4
+TICK-00984,CUST-0126,2026-06-13 14:50,payment_failure,Card declined for everyone,"Hi, Every transaction today has been rejected, including test cards. This is holding us up.",High,annoyed,10
+TICK-00985,CUST-0084,2026-06-27 16:50,slow_performance,The platform is very slow,"Following up on this, Pages take around thirty seconds to load. Please could someone look at this.",Low,annoyed,9
+TICK-00986,CUST-0190,2026-04-16 07:50,integration_failure,Integration stopped syncing,This is now the third time I am writing. Nothing has come through from the connected tool since Tuesday. We expect a reply today.,High,angry,7
+TICK-00987,CUST-0185,2026-04-01 14:50,slow_performance,Slow since the update,"Hello, Everything has been sluggish since the change you made last week. No rush, whenever you get a chance.",Medium,calm,8
+TICK-00988,CUST-0083,2026-07-26 11:50,login_failure,Cannot sign in,"Hi there, The login page rejects our details even after a reset. Many thanks.",High,calm,6
+TICK-00989,CUST-0071,2026-07-23 01:50,feature_request,Feature suggestion,"Following up on this, It would help if we could sort the table by date. This is holding us up.",Low,annoyed,9
+TICK-00990,CUST-0146,2026-02-26 12:50,password_reset,New password not accepted,This is unacceptable. I changed my password and now the new one is rejected. Please escalate this immediately.,Medium,angry,6
+TICK-00991,CUST-0041,2026-06-24 22:50,dashboard_bug,Chart will not load,We need this dealt with today. One panel stays blank no matter how many times I refresh. We are considering cancelling.,Medium,angry,3
+TICK-00992,CUST-0117,2026-05-28 01:50,billing_error,Double charged this month,This is unacceptable. We have two identical charges on the same date. Please escalate this immediately.,High,angry,7
+TICK-00993,CUST-0137,2026-05-01 15:50,notification_failure,Not receiving emails,"Following up on this, Alert emails are not arriving in any of our inboxes. This is holding us up.",Critical,annoyed,3
+TICK-00994,CUST-0012,2026-05-10 12:50,login_failure,Sign in loop,"Hello again, It accepts my password then sends me straight back to the login screen. Hoping for a quick reply.",High,annoyed,6
+TICK-00995,CUST-0102,2026-03-14 09:50,account_lockout,Too many attempts message,This is unacceptable. We are stuck on a lockout screen and the timer never clears. We expect a reply today.,High,angry,7
+TICK-00996,CUST-0006,2026-05-14 01:50,billing_error,Still being billed after cancelling,We need this dealt with today. We cancelled last month and a payment has gone out again. Please escalate this immediately.,High,angry,4
+TICK-00997,CUST-0058,2026-04-17 15:50,api_failure,API returning errors,"Hi, Our integration is getting 500 errors on most calls. Hoping for a quick reply.",Medium,annoyed,8
+TICK-00998,CUST-0135,2026-03-19 16:50,notification_failure,Alerts stopped,This is unacceptable. We used to get a notification for every new entry and they have gone quiet. Please escalate this immediately.,Medium,angry,4
+TICK-00999,CUST-0079,2026-05-12 21:50,notification_failure,Not receiving emails,We need this dealt with today. Alert emails are not arriving in any of our inboxes. Please escalate this immediately.,High,angry,3
+TICK-01000,CUST-0085,2026-02-17 17:50,slow_performance,The platform is very slow,We need this dealt with today. Pages take around thirty seconds to load. We expect a reply today.,Low,angry,7
