@@ -41,6 +41,7 @@ An AI agent that:
 5. Says out loud what it chose to favour and what that costs
 6. Gets checked twice, in case it got something wrong
 7. Says how solid each decision was, and flags the close calls for a person
+8. Keeps a permanent record of what it did, and writes it up in plain English
 
 ---
 
@@ -520,7 +521,7 @@ cd ticket-priority-agent
 ```bash
 python -m venv venv
 venv\Scripts\activate
-pip install fastapi uvicorn groq python-dotenv
+pip install fastapi uvicorn groq python-dotenv python-docx
 ```
 
 On Mac or Linux, use `source venv/bin/activate` instead.
@@ -535,6 +536,11 @@ GROQ_API_KEY=your_key_here
 **4. Run it**
 ```bash
 python decide.py
+```
+
+**To ask why one complaint ended up where it did**
+```bash
+python why.py TICK-00771
 ```
 
 **To see how solid each decision is on its own**
@@ -571,6 +577,9 @@ disagree, and pick the six hardest cases out of them.
 | `brain.py` | Gathers the evidence and runs the four ways of deciding. Makes no decision |
 | `decide.py` | Where the AI decides, explains itself, and gets checked |
 | `stability.py` | Tests which decisions were close calls, by changing one number at a time |
+| `decision_log.py` | Saves every decision, with everything that went into it |
+| `thinking_log.py` | Writes the same story into a Word file anyone can read |
+| `why.py` | Looks up why one complaint was placed where it was |
 | `api.py` | Puts it behind a web address |
 | `data/customers.csv` | The customer records |
 | `data/tickets.csv` | The complaints and what people wrote |
@@ -584,6 +593,105 @@ where the AI takes over, and keeping it separate means the evidence and the
 judgement never get tangled together.
 
 ---
+
+## Every decision is kept, and written up in plain English
+
+A decision that is made, printed to a screen, and then gone is not much use to
+a company. Six months later somebody asks why a customer was put fourth, and
+there is no answer.
+
+So every run is recorded twice, in two different ways, for two different
+readers.
+
+### For a computer: one file per decision
+
+Each decision is saved as its own file under `data/decisions/`, holding
+everything that went into it:
+
+- what was known about every complaint at the time
+- where each of the four ways of ranking placed it
+- what the AI chose, and the reason it gave
+- what the checks found, including any reason it had to rewrite
+- how solid the answer was, and whether a person should look
+
+Because the reasons **before** correction are kept alongside the corrected
+ones, a log that quietly hides its own mistakes is not what this is.
+
+There is a small tool for asking about one complaint:
+
+```bash
+python why.py TICK-00771
+```
+
+```
+TICK-00771 appears in 2 decision(s).
+
+  2026-08-16 16:34:45   (DEC-20260816-163445)
+  Placed 2 out of 6
+  Reason: Potential account takeover is a security risk that must be
+          addressed within the top three.
+  How solid that was: shaky
+  Flagged for a person to look at.
+
+  2026-08-16 16:37:16   (DEC-20260816-163716)
+  Placed 2 out of 6
+  Reason: A possible account takeover is a security risk that policy
+          forces into the top three.
+  How solid that was: shaky
+  Flagged for a person to look at.
+```
+
+That output also shows something useful on its own: across two separate runs
+the agent placed that complaint in the same position for the same reason, so
+its judgement on that one is steady.
+
+### For a person: a Word document that grows
+
+`data/how_the_agent_thinks.docx` tells the same story the way somebody without
+a technical background would want to read it. Each run is added underneath the
+last, so the file becomes a history you can scroll back through.
+
+It walks through seven steps in order:
+
+1. The complaints that were waiting
+2. What each of the three systems said about each one
+3. How the four ways of ranking each ordered them, and where they clashed most
+4. What the customers actually wrote
+5. What the AI decided, why, and what it gave up
+6. What the checks found
+7. Where each complaint was routed
+
+Here is the part worth reading, taken from a real run:
+
+```
+Were the reasons it gave actually true?
+
+  TICK-00266 claimed: A feature request with a deadline in minutes is
+                      urgent but less damaging than the overdue export.
+  but the data says:  0.3 hours still remain
+
+So the agent was asked to write those reasons again:
+
+  TICK-00266 now reads: Its response window is nearly exhausted with only
+                        0.3 hours left, and it comes from an enterprise
+                        customer, so it sits above complaints with looser
+                        deadlines.
+```
+
+The AI made a claim, the check caught it, the reason was rewritten, and all
+three of those things are on permanent record. Nothing has to be taken on
+trust.
+
+### Why not a database?
+
+A database would be the right answer for a reporting question, such as "how
+often did we put paying customers behind free ones last quarter". It is the
+wrong answer for "let me read what the agent was thinking", because nobody
+opens a database to read a story.
+
+The records are already stored as structured fields rather than loose text, so
+moving them into Postgres later is a change of where they live, not a redesign.
+Nothing in the reasoning depends on where the rows come from.
 
 ## What is honest about this
 
@@ -659,7 +767,7 @@ a formula, so a model would mostly rediscover that formula rather than learn
 anything real. That caveat would need saying out loud rather than presenting
 the accuracy as a finding.
 
-**4. Turn it into a full working pipeline.**
+**4. Move the records into Postgres and join it all into one pipeline.**
 The pieces exist but they are not joined up. A complete version would be:
 
 ```
