@@ -40,6 +40,7 @@ An AI agent that:
 4. Commits to one order and explains every position
 5. Says out loud what it chose to favour and what that costs
 6. Gets checked twice, in case it got something wrong
+7. Says how solid each decision was, and flags the close calls for a person
 
 ---
 
@@ -377,6 +378,97 @@ kinds of failure, which is why there are two different checks.
 
 ---
 
+## How solid is each decision?
+
+An order is only half an answer. The other half is how much you should trust it.
+
+Some decisions are close calls. If one number had been slightly different, the
+complaint would have landed somewhere else entirely. Other decisions hold no
+matter what you change. A support manager should know which is which, and
+nothing in the agent said so.
+
+So the project tests it directly.
+
+### How the test works
+
+For every complaint, one number is changed at a time, and the ranking is run
+again to see whether the complaint moved.
+
+The changes are small and believable, the kind of thing that could easily have
+been slightly wrong in real life:
+
+- Half as many people affected, or twice as many
+- Work turns out to have been blocked after all, or not blocked after all
+- A quarter more time left on the clock, or a quarter less
+- The customer pays half what we recorded, or £20,000 a month more
+
+Six or seven changes per complaint. If barely any of them move it, the decision
+is solid. If several do, it was a close call.
+
+### What it found
+
+| Complaint | Where the scoring puts it | How solid | What moves it |
+|---|---|---|---|
+| Export broken, 50 hours late | 1st | **Solid** | Nothing. 0 of 7 changes move it |
+| Files disappeared, free customer | 2nd | Fairly solid | 1 of 6 |
+| Feature request, £29,044 customer | 3rd | Fairly solid | 2 of 6 |
+| Slow pages, £39,127 customer | 4th | **Shaky** | 3 of 7 |
+| Possible break-in, £55 customer | 5th | **Shaky** | 3 of 6 |
+| Password reset, marked "Critical" | 6th | Fairly solid | 1 of 6 |
+
+The overdue export at first place is completely solid. Seven different changes
+and it does not budge. That is a decision you can act on without thinking twice.
+
+The £39,127 customer at fourth is shaky. Three changes move it, and one moves it
+two places. Its position is close to arbitrary, and that is worth knowing before
+anybody explains it to that customer.
+
+### It also produces the conditions that would reverse a decision
+
+Because the test works by actually rerunning the ranking, it does not have to
+guess what would change the answer. It knows:
+
+```
+TICK-00771  Possible break-in
+  if 7 people were affected, not 1, it moves from 5 to 4
+  if work was blocked after all,   it moves from 5 to 3
+```
+
+That is a real experiment, not the AI speculating. Somebody could take that
+straight to a support team: check whether more than one account was touched,
+because if it was, this moves up the queue.
+
+### It flags the shaky ones for a person
+
+The routing at the end says which decisions were not settled:
+
+```
+ROUTE TICK-00771 -> HUMAN AGENT  (now)      <- the scoring was not settled about this one
+ROUTE TICK-00171 -> HUMAN AGENT  (next)
+ROUTE TICK-00982 -> HUMAN AGENT  (next)
+ROUTE TICK-00707 -> HUMAN AGENT  (queued)   <- the scoring was not settled about this one
+```
+
+Not every decision deserves the same amount of trust, and now the output says so.
+
+### Two things this deliberately does not do
+
+**It does not ask the AI again.** The test reruns the four ways of ranking, not
+the AI. Asking the AI fifty times would be slow and costly, and the AI varies
+between runs anyway, so there would be no way to tell whether an order moved
+because of the change or because the AI happened to feel differently. The four
+ways give the same answer every time, so anything that moves, moved because of
+the change.
+
+This means it measures how solid the **scoring** is, not how solid the AI's
+final answer is. The AI decides on top of the scoring using the customer's own
+words and the written rules, and this test cannot see either of those. The
+output says so rather than overclaiming.
+
+**The AI never sees the results.** They are worked out before it is asked to
+decide, and deliberately kept from it. If the AI knew which decisions look
+solid, it would start aiming to look solid rather than aiming to be right.
+
 ## What it produces
 
 ```
@@ -445,6 +537,11 @@ GROQ_API_KEY=your_key_here
 python decide.py
 ```
 
+**To see how solid each decision is on its own**
+```bash
+python stability.py
+```
+
 **Or run it as a web service**
 ```bash
 uvicorn api:app --reload --port 8020
@@ -473,6 +570,7 @@ disagree, and pick the six hardest cases out of them.
 | `build_demo_batch.py` | Picks the six hardest cases out of the 1,000 |
 | `brain.py` | Gathers the evidence and runs the four ways of deciding. Makes no decision |
 | `decide.py` | Where the AI decides, explains itself, and gets checked |
+| `stability.py` | Tests which decisions were close calls, by changing one number at a time |
 | `api.py` | Puts it behind a web address |
 | `data/customers.csv` | The customer records |
 | `data/tickets.csv` | The complaints and what people wrote |
