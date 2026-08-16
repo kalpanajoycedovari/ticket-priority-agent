@@ -1,0 +1,237 @@
+[
+  {
+    "ticket": {
+      "ticket_id": "NEW-00001",
+      "customer_id": "CUST-0189",
+      "created_at": "2026-08-16 22:18",
+      "issue_type": "account_lockout",
+      "subject": "Team locked out",
+      "message": "our whole team is locked out. nobody can get in since about 6am. we have a client demo at 10 and I don't know what to tell them",
+      "reported_severity": "Critical",
+      "customer_mood": "unknown",
+      "times_contacted_about_this": "1"
+    },
+    "customer": {
+      "customer_id": "CUST-0189",
+      "company_name": "Green Retail",
+      "plan": "Free",
+      "monthly_value_gbp": "0",
+      "months_as_customer": "53",
+      "promised_response_hours": "72",
+      "has_complained_before": "False"
+    },
+    "telemetry": {
+      "ticket_id": "NEW-00001",
+      "service_name": "web-app",
+      "affected_users": "2860",
+      "error_rate_percent": "63.1",
+      "system_load_percent": "22",
+      "work_is_blocked": "True",
+      "observed_severity": "Critical"
+    },
+    "sla": {
+      "ticket_id": "NEW-00001",
+      "customer_id": "CUST-0189",
+      "promised_response_hours": "72.0",
+      "first_reply_hours": "69.1",
+      "hours_left_before_promise_broken": "2.9",
+      "promise_was_broken": "False"
+    },
+    "how_it_was_read": {
+      "issue_type": "account_lockout",
+      "subject": "Team locked out",
+      "reported_severity": "Critical",
+      "sure_about_the_kind": true,
+      "what_made_me_pick_it": "locked out, nobody can get in",
+      "anything_worrying": "Whole team locked out before client demo"
+    }
+  },
+  {
+    "ticket": {
+      "ticket_id": "NEW-00002",
+      "customer_id": "CUST-0141",
+      "created_at": "2026-08-16 22:18",
+      "issue_type": "compliance_request",
+      "subject": "Customer data deletion request",
+      "message": "I need to flag something. one of our customers has asked us to delete everything we hold on them. I believe there's a legal time limit on this and we're already a few days in",
+      "reported_severity": "High",
+      "customer_mood": "unknown",
+      "times_contacted_about_this": "1"
+    },
+    "customer": {
+      "customer_id": "CUST-0141",
+      "company_name": "Stone Labs",
+      "plan": "Free",
+      "monthly_value_gbp": "0",
+      "months_as_customer": "29",
+      "promised_response_hours": "72",
+      "has_complained_before": "True"
+    },
+    "telemetry": {
+      "ticket_id": "NEW-00002",
+      "service_name": "auth-service",
+      "affected_users": "1",
+      "error_rate_percent": "6.9",
+      "system_load_percent": "77",
+      "work_is_blocked": "False",
+      "observed_severity": "Low"
+    },
+    "sla": {
+      "ticket_id": "NEW-00002",
+      "customer_id": "CUST-0141",
+      "promised_response_hours": "72.0",
+      "first_reply_hours": "60.0",
+      "hours_left_before_promise_broken": "12.0",
+      "promise_was_broken": "False"
+    },
+    "how_it_was_read": {
+      "issue_type": "compliance_request",
+      "subject": "Customer data deletion request",
+      "reported_severity": "High",
+      "sure_about_the_kind": true,
+      "what_made_me_pick_it": "\"delete everything we hold on them\" and mention of legal time limit",
+      "anything_worrying": "Potential legal compliance risk due to missed deletion deadline"
+    }
+  },
+  {
+    "ticket": {
+      "ticket_id": "NEW-00003",
+      "customer_id": "CUST-0038",
+      "created_at": "2026-08-16 22:18",
+      "issue_type": "payment_failure",
+      "subject": "Payments failing at checkout",
+      "message": "payments are failing at checkout. we've had maybe forty customers email us this morning saying their card was declined. our own test card fails too",
+      "reported_severity": "High",
+      "customer_mood": "unknown",
+      "times_contacted_about_this": "1"
+    },
+    "customer": {
+      "customer_id": "CUST-0038",
+      "company_name": "Blue Works",
+      "plan": "Free",
+      "monthly_value_gbp": "0",
+      "months_as_customer": "13",
+      "promised_response_hours": "72",
+      "has_complained_before": "False"
+    },
+    "telemetry": {
+      "ticket_id": "NEW-00003",
+      "service_name": "auth-service",
+      "affected_users": "1306",
+      "error_rate_percent": "69.4",
+      "system_load_percent": "88",
+      "work_is_blocked": "True",
+      "observed_severity": "Critical"
+    },
+    "sla": {
+      "ticket_id": "NEW-00003",
+      "customer_id": "CUST-0038",
+      "promised_response_hours": "72.0",
+      "first_reply_hours": "23.7",
+      "hours_left_before_promise_broken": "48.3",
+      "promise_was_broken": "False"
+    },
+    "how_it_was_read": {
+      "issue_type": "payment_failure",
+      "subject": "Payments failing at checkout",
+      "reported_severity": "High",
+      "sure_about_the_kind": true,
+      "what_made_me_pick_it": "payments are failing at checkout; card was declined; test card fails",
+      "anything_worrying": "multiple customers unable to complete purchases"
+    }
+  },
+  {
+    "ticket": {
+      "ticket_id": "NEW-00004",
+      "customer_id": "CUST-0195",
+      "created_at": "2026-08-16 22:18",
+      "issue_type": "security_incident",
+      "subject": "Unknown device session",
+      "message": "there is a session logged in from a device we don't recognise and I can't work out how to end it. probably nothing but thought I should mention it",
+      "reported_severity": "Low",
+      "customer_mood": "unknown",
+      "times_contacted_about_this": "1"
+    },
+    "customer": {
+      "customer_id": "CUST-0195",
+      "company_name": "Stone Harbour",
+      "plan": "Free",
+      "monthly_value_gbp": "0",
+      "months_as_customer": "40",
+      "promised_response_hours": "72",
+      "has_complained_before": "False"
+    },
+    "telemetry": {
+      "ticket_id": "NEW-00004",
+      "service_name": "export-worker",
+      "affected_users": "1",
+      "error_rate_percent": "3.3",
+      "system_load_percent": "59",
+      "work_is_blocked": "False",
+      "observed_severity": "Low"
+    },
+    "sla": {
+      "ticket_id": "NEW-00004",
+      "customer_id": "CUST-0195",
+      "promised_response_hours": "72.0",
+      "first_reply_hours": "10.4",
+      "hours_left_before_promise_broken": "61.6",
+      "promise_was_broken": "False"
+    },
+    "how_it_was_read": {
+      "issue_type": "security_incident",
+      "subject": "Unknown device session",
+      "reported_severity": "Low",
+      "sure_about_the_kind": true,
+      "what_made_me_pick_it": "session logged in from a device we don't recognise; can't work out how to end it",
+      "anything_worrying": "Potential unauthorized access"
+    }
+  },
+  {
+    "ticket": {
+      "ticket_id": "NEW-00005",
+      "customer_id": "CUST-0178",
+      "created_at": "2026-08-16 22:18",
+      "issue_type": "dashboard_bug",
+      "subject": "Dashboard showing outdated data",
+      "message": "ABSOLUTELY UNACCEPTABLE. our dashboard chart is showing last month's figures. we pay you thousands every month and I expect better than this. I want someone to call me today",
+      "reported_severity": "High",
+      "customer_mood": "unknown",
+      "times_contacted_about_this": "1"
+    },
+    "customer": {
+      "customer_id": "CUST-0178",
+      "company_name": "Stone Retail",
+      "plan": "Free",
+      "monthly_value_gbp": "0",
+      "months_as_customer": "37",
+      "promised_response_hours": "72",
+      "has_complained_before": "False"
+    },
+    "telemetry": {
+      "ticket_id": "NEW-00005",
+      "service_name": "notify-service",
+      "affected_users": "16",
+      "error_rate_percent": "6.0",
+      "system_load_percent": "59",
+      "work_is_blocked": "False",
+      "observed_severity": "Low"
+    },
+    "sla": {
+      "ticket_id": "NEW-00005",
+      "customer_id": "CUST-0178",
+      "promised_response_hours": "72.0",
+      "first_reply_hours": "9.8",
+      "hours_left_before_promise_broken": "62.2",
+      "promise_was_broken": "False"
+    },
+    "how_it_was_read": {
+      "issue_type": "dashboard_bug",
+      "subject": "Dashboard showing outdated data",
+      "reported_severity": "High",
+      "sure_about_the_kind": true,
+      "what_made_me_pick_it": "dashboard chart is showing last month's figures",
+      "anything_worrying": "Customer is extremely upset and demands a call today"
+    }
+  }
+]

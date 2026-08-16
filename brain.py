@@ -20,12 +20,15 @@ DATA_FOLDER = "data"
 SEVERITY_ORDER = {"Low": 1, "Medium": 2, "High": 3, "Critical": 4}
 
 
-def load_batch():
-    """Reads the tickets we saved earlier."""
-    path = os.path.join(DATA_FOLDER, "demo_batch.json")
+def load_batch(filename="demo_batch.json"):
+    """
+    Reads a batch of tickets. Defaults to the six we picked earlier,
+    but any file in the same shape works, so the agent can be pointed
+    at complaints it has never seen.
+    """
+    path = os.path.join(DATA_FOLDER, filename)
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
-
 
 def read_facts(item):
     """Gathers the facts about one ticket from all three sources."""
@@ -277,13 +280,7 @@ def gather_evidence(batch):
                 "hours_left": f["hours_left"],
                 "already_late": f["already_late"],
             },
-            "our_past_behaviour": {
-                "hours_this_kind_of_problem_usually_takes": f["hours_this_kind_usually_takes"],
-                "what_that_number_means": "average hours from arrival to resolution "
-                                          "for this kind of problem across 1,000 past "
-                                          "complaints. It reflects how quickly we chose "
-                                          "to act, not how hard the problem is to fix.",
-            },
+            "hours_this_kind_usually_takes": f["hours_this_kind_usually_takes"],
             "system_load_percent": f["system_load_percent"],
 
             "customer_claimed_severity": severity_as_word(f["customer_says"]),

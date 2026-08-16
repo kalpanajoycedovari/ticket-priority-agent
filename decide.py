@@ -143,10 +143,19 @@ required.
             {"role": "user", "content": question},
         ],
         temperature=0.2,
+        max_tokens=8000,
         response_format={"type": "json_object"},
     )
 
-    return json.loads(response.choices[0].message.content)
+    text = response.choices[0].message.content
+
+    if not text or not text.strip():
+        raise RuntimeError(
+            "The model sent back nothing. This usually means the batch was "
+            "too large for one answer. Try fewer tickets, or raise max_tokens."
+        )
+
+    return json.loads(text)
 
 
 def check_the_reasons_match_the_facts(answer, facts):
