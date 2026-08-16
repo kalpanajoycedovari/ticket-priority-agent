@@ -18,6 +18,7 @@ from groq import Groq
 import brain
 import stability
 import decision_log
+import thinking_log
 
 load_dotenv()
 
@@ -228,7 +229,7 @@ Do not change any other reason. Do not change the ordering.
 
 Each new reason must still explain WHY the ticket sits where it does. Do not
 simply list the numbers back. Say what about the ticket earned it that place,
-using only what the data actually shows.
+using only what the data actually shows. Keep it to one sentence, the same length as the others.
 
 Reply with JSON only, in exactly this shape, containing only the tickets
 listed above:
@@ -344,6 +345,9 @@ def run_the_agent():
     record = decision_log.build_the_record(result, facts, orders)
     result["saved_to"] = decision_log.save_the_record(record)
     result["decision_id"] = record["decision_id"]
+    # Also write the same story out in a Word file, so anybody can read
+    # what the agent did without having to open the code.
+    result["written_up_in"] = thinking_log.write_this_run(result, facts, orders)
 
     return result
 
