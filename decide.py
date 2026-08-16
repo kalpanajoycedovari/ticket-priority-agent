@@ -16,6 +16,7 @@ from dotenv import load_dotenv
 from groq import Groq
 
 import brain
+import stability
 
 load_dotenv()
 
@@ -299,7 +300,10 @@ def run_the_agent():
     batch = brain.load_batch()
     evidence = brain.gather_evidence(batch)
     facts = [brain.read_facts(item) for item in batch]
-
+    # How solid is the scoring on its own? Worked out before we ask the AI,
+    # and deliberately not shown to it. If the AI knew which decisions look
+    # solid, it would start aiming for that instead of aiming to be right.
+    how_solid = stability.how_solid_is_this(facts)
     answer = ask_the_model(evidence)
 
     first_reasons = dict(answer["reasons"])
@@ -330,6 +334,7 @@ def run_the_agent():
             "needs_a_human_to_look": bool(still_wrong),
         },
         "reasons_before_correction": first_reasons,
+        "how_solid_the_scoring_is": how_solid["by_ticket"],
     }
 
 
@@ -397,13 +402,32 @@ def print_the_result(result):
                 if key != "problem":
                     print(f"    {key}: {value}")
 
+    print("\nHOW SOLID WAS THE SCORING UNDERNEATH?")
+    print("-" * 60)
+    print("  We changed one number at a time and re-ran the four ways of")
+    print("  ranking, to see which decisions were close calls.")
+    print("  This measures the scoring, not the AI's final answer.\n")
+
+    for r in result["how_solid_the_scoring_is"].values():
+        print(f"  {r['id']}  {r['how_solid']}  "
+              f"({r['small_changes_that_move_it']} of {r['small_changes_tried']} "
+              f"small changes move it)")
+
+        for m in r["what_would_move_it"][:2]:
+            print(f"    if {m['if']}, it moves from {m['moves_from']} to {m['moves_to']}")
+
     print("\nROUTING")
     print("-" * 60)
+
     for position, ticket_id in enumerate(result["order"], start=1):
         when = "now" if position == 1 else ("next" if position <= 3 else "queued")
-        print(f"  ROUTE {ticket_id} -> HUMAN AGENT  ({when})")
 
+        solid = result["how_solid_the_scoring_is"].get(ticket_id)
+        note = ""
+        if solid and solid["worth_a_second_look"]:
+            note = "   <- the scoring was not settled about this one"
 
+        print(f"  ROUTE {ticket_id} -> HUMAN AGENT  ({when}){note}")
 if __name__ == "__main__":
     print("\nAsking the agent to decide...")
     print_the_result(run_the_agent())
