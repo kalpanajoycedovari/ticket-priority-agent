@@ -17,6 +17,7 @@ from groq import Groq
 
 import brain
 import stability
+import decision_log
 
 load_dotenv()
 
@@ -304,6 +305,7 @@ def run_the_agent():
     # and deliberately not shown to it. If the AI knew which decisions look
     # solid, it would start aiming for that instead of aiming to be right.
     how_solid = stability.how_solid_is_this(facts)
+    orders = brain.rank_all_four_ways(facts)
     answer = ask_the_model(evidence)
 
     first_reasons = dict(answer["reasons"])
@@ -320,7 +322,7 @@ def run_the_agent():
 
         still_wrong = check_the_reasons_match_the_facts(answer, facts)
 
-    return {
+    result = {
         "order": answer["order"],
         "reasons": answer["reasons"],
         "the_trade_off": answer["the_trade_off"],
@@ -336,6 +338,14 @@ def run_the_agent():
         "reasons_before_correction": first_reasons,
         "how_solid_the_scoring_is": how_solid["by_ticket"],
     }
+
+    # Keep a record of this decision, so somebody can ask later why
+    # a complaint was placed where it was.
+    record = decision_log.build_the_record(result, facts, orders)
+    result["saved_to"] = decision_log.save_the_record(record)
+    result["decision_id"] = record["decision_id"]
+
+    return result
 
 
 def print_the_result(result):
@@ -428,6 +438,16 @@ def print_the_result(result):
             note = "   <- the scoring was not settled about this one"
 
         print(f"  ROUTE {ticket_id} -> HUMAN AGENT  ({when}){note}")
+
+    if result.get("saved_to"):
+        print("\nSAVED")
+        print("-" * 60)
+        print(f"  This decision is on record as {result['decision_id']}")
+        print(f"  Written to {result['saved_to']}")
+        print("  Anyone can open that file later and see exactly what the")
+        print("  agent knew, what it chose, and why.")
+
+
 if __name__ == "__main__":
     print("\nAsking the agent to decide...")
     print_the_result(run_the_agent())
