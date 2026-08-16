@@ -187,6 +187,42 @@ opposite of the truth.
 
 ---
 
+## Every signal the brief named
+
+The brief lists five things a ticket arrives with. All five reach the agent.
+
+| Signal it names | Where it comes from | How the agent sees it |
+|---|---|---|
+| Customer account value | `customers.csv` | Plan and monthly value, feeding the revenue strategy |
+| Stated urgency in the message | `tickets.csv` | The customer's own words, plus the severity they ticked |
+| Historical resolution time for similar issues | Averaged across the 1,000 past complaints | Hours this kind of problem usually takes |
+| Current system load | `telemetry.csv` | Load percentage at the moment the complaint arrived |
+| Whether the issue blocks a paying workflow | `telemetry.csv` | `work_is_blocked`, worth 150 points in the damage strategy |
+
+### A caution on the history figure
+
+`history_lookup.py` works out the average hours from arrival to resolution for
+each kind of problem:
+
+```
+data_loss                    5.2 hours on average
+system_outage                6.7 hours on average
+payment_failure             15.4 hours on average
+...
+feature_request            118.1 hours on average
+billing_error              126.2 hours on average
+password_reset             132.4 hours on average
+```
+
+Read carelessly that says a password reset is 25 times harder than a data loss.
+It says nothing of the sort. A password reset does not need 132 hours of work.
+It needs five minutes of work after five days of sitting in a queue.
+
+So this measures **how quickly we chose to act**, not how hard the problem is.
+The prompt says so explicitly, otherwise the agent would treat a long history as
+evidence of difficulty and keep doing what we have always done. That would make
+the agent inherit our worst habits and call it data.
+
 ## Where the three systems disagree, and how often
 
 Rather than claiming the systems disagree, the disagreements were counted.
@@ -378,6 +414,74 @@ The order was fine in that case. Only the explanation was wrong. Two different
 kinds of failure, which is why there are two different checks.
 
 ---
+
+## What the agent says about its own reasoning
+
+Three things the agent produces alongside the ordering, because the brief asks
+for each of them by name.
+
+### It names the conflicts it found
+
+The disagreements are not labelled for it. It has to spot them, say which signal
+it believed, and say why that source was the more trustworthy one.
+
+From a real run:
+
+```
+TICK-00771
+  what disagreed: monitoring marked severity Low while the customer claimed
+                  High and the issue is a possible breach
+  it believed:    the customer, plus the security policy
+  why:            monitoring cannot detect account takeover, so its low
+                  severity underestimates the true risk
+
+TICK-00135
+  what disagreed: customer labelled the issue Critical but monitoring
+                  reported Low for a simple password reset
+  it believed:    monitoring
+  why:            password resets are trivial to resolve, so the customer's
+                  escalation is overstated
+```
+
+Those two tickets are near-identical on the numbers. One user affected,
+monitoring says Low, customer claims it is serious. The agent believed the
+customer on one and monitoring on the other, and gave a different reason for
+each. The only thing separating them is what was written in the message.
+
+### It ranks all four strategies, not just the winner
+
+```
+1. damage     why here:   real harm to customers directly reflects business impact
+              gets wrong: can de-prioritise high-paying customers whose issues
+                          are less severe but revenue-critical
+
+2. deadline   why here:   SLA breaches carry legal and financial penalties
+              gets wrong: may push urgent but not-yet-overdue problems lower
+
+3. money      why here:   revenue matters for business health
+              gets wrong: can ignore severe issues from free customers
+
+4. fairness   why here:   repeat askers and badly affected low-payers get some weight
+              gets wrong: subjective, and can conflict with clear impact
+```
+
+Every one of the four gets a place, a justification, and a stated drawback,
+including the one it put first.
+
+### It admits which call was closest
+
+```
+Choosing between the security incident and the overdue export was toughest.
+The breach could have far-reaching consequences, yet the export was already
+violating its SLA, so either ordering could be justified.
+```
+
+### When it leaves something out
+
+The model occasionally drops one of these fields. That does not crash the run and
+it does not pass silently either. The missing field is recorded, and the whole
+decision is flagged for human review, because part of the answer could not be
+verified.
 
 ## How solid is each decision?
 
@@ -577,6 +681,7 @@ disagree, and pick the six hardest cases out of them.
 | `brain.py` | Gathers the evidence and runs the four ways of deciding. Makes no decision |
 | `decide.py` | Where the AI decides, explains itself, and gets checked |
 | `stability.py` | Tests which decisions were close calls, by changing one number at a time |
+| `history_lookup.py` | Works out how long each kind of problem has taken before |
 | `decision_log.py` | Saves every decision, with everything that went into it |
 | `thinking_log.py` | Writes the same story into a Word file anyone can read |
 | `why.py` | Looks up why one complaint was placed where it was |
