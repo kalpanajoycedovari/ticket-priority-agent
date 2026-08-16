@@ -20,6 +20,7 @@ from docx.shared import Pt, RGBColor, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 FILE_PATH = os.path.join("data", "how_the_agent_thinks.docx")
+MARKDOWN_PATH = os.path.join("data", "how_the_agent_thinks.md")
 
 # colours, kept to violet and grey so it reads calmly
 DEEP = RGBColor(0x4C, 0x1D, 0x95)
@@ -276,3 +277,160 @@ def write_this_run(result, facts, orders):
     doc.save(FILE_PATH)
 
     return FILE_PATH
+# ----- THE SAME STORY, AS A MARKDOWN FILE -----
+#
+# GitHub cannot show a Word file in the browser, it only downloads it.
+# So we write the same thing as markdown too, which GitHub displays
+# straight away. Same content, two formats, for two kinds of reader.
+
+def write_this_run_as_markdown(result, facts, orders):
+    """Adds one run to the bottom of the markdown file."""
+    facts_by_id = {f["id"]: f for f in facts}
+    lines = []
+
+    if not os.path.exists(MARKDOWN_PATH):
+        lines.append("# How the agent thinks\n")
+        lines.append(
+            "Every time the agent decides which customer complaint should be "
+            "handled first, what it did is written down here. The newest run is "
+            "always at the bottom.\n"
+        )
+        lines.append(
+            "Each run walks through the same seven steps, in order, so you can "
+            "see where the answer came from rather than just what it was.\n"
+        )
+
+    lines.append("\n---\n")
+    lines.append(f"## Run on {datetime.now().strftime('%d %B %Y at %H:%M:%S')}\n")
+    lines.append(f"*Recorded as {result.get('decision_id', 'not recorded')}*\n")
+
+    # ---------- 1
+    lines.append("\n### Step 1  Pick up the waiting complaints\n")
+    lines.append(f"{len(facts)} complaints were waiting.\n")
+    for f in facts:
+        lines.append(f"- `{f['id']}`  {f['subject']}")
+
+    # ---------- 2
+    lines.append("\n### Step 2  Look up the three separate systems\n")
+    lines.append("Each system knows a different part of the story, and none of "
+                 "them can see what the others see.\n")
+    lines.append("| Ticket | Customer records | Monitoring | The promise clock | They said |")
+    lines.append("|---|---|---|---|---|")
+    for f in facts:
+        blocked = "blocked" if f["cannot_work"] else "not blocked"
+        late = ", already late" if f["already_late"] else ""
+        lines.append(
+            f"| `{f['id']}` "
+            f"| {f['plan']}, £{f['pays_monthly']:,}/mo, asked {f['times_asked']}x "
+            f"| {word_for(f['monitoring_says'])}, {f['users_hit']} affected, {blocked} "
+            f"| {f['promised_hours']}h promised, {f['hours_left']}h left{late} "
+            f"| {word_for(f['customer_says'])} |"
+        )
+
+    # ---------- 3
+    lines.append("\n### Step 3  Rank them four different ways\n")
+    lines.append("Each way is reasonable on its own, and each one is wrong on its "
+                 "own. They are evidence for the agent to weigh, not instructions "
+                 "to follow.\n")
+    for name, order in orders.items():
+        lines.append(f"- **{name}**: " + " → ".join(order))
+
+    lines.append("\nWhere the four disagreed most:\n")
+    for f in facts:
+        places = [order.index(f["id"]) + 1 for order in orders.values()]
+        if max(places) - min(places) >= 3:
+            lines.append(f"- `{f['id']}` was placed as high as {min(places)} and as "
+                         f"low as {max(places)}. This is where judgement was needed.")
+
+    # ---------- 4
+    lines.append("\n### Step 4  Read what the customer actually wrote\n")
+    lines.append("The four ways above only look at numbers, so they cannot tell a "
+                 "password reset apart from a break-in. Both look like one person "
+                 "with nothing failing. The words are the difference.\n")
+    for f in facts:
+        lines.append(f"- `{f['id']}`: \"{f['message']}\"")
+
+    # ---------- 5
+    lines.append("\n### Step 5  The AI decides, and says why\n")
+    for position, ticket_id in enumerate(result["order"], start=1):
+        f = facts_by_id[ticket_id]
+        lines.append(f"**{position}. `{ticket_id}`  {f['subject']}**  ")
+        lines.append(f"{result['reasons'].get(ticket_id, '')}\n")
+
+    conflicts = result.get("conflicts_i_noticed", [])
+    if conflicts:
+        lines.append("\n**The contradictions it spotted:**\n")
+        for c in conflicts:
+            lines.append(f"- `{', '.join(c.get('tickets', []))}` "
+                         f"{c.get('what_disagreed', '')}. "
+                         f"It believed {c.get('which_i_believed', '')}, "
+                         f"because {c.get('why', '')}")
+
+    lines.append(f"\n**The trade-off it made:** {result.get('the_trade_off', '')}\n")
+    lines.append(f"**The closest call:** {result.get('hardest_call', '')}\n")
+
+    ranking = result.get("strategy_ranking", [])
+    if ranking:
+        lines.append("\n**How it ranked the four ways of deciding:**\n")
+        lines.append("| Place | Way | Why here | What it gets wrong |")
+        lines.append("|---|---|---|---|")
+        for st in ranking:
+            lines.append(f"| {st.get('place', '')} | {st.get('strategy', '')} "
+                         f"| {st.get('why_it_ranks_here', '')} "
+                         f"| {st.get('what_it_gets_wrong', '')} |")
+
+    # ---------- 6
+    lines.append("\n### Step 6  Check the answer before anything happens\n")
+    checks = result["checks"]
+
+    lines.append("**Did every complaint come back, and were the written rules "
+                 "followed?**  ")
+    if not checks["policy"]:
+        lines.append("Yes. Nothing was dropped and no rule was broken.\n")
+    else:
+        for c in checks["policy"]:
+            lines.append(f"{c['problem']}: {c.get('ticket', '')} {c.get('why', '')}\n")
+
+    lines.append("**Were the reasons it gave actually true?**  ")
+    wrong = checks.get("reasons_the_data_did_not_support", [])
+    if not wrong:
+        lines.append("Yes. Every reason matched the numbers we hold.\n")
+    else:
+        for c in wrong:
+            lines.append(f"- `{c['ticket']}` claimed: *{c['the_model_said']}*")
+            lines.append(f"  but the data says: **{c['but_the_data_says']}**")
+
+        fixed = checks.get("reasons_we_asked_the_model_to_rewrite", {})
+        if fixed:
+            lines.append("\nSo the agent was asked to write those reasons again:\n")
+            for tid, new_reason in fixed.items():
+                lines.append(f"- `{tid}` now reads: {new_reason}")
+
+        if checks.get("needs_a_human_to_look"):
+            lines.append("\nSome reasons still did not match. A person should look "
+                         "at this before it is acted on.\n")
+
+    lines.append("\n**How solid was the answer?** One number was changed at a time "
+                 "and everything ranked again, to see which places were close calls.\n")
+    lines.append("| Ticket | How solid | Changes that move it |")
+    lines.append("|---|---|---|")
+    for r in result.get("how_solid_the_scoring_is", {}).values():
+        lines.append(f"| `{r['id']}` | {r['how_solid']} | "
+                     f"{r['small_changes_that_move_it']} of "
+                     f"{r['small_changes_tried']} |")
+
+    # ---------- 7
+    lines.append("\n### Step 7  Hand them to a person\n")
+    for position, ticket_id in enumerate(result["order"], start=1):
+        when = "now" if position == 1 else ("next" if position <= 3 else "queued")
+        solid = result.get("how_solid_the_scoring_is", {}).get(ticket_id, {})
+        tail = ("  *(the numbers were not settled about this one)*"
+                if solid.get("worth_a_second_look") else "")
+        lines.append(f"- `{ticket_id}` goes to a person **{when}**{tail}")
+
+    lines.append("")
+
+    with open(MARKDOWN_PATH, "a", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+
+    return MARKDOWN_PATH

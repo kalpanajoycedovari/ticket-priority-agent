@@ -398,6 +398,8 @@ def run_the_agent():
     # Also write the same story out in a Word file, so anybody can read
     # what the agent did without having to open the code.
     result["written_up_in"] = thinking_log.write_this_run(result, facts, orders)
+    result["also_written_up_in"] = thinking_log.write_this_run_as_markdown(
+        result, facts, orders)
 
     return result
 
