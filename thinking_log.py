@@ -195,14 +195,19 @@ def write_this_run(result, facts, orders):
     note(doc, "The closest call:", indent=0.3)
     note(doc, result["hardest_call"], indent=0.6, italic=True)
 
-    strategy = result.get("strategy_choice", {})
-    if strategy:
+    ranking = result.get("strategy_ranking", [])
+    if ranking:
         note(doc, "")
-        note(doc, f"Its thinking leaned closest to: {strategy.get('chose', '')}",
-             indent=0.3)
-        note(doc, strategy.get("why", ""), indent=0.6, italic=True)
-        note(doc, "What it gave up by leaning that way:", indent=0.3)
-        note(doc, strategy.get("what_it_costs_us", ""), indent=0.6, italic=True)
+        note(doc, "How it ranked the four ways of deciding:", indent=0.3)
+        for st in ranking:
+            note(doc, f"{st['place']}. {st['strategy']}", indent=0.6)
+            note(doc, f"why here: {st['why_it_ranks_here']}", indent=0.9, italic=True)
+            note(doc, f"gets wrong: {st['what_it_gets_wrong']}", indent=0.9, italic=True)
+
+        note(doc, "")
+        note(doc, "Closest call between the four:", indent=0.3)
+        note(doc, result.get("why_the_winner_beat_the_runner_up", ""),
+             indent=0.6, italic=True)
 
     # ---------- step 6
     step_heading(doc, 6, "Check the answer before anything happens")

@@ -36,6 +36,8 @@ You will be given, for every ticket:
   - what our customer records say: their plan and what they pay us
   - what our monitoring saw: how many users are affected, whether work is blocked
   - what our contract clock says: how long we promised, how long is left
+  - how long we have historically taken on this kind of problem
+  - how loaded the system was when the complaint arrived
   - where four different ways of ranking placed the ticket
   - how much those four ways disagreed
 
@@ -46,6 +48,11 @@ Our monitoring only knows what it can measure. It cannot see who the customer is
 and it is blind to harm that does not show up as errors, such as a break-in or a
 legal request. Our contract clock only knows deadlines. It does not know whether
 a ticket matters.
+
+The history figure is how long we took in the past, not how hard the problem is.
+A password reset does not need a hundred hours of work. It needs five minutes of
+work after five days of being ignored. So a long history number is a sign of how
+we have behaved, not a reason to keep behaving that way.
 
 The severity a customer chooses is often wrong. Upset people mark everything as
 Critical. Read what they actually wrote rather than trusting the label.
@@ -62,14 +69,21 @@ is. If hours remain, it is not overdue.
 But a reason must still be a reason. Say why the ticket sits where it does, not
 just what the numbers are. Listing figures back at us is not an explanation.
 
+Before you decide, look for places where the sources contradict each other, or
+where what the customer wrote does not match what monitoring measured. List
+those. For each one say which signal you believed and why that source was the
+more trustworthy one for that particular complaint.
+
 You must commit to one order. Do not say it depends.
 
 Your order must be your own judgement, not a copy of any of the four rankings.
-They are evidence to weigh, not options to pick from. After you have decided,
-name which of the four your thinking leaned closest to, and say what each of the
-other three would have got right if it had led instead. Every one of them is
-reasonable and every one has a drawback, so say what the drawback of your own
-leaning is rather than pretending it has none.
+They are evidence to weigh, not options to pick from.
+
+After you have decided, rank all four ways of ranking from 1 to 4, where 1 is the
+one that deserved the most weight for this particular batch of complaints. Give
+every one of the four a place. For each, say why it sits where it does and what
+it gets wrong. Every one of them is reasonable and every one has a drawback, so
+name the drawback of your first place rather than pretending it has none.
 """
 
 
@@ -92,7 +106,8 @@ Each rule lifts a ticket UP the queue. None of them ever pushes one down.
 
 Decide the order a human should handle these in.
 
-Reply with JSON only, no other text, in exactly this shape:
+Reply with JSON only, no other text, in exactly this shape. Every field is
+required.
 
 {{
   "order": ["TICK-00000", "TICK-00000"],
@@ -100,18 +115,24 @@ Reply with JSON only, no other text, in exactly this shape:
     "TICK-00000": "one sentence saying what decided this ticket's place"
   }},
   "the_trade_off": "two or three sentences naming what you chose to favour, what you chose to sacrifice, and what that costs us",
+  "conflicts_i_noticed": [
+    {{
+      "tickets": ["TICK-00000"],
+      "what_disagreed": "which two sources or signals pointed different ways",
+      "which_i_believed": "which one you went with",
+      "why": "why that source was the more reliable one here"
+    }}
+  ],
   "hardest_call": "which single decision was closest, and why it could reasonably have gone the other way",
-  "strategy_choice": {{
-    "chose": "money, damage, deadline or fairness, whichever you leaned on most",
-    "why": "why this way of ranking suited this particular batch",
-    "rejected": {{
-      "money": "why you did not lead with this, and what it would have got right",
-      "damage": "same",
-      "deadline": "same",
-      "fairness": "same"
-    }},
-    "what_it_costs_us": "the drawback of the way you chose, stated plainly"
-  }}
+  "strategy_ranking": [
+    {{
+      "place": 1,
+      "strategy": "money, damage, deadline or fairness",
+      "why_it_ranks_here": "why this one deserved the most weight for THIS batch",
+      "what_it_gets_wrong": "the drawback you are accepting by weighting it highest"
+    }}
+  ],
+  "why_the_winner_beat_the_runner_up": "one or two sentences on the closest of the four"
 }}
 """
 
@@ -141,7 +162,7 @@ def check_the_reasons_match_the_facts(answer, facts):
 
     complaints = []
 
-    for ticket_id, reason in answer["reasons"].items():
+    for ticket_id, reason in answer.get("reasons", {}).items():
         f = facts_by_id.get(ticket_id)
         if f is None:
             continue
@@ -229,7 +250,8 @@ Do not change any other reason. Do not change the ordering.
 
 Each new reason must still explain WHY the ticket sits where it does. Do not
 simply list the numbers back. Say what about the ticket earned it that place,
-using only what the data actually shows. Keep it to one sentence, the same length as the others.
+using only what the data actually shows. Keep it to one sentence, the same
+length as the others.
 
 Reply with JSON only, in exactly this shape, containing only the tickets
 listed above:
@@ -251,7 +273,7 @@ listed above:
         response_format={"type": "json_object"},
     )
 
-    fixed = json.loads(response.choices[0].message.content)["reasons"]
+    fixed = json.loads(response.choices[0].message.content).get("reasons", {})
 
     # Only accept corrections for the tickets we asked about. If the model
     # rewrites everything, we ignore the parts we did not ask for.
@@ -294,6 +316,21 @@ def check_the_models_answer(answer, facts):
     return checks
 
 
+def what_the_model_left_out(answer):
+    """
+    Notes any part of the required answer the model did not send back.
+
+    A missing field is not a crash, but it is worth recording. If the
+    reasoning fields keep going missing, that is a prompt problem and
+    somebody should know about it.
+    """
+    wanted = [
+        "order", "reasons", "the_trade_off", "conflicts_i_noticed",
+        "hardest_call", "strategy_ranking", "why_the_winner_beat_the_runner_up",
+    ]
+    return [name for name in wanted if not answer.get(name)]
+
+
 def run_the_agent():
     """
     The whole job, start to finish. Returns everything that happened,
@@ -302,14 +339,18 @@ def run_the_agent():
     batch = brain.load_batch()
     evidence = brain.gather_evidence(batch)
     facts = [brain.read_facts(item) for item in batch]
+
     # How solid is the scoring on its own? Worked out before we ask the AI,
     # and deliberately not shown to it. If the AI knew which decisions look
     # solid, it would start aiming for that instead of aiming to be right.
     how_solid = stability.how_solid_is_this(facts)
     orders = brain.rank_all_four_ways(facts)
+
     answer = ask_the_model(evidence)
 
-    first_reasons = dict(answer["reasons"])
+    missing = what_the_model_left_out(answer)
+
+    first_reasons = dict(answer.get("reasons", {}))
     wrong_claims = check_the_reasons_match_the_facts(answer, facts)
 
     corrections = {}
@@ -323,18 +364,26 @@ def run_the_agent():
 
         still_wrong = check_the_reasons_match_the_facts(answer, facts)
 
+    # We use .get with a fallback on the reasoning fields. The model very
+    # occasionally drops one, and losing a paragraph of explanation should
+    # not throw away a decision that is otherwise sound. What it dropped
+    # is recorded in the checks instead.
     result = {
         "order": answer["order"],
-        "reasons": answer["reasons"],
-        "the_trade_off": answer["the_trade_off"],
-        "hardest_call": answer["hardest_call"],
-        "strategy_choice": answer["strategy_choice"],
+        "reasons": answer.get("reasons", {}),
+        "the_trade_off": answer.get("the_trade_off", ""),
+        "hardest_call": answer.get("hardest_call", ""),
+        "conflicts_i_noticed": answer.get("conflicts_i_noticed", []),
+        "strategy_ranking": answer.get("strategy_ranking", []),
+        "why_the_winner_beat_the_runner_up": answer.get(
+            "why_the_winner_beat_the_runner_up", ""),
         "checks": {
             "policy": check_the_models_answer(answer, facts),
             "reasons_the_data_did_not_support": wrong_claims,
             "reasons_we_asked_the_model_to_rewrite": corrections,
             "still_unsupported_after_rewriting": still_wrong,
-            "needs_a_human_to_look": bool(still_wrong),
+            "parts_of_the_answer_the_model_left_out": missing,
+            "needs_a_human_to_look": bool(still_wrong) or bool(missing),
         },
         "reasons_before_correction": first_reasons,
         "how_solid_the_scoring_is": how_solid["by_ticket"],
@@ -345,6 +394,7 @@ def run_the_agent():
     record = decision_log.build_the_record(result, facts, orders)
     result["saved_to"] = decision_log.save_the_record(record)
     result["decision_id"] = record["decision_id"]
+
     # Also write the same story out in a Word file, so anybody can read
     # what the agent did without having to open the code.
     result["written_up_in"] = thinking_log.write_this_run(result, facts, orders)
@@ -363,21 +413,36 @@ def print_the_result(result):
 
     print("\nTHE TRADE-OFF")
     print("-" * 60)
-    print(f"  {result['the_trade_off']}")
+    print(f"  {result['the_trade_off'] or 'the model did not send this back'}")
 
     print("\nHARDEST CALL")
     print("-" * 60)
-    print(f"  {result['hardest_call']}")
+    print(f"  {result['hardest_call'] or 'the model did not send this back'}")
 
-    strategy = result["strategy_choice"]
-    print("\nWHICH WAY OF RANKING IT LEANED CLOSEST TO")
+    print("\nCONFLICTS THE AGENT NOTICED")
     print("-" * 60)
-    print(f"  Leaned towards: {strategy['chose']}")
-    print(f"  Why:            {strategy['why']}")
-    print("\n  What the other three would have got right:")
-    for name, reason in strategy["rejected"].items():
-        print(f"    {name}: {reason}")
-    print(f"\n  What this leaning costs us: {strategy['what_it_costs_us']}")
+    if not result["conflicts_i_noticed"]:
+        print("  The model did not send this back.")
+    else:
+        for c in result["conflicts_i_noticed"]:
+            print(f"\n  {', '.join(c.get('tickets', []))}")
+            print(f"     what disagreed: {c.get('what_disagreed', '')}")
+            print(f"     it believed:    {c.get('which_i_believed', '')}")
+            print(f"     why:            {c.get('why', '')}")
+
+    print("\nHOW IT RANKED THE FOUR WAYS OF DECIDING")
+    print("-" * 60)
+    if not result["strategy_ranking"]:
+        print("  The model did not send this back.")
+    else:
+        for st in result["strategy_ranking"]:
+            print(f"\n  {st.get('place', '?')}. {st.get('strategy', '')}")
+            print(f"     why here:   {st.get('why_it_ranks_here', '')}")
+            print(f"     gets wrong: {st.get('what_it_gets_wrong', '')}")
+
+        if result["why_the_winner_beat_the_runner_up"]:
+            print("\n  Closest call between the four:")
+            print(f"  {result['why_the_winner_beat_the_runner_up']}")
 
     checks = result["checks"]
 
@@ -398,9 +463,8 @@ def print_the_result(result):
             print(f"\n  {ticket_id} now reads:")
             print(f"    {new_reason}")
 
-        if checks["needs_a_human_to_look"]:
+        if checks["still_unsupported_after_rewriting"]:
             print("\n  Some reasons still do not match the data.")
-            print("  A human should look at this before it is routed.")
         else:
             print("\n  All reasons now match the data.")
 
@@ -415,6 +479,11 @@ def print_the_result(result):
             for key, value in p.items():
                 if key != "problem":
                     print(f"    {key}: {value}")
+
+    if checks["parts_of_the_answer_the_model_left_out"]:
+        print("\n  The model left these parts out of its answer:")
+        for name in checks["parts_of_the_answer_the_model_left_out"]:
+            print(f"    {name}")
 
     print("\nHOW SOLID WAS THE SCORING UNDERNEATH?")
     print("-" * 60)
@@ -442,6 +511,10 @@ def print_the_result(result):
             note = "   <- the scoring was not settled about this one"
 
         print(f"  ROUTE {ticket_id} -> HUMAN AGENT  ({when}){note}")
+
+    if checks["needs_a_human_to_look"]:
+        print("\n  This whole decision is flagged for human review before it")
+        print("  is acted on, because part of the answer could not be verified.")
 
     if result.get("saved_to"):
         print("\nSAVED")

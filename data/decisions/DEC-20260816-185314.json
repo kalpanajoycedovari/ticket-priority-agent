@@ -1,0 +1,270 @@
+{
+  "decision_id": "DEC-20260816-185314",
+  "decided_at": "2026-08-16 18:53:14",
+  "how_many_tickets": 6,
+  "final_order": [
+    "TICK-00982",
+    "TICK-00171",
+    "TICK-00771",
+    "TICK-00707",
+    "TICK-00266",
+    "TICK-00135"
+  ],
+  "the_trade_off_made": "We favored impact and deadline urgency over revenue, placing the free\u2011plan data loss ahead of high\u2011paying enterprise tickets. This sacrifices short\u2011term satisfaction of big spenders and may delay their roadmap items.",
+  "hardest_call": "Putting the security incident (TICK-00771) third instead of second was the closest call; it could reasonably have been ranked above the massive data loss because breaches have long\u2011term security ramifications.",
+  "which_way_it_leaned_towards": {
+    "chose": "damage",
+    "why": "Damage captures user impact, work blockage and severity, which best distinguishes the truly critical tickets in this mixed set.",
+    "rejected": {
+      "money": "Leading with money would have pushed the free\u2011plan data loss and security incident down, missing their real harm; it would have correctly prioritized enterprise revenue.",
+      "damage": "N/A",
+      "deadline": "A pure deadline focus would have elevated the overdue export but could have left the security breach lower than required by policy.",
+      "fairness": "Fairness rankings would have shuffled tickets based on past interactions, ignoring the magnitude of current harm."
+    },
+    "what_it_costs_us": "Prioritizing damage may delay work for high\u2011paying customers, risking churn or dissatisfaction among our biggest revenue sources."
+  },
+  "checks": {
+    "policy": [],
+    "reasons_the_data_did_not_support": [],
+    "reasons_we_asked_the_model_to_rewrite": {},
+    "still_unsupported_after_rewriting": [],
+    "needs_a_human_to_look": false
+  },
+  "reasons_before_correction": {
+    "TICK-00982": "Overdue SLA and dozens of users unable to export make this the most urgent.",
+    "TICK-00171": "Critical data loss affecting thousands of users and blocking work demands immediate attention despite the free plan.",
+    "TICK-00771": "Potential account takeover requires fast response, and policy forces it into the top three.",
+    "TICK-00707": "Enterprise customer experiences very slow pages for a few users and the promised response time is still pending.",
+    "TICK-00266": "Feature request with a looming response deadline for a high\u2011paying enterprise client.",
+    "TICK-00135": "Password reset issue is low impact and not time\u2011critical, so it can be handled last."
+  },
+  "tickets": [
+    {
+      "ticket_id": "TICK-00982",
+      "subject": "Cannot download report",
+      "placed_at": 1,
+      "what_we_knew": {
+        "customer_pays_monthly_gbp": 106,
+        "customer_plan": "Basic",
+        "times_they_have_asked": 11,
+        "monitoring_severity": 2,
+        "people_affected": 35,
+        "work_is_blocked": false,
+        "hours_promised": 24.0,
+        "hours_left": -49.8,
+        "already_late": true,
+        "customer_claimed_severity": 2
+      },
+      "where_each_way_of_ranking_put_it": {
+        "money": 3,
+        "damage": 2,
+        "deadline": 1,
+        "fairness": 1
+      },
+      "why_it_was_placed_there": "Overdue SLA and dozens of users unable to export make this the most urgent.",
+      "how_solid": "solid",
+      "what_would_move_it": [],
+      "needs_a_person_to_look": false
+    },
+    {
+      "ticket_id": "TICK-00171",
+      "subject": "Deleted records we did not delete",
+      "placed_at": 2,
+      "what_we_knew": {
+        "customer_pays_monthly_gbp": 0,
+        "customer_plan": "Free",
+        "times_they_have_asked": 1,
+        "monitoring_severity": 4,
+        "people_affected": 4940,
+        "work_is_blocked": true,
+        "hours_promised": 72.0,
+        "hours_left": 29.6,
+        "already_late": false,
+        "customer_claimed_severity": 4
+      },
+      "where_each_way_of_ranking_put_it": {
+        "money": 6,
+        "damage": 1,
+        "deadline": 3,
+        "fairness": 4
+      },
+      "why_it_was_placed_there": "Critical data loss affecting thousands of users and blocking work demands immediate attention despite the free plan.",
+      "how_solid": "fairly solid",
+      "what_would_move_it": [
+        {
+          "if": "we had a quarter more time left than we thought",
+          "moves_from": 2,
+          "moves_to": 4,
+          "how_far": 2
+        }
+      ],
+      "needs_a_person_to_look": false
+    },
+    {
+      "ticket_id": "TICK-00771",
+      "subject": "Possible breach",
+      "placed_at": 3,
+      "what_we_knew": {
+        "customer_pays_monthly_gbp": 55,
+        "customer_plan": "Basic",
+        "times_they_have_asked": 7,
+        "monitoring_severity": 1,
+        "people_affected": 1,
+        "work_is_blocked": false,
+        "hours_promised": 24.0,
+        "hours_left": 15.4,
+        "already_late": false,
+        "customer_claimed_severity": 3
+      },
+      "where_each_way_of_ranking_put_it": {
+        "money": 4,
+        "damage": 4,
+        "deadline": 5,
+        "fairness": 2
+      },
+      "why_it_was_placed_there": "Potential account takeover requires fast response, and policy forces it into the top three.",
+      "how_solid": "shaky",
+      "what_would_move_it": [
+        {
+          "if": "7 people were affected, not 1",
+          "moves_from": 5,
+          "moves_to": 4,
+          "how_far": 1
+        },
+        {
+          "if": "work was blocked after all",
+          "moves_from": 5,
+          "moves_to": 3,
+          "how_far": 2
+        },
+        {
+          "if": "we had a quarter less time left than we thought",
+          "moves_from": 5,
+          "moves_to": 4,
+          "how_far": 1
+        }
+      ],
+      "needs_a_person_to_look": true
+    },
+    {
+      "ticket_id": "TICK-00707",
+      "subject": "The platform is very slow",
+      "placed_at": 4,
+      "what_we_knew": {
+        "customer_pays_monthly_gbp": 39127,
+        "customer_plan": "Enterprise",
+        "times_they_have_asked": 2,
+        "monitoring_severity": 1,
+        "people_affected": 3,
+        "work_is_blocked": false,
+        "hours_promised": 2.0,
+        "hours_left": 1.1,
+        "already_late": false,
+        "customer_claimed_severity": 1
+      },
+      "where_each_way_of_ranking_put_it": {
+        "money": 1,
+        "damage": 3,
+        "deadline": 4,
+        "fairness": 6
+      },
+      "why_it_was_placed_there": "Enterprise customer experiences very slow pages for a few users and the promised response time is still pending.",
+      "how_solid": "shaky",
+      "what_would_move_it": [
+        {
+          "if": "work was blocked after all",
+          "moves_from": 4,
+          "moves_to": 3,
+          "how_far": 1
+        },
+        {
+          "if": "we had a quarter less time left than we thought",
+          "moves_from": 4,
+          "moves_to": 2,
+          "how_far": 2
+        },
+        {
+          "if": "we had a quarter more time left than we thought",
+          "moves_from": 4,
+          "moves_to": 5,
+          "how_far": 1
+        }
+      ],
+      "needs_a_person_to_look": true
+    },
+    {
+      "ticket_id": "TICK-00266",
+      "subject": "Request for bulk actions",
+      "placed_at": 5,
+      "what_we_knew": {
+        "customer_pays_monthly_gbp": 29044,
+        "customer_plan": "Enterprise",
+        "times_they_have_asked": 4,
+        "monitoring_severity": 1,
+        "people_affected": 1,
+        "work_is_blocked": false,
+        "hours_promised": 2.0,
+        "hours_left": 0.3,
+        "already_late": false,
+        "customer_claimed_severity": 3
+      },
+      "where_each_way_of_ranking_put_it": {
+        "money": 2,
+        "damage": 5,
+        "deadline": 2,
+        "fairness": 3
+      },
+      "why_it_was_placed_there": "Feature request with a looming response deadline for a high\u2011paying enterprise client.",
+      "how_solid": "fairly solid",
+      "what_would_move_it": [
+        {
+          "if": "7 people were affected, not 1",
+          "moves_from": 3,
+          "moves_to": 2,
+          "how_far": 1
+        },
+        {
+          "if": "work was blocked after all",
+          "moves_from": 3,
+          "moves_to": 2,
+          "how_far": 1
+        }
+      ],
+      "needs_a_person_to_look": false
+    },
+    {
+      "ticket_id": "TICK-00135",
+      "subject": "Password reset needed",
+      "placed_at": 6,
+      "what_we_knew": {
+        "customer_pays_monthly_gbp": 41,
+        "customer_plan": "Basic",
+        "times_they_have_asked": 1,
+        "monitoring_severity": 1,
+        "people_affected": 1,
+        "work_is_blocked": false,
+        "hours_promised": 24.0,
+        "hours_left": 19.3,
+        "already_late": false,
+        "customer_claimed_severity": 4
+      },
+      "where_each_way_of_ranking_put_it": {
+        "money": 5,
+        "damage": 6,
+        "deadline": 6,
+        "fairness": 5
+      },
+      "why_it_was_placed_there": "Password reset issue is low impact and not time\u2011critical, so it can be handled last.",
+      "how_solid": "fairly solid",
+      "what_would_move_it": [
+        {
+          "if": "work was blocked after all",
+          "moves_from": 6,
+          "moves_to": 5,
+          "how_far": 1
+        }
+      ],
+      "needs_a_person_to_look": false
+    }
+  ]
+}

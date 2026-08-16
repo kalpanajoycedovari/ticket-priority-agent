@@ -81,7 +81,8 @@ def build_the_record(result, facts, orders):
         "final_order": result["order"],
         "the_trade_off_made": result["the_trade_off"],
         "hardest_call": result["hardest_call"],
-        "which_way_it_leaned_towards": result["strategy_choice"],
+        "how_it_ranked_the_four_ways": result["strategy_ranking"],
+        "why_the_winner_beat_the_runner_up": result["why_the_winner_beat_the_runner_up"],
 
         "checks": result["checks"],
         "reasons_before_correction": result.get("reasons_before_correction", {}),

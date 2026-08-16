@@ -10,6 +10,10 @@ and neither file has its own copy.
 
 import json
 import os
+import history_lookup
+
+# Worked out once when the file loads, not on every ticket.
+HOW_LONG_EACH_KIND_TAKES = history_lookup.how_long_each_kind_usually_takes()
 
 DATA_FOLDER = "data"
 
@@ -49,6 +53,9 @@ def read_facts(item):
         "promised_hours": float(s["promised_response_hours"]),
         "hours_left": float(s["hours_left_before_promise_broken"]),
         "already_late": s["promise_was_broken"] == "True",
+        "system_load_percent": int(m["system_load_percent"]),
+        "hours_this_kind_usually_takes": HOW_LONG_EACH_KIND_TAKES.get(
+            t["issue_type"], 0.0),
     }
 
 
@@ -270,6 +277,14 @@ def gather_evidence(batch):
                 "hours_left": f["hours_left"],
                 "already_late": f["already_late"],
             },
+            "our_past_behaviour": {
+                "hours_this_kind_of_problem_usually_takes": f["hours_this_kind_usually_takes"],
+                "what_that_number_means": "average hours from arrival to resolution "
+                                          "for this kind of problem across 1,000 past "
+                                          "complaints. It reflects how quickly we chose "
+                                          "to act, not how hard the problem is to fix.",
+            },
+            "system_load_percent": f["system_load_percent"],
 
             "customer_claimed_severity": severity_as_word(f["customer_says"]),
             "ranked_position_by": places,
