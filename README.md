@@ -58,6 +58,12 @@ creates the disagreement.
 None of these three can see what the others see. So they routinely disagree,
 and the agent has to work out who to believe.
 
+Each system is a separate file, joined together by the customer's reference
+number, the same way separate systems join up in a real company. They were kept
+separate on purpose. If everything sat in one big table, the agent would never
+have to work out which source to believe, and there would be nothing to reason
+about.
+
 ### The blind spot, on purpose
 
 Monitoring is deliberately made blind to three kinds of problem: suspected
@@ -70,6 +76,175 @@ monitoring screen is entirely green.
 So the agent is given a case where every automatic warning light says
 "nothing to see here" and the right answer is to deal with it immediately. The
 only way to spot it is to read what the customer wrote.
+
+---
+
+## How the practice data was made
+
+No real support data was available, so 1,000 past complaints were built from
+scratch. This was the largest part of the work, and the choices behind it
+matter as much as the agent itself, because a queue where every answer is
+obvious would prove nothing.
+
+### Two separate dials for each kind of problem
+
+An early version tied each kind of problem to a fixed list of allowed
+seriousness levels. A payment failure could only ever be serious, a password
+reset could only ever be minor.
+
+That had to be thrown away. It meant the agent could skip straight from the
+kind of problem to the answer, and the three systems became decoration.
+
+The replacement gives every kind of problem two separate dials: how often it
+turns up, and how bad it is likely to be when it does.
+
+```python
+ISSUE_PROFILES = {
+    "system_outage":     {"freq": 1,  "sev": {"High": 0.2, "Critical": 0.8}},
+    "security_incident": {"freq": 2,  "sev": {"Medium": 0.2, "High": 0.4, "Critical": 0.4}},
+    "payment_failure":   {"freq": 8,  "sev": {"Medium": 0.3, "High": 0.5, "Critical": 0.2}},
+    "slow_performance":  {"freq": 15, "sev": {"Low": 0.5, "Medium": 0.35, "High": 0.15}},
+    "password_reset":    {"freq": 15, "sev": {"Low": 0.8, "Medium": 0.2}},
+}
+```
+
+Reading one line: a payment failure turns up eight times as often as a total
+outage, and when one appears there is a 30% chance it is medium, 50% high, 20%
+critical. Seventeen kinds of problem are covered.
+
+The frequency numbers matter as much as the seriousness ones. Real support
+queues are mostly routine, with a thin sliver of emergencies. Password resets
+turn up fifteen times as often as total outages, so the practice data looks
+like a real inbox rather than a list of disasters.
+
+### Two different opinions on how bad each problem is
+
+Every complaint carries two separate seriousness ratings:
+
+- **What the customer said** when they filled in the form
+- **What monitoring worked out** from what it could actually measure
+
+These disagree on 546 out of the 1,000 complaints.
+
+That gap is the point. Customers exaggerate. Somebody who cannot reset their
+password ticks "Critical" because to them it is critical. Monitoring sees one
+person affected and nothing failing.
+
+How much somebody exaggerates depends on their mood, and their mood depends
+partly on how many times they have already written in:
+
+```python
+if mood == "angry":
+    chance_of_exaggerating = 0.65
+elif mood == "annoyed":
+    chance_of_exaggerating = 0.35
+else:
+    chance_of_exaggerating = 0.10
+```
+
+So being loud does not mean being urgent, and the agent has to tell those apart
+by reading the message rather than trusting the label.
+
+### The true seriousness is thrown away
+
+Each complaint is given a real seriousness when it is created. That is used to
+work out what monitoring would have seen, and is then discarded. It is never
+saved to any file.
+
+Nobody knows the true answer at the moment a complaint arrives in real life, so
+the agent does not get to know it either.
+
+### What happened afterwards is kept in a separate file
+
+A fifth file holds what a person eventually decided, how long it took to fix,
+and how it ended. None of that is known when a complaint first arrives.
+
+It is deliberately kept in its own file rather than as extra columns, so the
+agent physically cannot read it while deciding. Doing that would be like
+marking your own exam with the answers in front of you: the result would look
+excellent and mean nothing.
+
+That file is used afterwards, to compare what the agent chose against what a
+person actually did.
+
+### Three rounds of fixing data that made no sense
+
+The first version produced combinations no reviewer would believe. Each was
+found by printing real examples and reading them, rather than trusting the
+summary numbers.
+
+| What was wrong | Why it happened | The fix |
+|---|---|---|
+| A break-in showing 59 affected people while monitoring called it minor | The seriousness was quietened but the number of affected people was not | Quieten both together, so the story is consistent |
+| A request for dark mode coming out as a serious problem | Any kind of problem had a small chance of "blocking work", and blocked work jumps straight to serious | List the problems that never block anyone |
+| The deadline warning firing on nearly every large customer | The test asked for "fewer than 2 hours left" but large customers are only promised 2 hours in total, so it could never fail | Compare against a share of what was promised, not a fixed number of hours |
+
+The last one is worth noting. One hour left means something very different for
+a 2 hour promise and a 72 hour promise. Comparing raw hours would give you the
+opposite of the truth.
+
+---
+
+## Where the three systems disagree, and how often
+
+Rather than claiming the systems disagree, the disagreements were counted.
+Eight kinds were named, and every one of the 1,000 complaints was tested
+against them:
+
+| Kind of disagreement | Count | What it means |
+|---|---|---|
+| We already broke our promise | 243 | We missed the reply time we agreed |
+| Clock running out on something minor | 231 | Barely any time left, but the problem is trivial |
+| Pays nothing but badly broken | 143 | Free customer, seriously affected or completely stuck |
+| Customer overstating it | 139 | Claimed seriousness is two or more levels above what monitoring sees |
+| Asked us again and again | 101 | Has written in seven or more times |
+| Monitoring cannot see it | 61 | Break-in, legal request, or billing, where the screen stays green |
+| Pays a lot, tiny problem | 46 | Pays £10,000 a month or more, nothing much is wrong |
+| Customer understating it | 20 | Monitoring sees it as far worse than the customer said |
+
+One tuning note. The "asked us again and again" test originally used four or
+more contacts and fired on 425 out of 1,000. With 1,000 complaints across 200
+customers, the average customer writes in five times, so almost everybody
+tripped it. A warning that fires on 43% of cases is not a warning. Raising the
+bar to seven brought it down to 101.
+
+There is also a case where the labelling is knowingly naive. A legal data
+deletion request from a customer paying £17,238 a month got labelled "pays a
+lot, tiny problem", because "tiny" in that test means monitoring called it
+minor, and monitoring is blind to legal work by design. That was left in rather
+than patched. The labelling is simple and the agent has to be less simple than
+the labelling.
+
+---
+
+## The six complaints given to the agent
+
+Rather than writing the test cases by hand, a script searches all 1,000 for the
+strongest real example of each kind of disagreement.
+
+| Reference | The kind of case | Problem | Plan | Pays | Customer said | Monitoring said |
+|---|---|---|---|---|---|---|
+| TICK-00707 | Pays a lot, tiny problem | Slow pages | Enterprise | £39,127 | Low | Low |
+| TICK-00171 | Free but badly broken | Files gone | Free | £0 | Critical | Critical |
+| TICK-00771 | Monitoring cannot see it | Possible break-in | Basic | £55 | High | Low |
+| TICK-00266 | Deadline nearly up | Feature request | Enterprise | £29,044 | High | Low |
+| TICK-00982 | Asked before | Export broken | Basic | £106 | Medium | Medium |
+| TICK-00135 | Overstated | Password reset | Basic | £41 | Critical | Low |
+
+### Why this set is hard
+
+Look at TICK-00135 and TICK-00771 side by side. On the numbers they are almost
+identical: one person affected, monitoring says minor, customer claims it is
+serious.
+
+One is a password reset and belongs at the bottom. The other is somebody
+reporting that their account email was changed without their knowledge, and
+belongs near the top.
+
+No amount of counting affected people separates those two. The only thing that
+does is reading what the customer wrote. That pair is what stops the agent
+taking an easy shortcut like "always believe the customer" or "always believe
+monitoring", because both shortcuts fail here.
 
 ---
 
@@ -102,6 +277,22 @@ agree on what should come first:
 Look at the first row. The same complaint is either the most urgent thing in
 the queue or the least urgent, depending entirely on which way you pick.
 
+Two of the six are settled: the password reset is near the bottom under all
+four, and the overdue export is near the top under all four. The other four are
+genuinely contested, and the agent has to say which decisions were hard.
+
+### Two details in the scoring worth explaining
+
+**Damage does not grow in a straight line.** A complaint affecting 5,000 people
+is not 5,000 times worse than one affecting one person. Every ten people count
+as one point, so monitoring's own verdict stays the main signal and the count
+of affected people only breaks ties. Without this, the complaint affecting
+4,940 people would drown out every other number in the set.
+
+**The deadline compares shares, not hours.** One hour left out of two promised
+means most of your time is gone. One hour left out of seventy-two means you
+have barely started. Comparing raw hours would rank those the wrong way round.
+
 ---
 
 ## The written rules
@@ -116,8 +307,21 @@ and they always apply:
 | A legal request is never below 4th place | The deadline is set by law, not by us, and missing it means a fine |
 | Somebody badly affected is never below 5th place just because they pay nothing | Paying nothing is not a reason to be left last when the problem is real |
 
-Everything else is left to the agent's judgement, on purpose. Add enough fixed
-rules and there is nothing left to think about.
+The rules live in one place and the code reads them from there, so a manager
+could change the policy without touching the logic, and the two can never
+quietly disagree with each other.
+
+### What was deliberately left out
+
+These were considered as fixed rules and rejected:
+
+- Big customers always first
+- Whatever affects most people always first
+- Whatever is closest to a broken promise always first
+
+Each one would remove a trade-off the agent is supposed to weigh. Enough fixed
+rules and there is nothing left to think about, which is easier to attack than
+a judgement that is explained in writing.
 
 ---
 
@@ -128,7 +332,9 @@ happens.
 
 **Check one: did it follow the rules?**
 Every complaint must come back exactly once, and the order must not break any
-of the three written rules.
+of the three written rules. The "exactly once" part matters more than it looks.
+An AI can drop a complaint, invent one, or list the same one twice. If that
+happened, a customer would silently vanish from the queue.
 
 **Check two: are its reasons true?**
 The agent explains each position in a sentence. This compares those sentences
@@ -138,8 +344,36 @@ that gets caught.
 
 **When a reason is wrong, it is sent back.**
 The agent is told which claim the data does not support and asked to write that
-reason again. If it still does not match after that, the whole decision is
+reason again. Only the wrong ones. If it rewrites the others anyway, those are
+thrown away. If a reason still does not match after that, the whole decision is
 flagged for a person to look at rather than being quietly accepted.
+
+### Both checks catching something real
+
+Neither check is decoration. Both have caught genuine mistakes.
+
+**The rules check.** Ranking on numbers alone put the possible break-in fifth,
+behind a request for bulk actions and a complaint about slow pages. The check
+caught it:
+
+```
+TICK-00771 should move to position 3
+  because monitoring cannot measure this kind of harm,
+  so the numbers will always underrate it
+```
+
+**The reasons check.** The AI described a complaint as "many users blocked on
+export" when monitoring showed nobody was blocked:
+
+```
+TICK-00982
+  it said:           Late deadline and many users blocked on export
+                     make it most urgent.
+  but the data says: monitoring shows no work is blocked
+```
+
+The order was fine in that case. Only the explanation was wrong. Two different
+kinds of failure, which is why there are two different checks.
 
 ---
 
@@ -162,6 +396,17 @@ THE TRADE-OFF
 HARDEST CALL
   Placing the break-in third rather than second was closest. Its seriousness
   could have justified a higher spot, but the export was already two days late.
+
+WHICH WAY OF RANKING IT LEANED CLOSEST TO
+  Leaned towards: damage
+  What money would have got right: correctly prioritised revenue, but would
+    have pushed the critical data loss for a free customer down the queue
+  What deadline would have got right: correctly surfaced overdue work, but
+    could have left the break-in below where policy requires
+  What fairness would have got right: correctly lifted the free customer, but
+    ranks on how often somebody has written in rather than how bad it is
+  What this leaning costs us: some high-paying customers wait longer, which
+    risks losing them
 ```
 
 Note positions 4 and 5. Two customers paying £68,171 a month between them sit
@@ -207,14 +452,14 @@ uvicorn api:app --reload --port 8020
 
 Then open http://127.0.0.1:8020/docs and press the button on `/decide`.
 
-**To make fresh test data**
+**To make fresh practice data**
 ```bash
 python generate_historical_data.py
 python find_conflicts.py
 python build_demo_batch.py
 ```
 
-Those three build 1,000 pretend past complaints, find where the systems
+Those three build 1,000 pretend past complaints, count where the systems
 disagree, and pick the six hardest cases out of them.
 
 ---
@@ -224,12 +469,21 @@ disagree, and pick the six hardest cases out of them.
 | File | What it does |
 |---|---|
 | `generate_historical_data.py` | Makes 1,000 pretend past complaints across five files |
-| `find_conflicts.py` | Finds where the three systems disagree, and how often |
+| `find_conflicts.py` | Counts where the three systems disagree, in eight named ways |
 | `build_demo_batch.py` | Picks the six hardest cases out of the 1,000 |
 | `brain.py` | Gathers the evidence and runs the four ways of deciding. Makes no decision |
 | `decide.py` | Where the AI decides, explains itself, and gets checked |
 | `api.py` | Puts it behind a web address |
-| `data/` | The pretend complaints and the information about them |
+| `data/customers.csv` | The customer records |
+| `data/tickets.csv` | The complaints and what people wrote |
+| `data/telemetry.csv` | What monitoring saw |
+| `data/sla_ledger.csv` | The promise clock |
+| `data/ticket_outcomes.csv` | What happened afterwards. Never read while deciding |
+| `data/demo_batch.json` | The six complaints given to the agent |
+
+`brain.py` gathers everything and picks no winner on purpose. That is the point
+where the AI takes over, and keeping it separate means the evidence and the
+judgement never get tangled together.
 
 ---
 
@@ -239,8 +493,8 @@ The brief asked for a walkthrough of what is unfinished. These are the things I
 would want a reviewer to know.
 
 **The data is made up.** No real support data was available, so 1,000 past
-complaints were generated. They were built carefully, but they are still
-invented.
+complaints were generated. They were built carefully and fixed three times
+where they made no sense, but they are still invented.
 
 **One check partly detects my own writing.** The agent looks for phrases like
 "this is the third time I am writing" to spot an unhappy customer. That phrase
@@ -271,6 +525,13 @@ one person was affected and nothing was broken. The rule checks passed it,
 because no written rule covers being taken in. This is exactly the kind of case
 the reason checking was built for, and it does not catch all of them.
 
+**Asking for a favourite once made things worse.** An early version asked the
+AI which of the four ways it chose. It answered "fairness" and then copied the
+fairness ranking out almost exactly, including putting the £39,127 customer
+last with the reason "is last under fairness". It had stopped judging and
+started obeying. The wording was changed to ask which way its thinking leaned
+closest to, after deciding, and the copying stopped.
+
 ---
 
 ## What I would do next
@@ -297,7 +558,8 @@ people did before, this usually goes second". It would be one more voice in the
 argument, not the decider, and the agent would be able to overrule it in
 writing. Worth being careful here, since those past decisions were generated by
 a formula, so a model would mostly rediscover that formula rather than learn
-anything real.
+anything real. That caveat would need saying out loud rather than presenting
+the accuracy as a finding.
 
 **4. Turn it into a full working pipeline.**
 The pieces exist but they are not joined up. A complete version would be:
