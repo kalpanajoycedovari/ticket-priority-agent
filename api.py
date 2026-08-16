@@ -40,24 +40,8 @@ def evidence():
 @app.post("/decide")
 def make_a_decision():
     """
-    The full agent. Gathers the evidence, asks the model to decide,
-    then checks the answer against our policy and against our data.
-
-    Returns the order, the reasoning, and both checks.
+    The full agent. Gathers the evidence, asks the model to decide, corrects
+    any reason the data does not support, then checks the order against
+    our written policy.
     """
-    batch = brain.load_batch()
-    evidence = brain.gather_evidence(batch)
-    facts = [brain.read_facts(item) for item in batch]
-
-    answer = decide.ask_the_model(evidence)
-
-    return {
-        "order": answer["order"],
-        "reasons": answer["reasons"],
-        "the_trade_off": answer["the_trade_off"],
-        "hardest_call": answer["hardest_call"],
-        "checks": {
-            "policy": decide.check_the_models_answer(answer, evidence),
-            "reasons_match_data": decide.check_the_reasons_match_the_facts(answer, facts),
-        },
-    }
+    return decide.run_the_agent()

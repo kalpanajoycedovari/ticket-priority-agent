@@ -166,19 +166,21 @@ def read_the_message(f):
 SEVERITY_POLICY = [
     {
         "applies_to": "a suspected break-in or account takeover",
-        "never_below": 3,
+        "must_be_ranked_at_or_above": 3,
         "reason": "monitoring cannot measure this kind of harm, so the numbers "
                   "will always underrate it",
     },
     {
         "applies_to": "a legal request such as GDPR",
-        "never_below": 4,
+        "must_be_ranked_at_or_above": 4,
         "reason": "the deadline is set by law, not by us, and missing it carries a fine",
     },
     {
         "applies_to": "a customer who is badly affected but pays nothing",
-        "never_below": 5,
-        "reason": "paying nothing is not a reason to be left last when the problem is real",
+        "must_be_ranked_at_or_above": 5,
+        "reason": "paying nothing is not a reason to be left last when the problem "
+                  "is real. This rule only ever lifts a ticket up the queue. "
+                  "It must never be used to push a ticket down.",
     },
 ]
 
@@ -201,29 +203,28 @@ def check_against_policy(order, facts):
         notes = read_the_message(f)
 
         if "sounds serious" in notes and f["issue"] == "security_incident":
-            if position > breakin_rule["never_below"]:
+            if position > breakin_rule["must_be_ranked_at_or_above"]:
                 problems.append({
                     "ticket": ticket_id,
-                    "move_to": breakin_rule["never_below"],
+                    "move_to": breakin_rule["must_be_ranked_at_or_above"],
                     "why": breakin_rule["reason"],
                 })
 
         if f["issue"] == "compliance_request":
-            if position > legal_rule["never_below"]:
+            if position > legal_rule["must_be_ranked_at_or_above"]:
                 problems.append({
                     "ticket": ticket_id,
-                    "move_to": legal_rule["never_below"],
+                    "move_to": legal_rule["must_be_ranked_at_or_above"],
                     "why": legal_rule["reason"],
                 })
 
-        if position > unfair_rule["never_below"] and f["pays_monthly"] == 0:
+        if position > unfair_rule["must_be_ranked_at_or_above"] and f["pays_monthly"] == 0:
             if f["monitoring_says"] >= 3 or f["cannot_work"]:
                 problems.append({
                     "ticket": ticket_id,
-                    "move_to": unfair_rule["never_below"],
+                    "move_to": unfair_rule["must_be_ranked_at_or_above"],
                     "why": unfair_rule["reason"],
                 })
-
     return problems
 # ----- PULLING IT ALL TOGETHER -----
 def severity_as_word(number):
