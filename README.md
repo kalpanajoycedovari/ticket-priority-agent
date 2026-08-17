@@ -671,31 +671,86 @@ disagree, and pick the six hardest cases out of them.
 
 ---
 
-## The files
+## Every file, and what it is for
+
+There are two ways in and two ways to look at the result, so it is worth being
+explicit about which file does what.
+
+### The two entry points, and why there are two
+
+This is the pair most likely to look like a duplicate, so it is first.
+
+| File | What it runs on | Why it exists |
+|---|---|---|
+| `decide.py` | `data/demo_batch.json` — six complaints chosen out of the 1,000 practice ones | The main run. These six were picked because the four strategies disagree about them most sharply, so it is the hardest test I could build from the practice data |
+| `decide_new.py` | `data/new_batch.json` — complaints I typed in plain English | The honest test. These were never in the practice data and the wording is nothing like it, so it shows the agent handling something it has genuinely not seen |
+
+`decide_new.py` is nine lines long. It does not repeat any logic. It points
+`brain.load_batch` at a different file and then calls the same agent:
+
+```python
+real_load = brain.load_batch
+brain.load_batch = lambda *a, **k: real_load("new_batch.json")
+```
+
+That was deliberate. If the second entry point had its own copy of the pipeline,
+the two could drift apart and the unseen-data test would stop testing the thing
+that actually runs. One agent, two batches.
+
+### The pipeline, in the order it runs
 
 | File | What it does |
 |---|---|
-| `generate_historical_data.py` | Makes 1,000 pretend past complaints across five files |
-| `find_conflicts.py` | Counts where the three systems disagree, in eight named ways |
-| `build_demo_batch.py` | Picks the six hardest cases out of the 1,000 |
-| `brain.py` | Gathers the evidence and runs the four ways of deciding. Makes no decision |
-| `decide.py` | Where the AI decides, explains itself, and gets checked |
-| `stability.py` | Tests which decisions were close calls, by changing one number at a time |
-| `history_lookup.py` | Works out how long each kind of problem has taken before |
-| `decision_log.py` | Saves every decision, with everything that went into it |
-| `thinking_log.py` | Writes the same story into a Word file anyone can read |
-| `why.py` | Looks up why one complaint was placed where it was |
-| `api.py` | Puts it behind a web address |
-| `data/customers.csv` | The customer records |
-| `data/tickets.csv` | The complaints and what people wrote |
-| `data/telemetry.csv` | What monitoring saw |
-| `data/sla_ledger.csv` | The promise clock |
-| `data/ticket_outcomes.csv` | What happened afterwards. Never read while deciding |
-| `data/demo_batch.json` | The six complaints given to the agent |
+| `intake.py` | Reads a complaint written in ordinary words and works out the problem type and the severity the customer claims, kept as two separate things. Then attaches a customer, a monitoring reading and a clock reading, and saves the batch |
+| `brain.py` | Loads a batch, joins the three sources onto every ticket, runs the four scoring strategies, and hands back the evidence. **Deliberately picks no winner** |
+| `stability.py` | Changes one number at a time and re-ranks, to find which placements were close calls. Runs on the scores, never the model |
+| `decide.py` | Asks the model for an order, reasons, conflicts and a strategy ranking. Then verifies the answer against policy and against the source numbers, retries once, and escalates if it still fails |
+| `decision_log.py` | Saves every decision as its own file, with everything that went into it |
+| `thinking_log.py` | Writes the same run into a Word file and a markdown file, so a person can read it without opening any code |
+| `api.py` | Exposes `/health`, `/evidence` and `/decide` over HTTP |
 
-`brain.py` gathers everything and picks no winner on purpose. That is the point
-where the AI takes over, and keeping it separate means the evidence and the
-judgement never get tangled together.
+`brain.py` gathering everything and choosing nothing is the most important line
+in that table. It is the exact point where the code stops and the model starts,
+and keeping it in its own file means the evidence and the judgement never get
+tangled together. I can point at the boundary rather than describe it.
+
+### Building the practice data, run once
+
+| File | What it does |
+|---|---|
+| `generate_historical_data.py` | Makes 1,000 pretend past complaints across five CSV files |
+| `find_conflicts.py` | Counts where the three sources disagree, in eight named ways |
+| `build_demo_batch.py` | Searches all 1,000 for the strongest example of each kind of conflict, and saves the six |
+| `history_lookup.py` | Averages resolution time per problem type across the 1,000 |
+
+### Looking things up afterwards
+
+| File | What it does |
+|---|---|
+| `why.py` | `python why.py TICK-00771` prints every decision that complaint appeared in, where it was placed, and the reason given each time |
+
+### The data
+
+| File | What it holds |
+|---|---|
+| `data/customers.csv` | Source 1. Plan, monthly value, promised response hours |
+| `data/telemetry.csv` | Source 2. Affected users, error rate, system load, whether work is blocked |
+| `data/sla_ledger.csv` | Source 3. Hours promised, hours left, whether the promise was broken |
+| `data/tickets.csv` | The complaints and what people wrote |
+| `data/ticket_outcomes.csv` | What a person eventually decided. **Never read while deciding** |
+| `data/demo_batch.json` | The six chosen complaints, used by `decide.py` |
+| `data/new_batch.json` | The plain-English complaints, used by `decide_new.py` |
+| `data/decisions/` | One file per decision, kept permanently |
+| `data/how_the_agent_thinks.md` | Every run written out, readable straight in GitHub |
+| `data/how_the_agent_thinks.docx` | The same thing as a Word document |
+
+### One file that is left over
+
+`agent.py` was the original version, before the model was involved at all. It
+ranked the six complaints using only the four scoring strategies and a list of
+phrases. I kept it in the repo rather than deleting it, because the difference
+between that file and `decide.py` is the difference between a scoring script and
+an agent, and that comparison is more useful than a clean directory.
 
 ---
 
@@ -888,6 +943,69 @@ The last part matters most. Every decision, every reason, every time a check
 caught something, saved and searchable. Six months later you could ask "how
 often do we put paying customers behind free ones, and were we right to?" You
 cannot ask that today, because nothing is kept.
+
+### What about RAG?
+
+There is no retrieval step in this project. That was a decision, not an
+oversight, so here is the reasoning.
+
+**Retrieval solves a problem I do not have.** RAG exists for when there is more
+text than fits in a prompt, so you search for the relevant pieces first. A batch
+here is six tickets, each with three short rows joined to it. That is a few
+thousand characters. There is nothing to search, because everything already
+fits.
+
+**Worse, retrieval would have broken the thing the project is about.** The agent
+has to see all three sources at once to notice they contradict each other.
+Retrieval fetches what looks most relevant to the question. Ask it about a
+complaint and it might return the customer record and the ticket text and skip
+the monitoring row, because the monitoring row says nothing interesting: one
+user, no errors, severity Low.
+
+That quiet row is the whole point. It is what disagrees with the customer
+claiming Critical. A retrieval step that scored relevance would drop exactly the
+evidence the reasoning depends on, and the agent would never know it was missing.
+It would produce a confident answer built on two thirds of the picture.
+
+**Where it would actually earn a place.** One job in this project genuinely is a
+retrieval problem: finding similar past complaints. "We have handled fifty
+complaints like this one, here is what happened to them." There are 1,000 past
+complaints, far too many to put in a prompt, and a new complaint is not going to
+match any of them word for word.
+
+That would need embeddings, or at least proper search, and it would be a real
+use of the technique. But it would be a fifth opinion offered to the agent, not
+the mechanism that feeds it evidence. The three sources would still be joined
+directly, every time, in full.
+
+Even then I would try a plain filter first. `history_lookup.py` already answers
+a simpler version of that question by averaging resolution time per problem
+type, and it needed twenty lines and no model at all. Reaching for embeddings
+before checking whether a filter would do is how projects end up with
+infrastructure nobody can justify.
+
+**The general point.** Retrieval is for when you have too much information and
+need to find some of it. This project has a small amount of information that
+disagrees with itself, and the difficulty is deciding who to believe. Those are
+different problems, and only one of them is solved by search.
+
+### What about Docker?
+
+I left it out on purpose, and this is the reasoning.
+
+Right now the project is Python and a handful of files. There is no database,
+no queue, no second service. A container would wrap something that already
+starts with one command, so it would add a build step and a file to maintain
+without making anything easier to run. Somebody cloning this repo needs three
+commands and a key, and that is genuinely simpler than installing Docker.
+
+It earns its place at step four above. Once the decision records live in
+Postgres, there are two things that have to start together and agree on a
+connection string, and that is the point where "it works on my machine" starts
+to actually mean something. Then Docker Compose is the right answer, not before.
+
+I would rather explain why a tool is absent than add it so the repo looks
+production-shaped.
 
 ---
 
