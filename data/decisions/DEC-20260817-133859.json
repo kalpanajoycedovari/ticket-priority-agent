@@ -1,0 +1,238 @@
+{
+  "decision_id": "DEC-20260817-133859",
+  "decided_at": "2026-08-17 13:38:59",
+  "how_many_tickets": 5,
+  "final_order": [
+    "NEW-00001",
+    "NEW-00003",
+    "NEW-00004",
+    "NEW-00002",
+    "NEW-00005"
+  ],
+  "the_trade_off_made": "We favoured impact and security/legal risk over pure monitoring severity and customer\u2011expressed urgency. This means a low\u2011severity security alert jumps ahead of a legal request, costing a slight delay on the compliance ticket but protecting the platform and avoiding possible breach penalties.",
+  "hardest_call": "Balancing the legal deletion request (NEW-00002) against the suspected security incident (NEW-00004) was toughest; either could be justified as third, but we placed security higher to respect the explicit policy lift.",
+  "how_it_ranked_the_four_ways": [
+    {
+      "place": 1,
+      "strategy": "damage",
+      "why_it_ranks_here": "Impact on users and work blockage directly affect business continuity, which was the dominant factor across tickets.",
+      "what_it_gets_wrong": "It can undervalue legal or security obligations that have low immediate user impact but high downstream risk"
+    },
+    {
+      "place": 2,
+      "strategy": "deadline",
+      "why_it_ranks_here": "Statutory and SLA deadlines dictate urgency beyond raw impact, especially for compliance tickets.",
+      "what_it_gets_wrong": "May push a less\u2011critical but time\u2011sensitive request ahead of a higher\u2011impact incident"
+    },
+    {
+      "place": 3,
+      "strategy": "fairness",
+      "why_it_ranks_here": "Considers customer sentiment and equity, useful when impact metrics are similar.",
+      "what_it_gets_wrong": "Subjective and can be skewed by angry customers exaggerating severity"
+    },
+    {
+      "place": 4,
+      "strategy": "money",
+      "why_it_ranks_here": "All tickets are from free plans, so revenue provides no useful differentiation.",
+      "what_it_gets_wrong": "Ignores potential long\u2011term value of high\u2011paying customers, though not relevant here"
+    }
+  ],
+  "why_the_winner_beat_the_runner_up": "Damage outranked deadline because the lockout affected thousands and blocked a live demo, a concrete business loss that outweighed any timing considerations.",
+  "checks": {
+    "policy": [],
+    "reasons_the_data_did_not_support": [],
+    "reasons_we_asked_the_model_to_rewrite": {},
+    "still_unsupported_after_rewriting": [],
+    "parts_of_the_answer_the_model_left_out": [],
+    "needs_a_human_to_look": false
+  },
+  "reasons_before_correction": {
+    "NEW-00001": "Critical team lockout affecting all users and blocking work with a demo in hours forces it to the top.",
+    "NEW-00003": "Widespread payment failures block transactions for many users, making it the next priority.",
+    "NEW-00004": "Potential security breach, despite low monitored impact, is lifted by policy to at least third place.",
+    "NEW-00002": "Legal data deletion request must be handled within statutory time, so it stays within the top four.",
+    "NEW-00005": "Dashboard showing stale data impacts few users and can wait behind higher\u2011impact issues."
+  },
+  "tickets": [
+    {
+      "ticket_id": "NEW-00001",
+      "subject": "Team locked out",
+      "placed_at": 1,
+      "what_we_knew": {
+        "customer_pays_monthly_gbp": 0,
+        "customer_plan": "Free",
+        "times_they_have_asked": 1,
+        "monitoring_severity": 4,
+        "people_affected": 2860,
+        "work_is_blocked": true,
+        "hours_promised": 72.0,
+        "hours_left": 2.9,
+        "already_late": false,
+        "customer_claimed_severity": 4
+      },
+      "where_each_way_of_ranking_put_it": {
+        "money": 1,
+        "damage": 1,
+        "deadline": 1,
+        "fairness": 1
+      },
+      "why_it_was_placed_there": "Critical team lockout affecting all users and blocking work with a demo in hours forces it to the top.",
+      "how_solid": "solid",
+      "what_would_move_it": [],
+      "needs_a_person_to_look": false
+    },
+    {
+      "ticket_id": "NEW-00003",
+      "subject": "Payments failing at checkout",
+      "placed_at": 2,
+      "what_we_knew": {
+        "customer_pays_monthly_gbp": 0,
+        "customer_plan": "Free",
+        "times_they_have_asked": 1,
+        "monitoring_severity": 4,
+        "people_affected": 1306,
+        "work_is_blocked": true,
+        "hours_promised": 72.0,
+        "hours_left": 48.3,
+        "already_late": false,
+        "customer_claimed_severity": 3
+      },
+      "where_each_way_of_ranking_put_it": {
+        "money": 3,
+        "damage": 2,
+        "deadline": 3,
+        "fairness": 3
+      },
+      "why_it_was_placed_there": "Widespread payment failures block transactions for many users, making it the next priority.",
+      "how_solid": "fairly solid",
+      "what_would_move_it": [
+        {
+          "if": "we had a quarter more time left than we thought",
+          "moves_from": 2,
+          "moves_to": 3,
+          "how_far": 1
+        }
+      ],
+      "needs_a_person_to_look": false
+    },
+    {
+      "ticket_id": "NEW-00004",
+      "subject": "Unknown device session",
+      "placed_at": 3,
+      "what_we_knew": {
+        "customer_pays_monthly_gbp": 0,
+        "customer_plan": "Free",
+        "times_they_have_asked": 1,
+        "monitoring_severity": 1,
+        "people_affected": 1,
+        "work_is_blocked": false,
+        "hours_promised": 72.0,
+        "hours_left": 61.6,
+        "already_late": false,
+        "customer_claimed_severity": 1
+      },
+      "where_each_way_of_ranking_put_it": {
+        "money": 4,
+        "damage": 5,
+        "deadline": 4,
+        "fairness": 4
+      },
+      "why_it_was_placed_there": "Potential security breach, despite low monitored impact, is lifted by policy to at least third place.",
+      "how_solid": "shaky",
+      "what_would_move_it": [
+        {
+          "if": "7 people were affected, not 1",
+          "moves_from": 5,
+          "moves_to": 4,
+          "how_far": 1
+        },
+        {
+          "if": "work was blocked after all",
+          "moves_from": 5,
+          "moves_to": 4,
+          "how_far": 1
+        },
+        {
+          "if": "we had a quarter less time left than we thought",
+          "moves_from": 5,
+          "moves_to": 4,
+          "how_far": 1
+        },
+        {
+          "if": "this customer pays us \u00a320,000 a month more than recorded",
+          "moves_from": 5,
+          "moves_to": 4,
+          "how_far": 1
+        }
+      ],
+      "needs_a_person_to_look": true
+    },
+    {
+      "ticket_id": "NEW-00002",
+      "subject": "Customer data deletion request",
+      "placed_at": 4,
+      "what_we_knew": {
+        "customer_pays_monthly_gbp": 0,
+        "customer_plan": "Free",
+        "times_they_have_asked": 1,
+        "monitoring_severity": 1,
+        "people_affected": 1,
+        "work_is_blocked": false,
+        "hours_promised": 72.0,
+        "hours_left": 12.0,
+        "already_late": false,
+        "customer_claimed_severity": 3
+      },
+      "where_each_way_of_ranking_put_it": {
+        "money": 2,
+        "damage": 4,
+        "deadline": 2,
+        "fairness": 2
+      },
+      "why_it_was_placed_there": "Legal data deletion request must be handled within statutory time, so it stays within the top four.",
+      "how_solid": "fairly solid",
+      "what_would_move_it": [
+        {
+          "if": "work was blocked after all",
+          "moves_from": 3,
+          "moves_to": 2,
+          "how_far": 1
+        },
+        {
+          "if": "we had a quarter less time left than we thought",
+          "moves_from": 3,
+          "moves_to": 2,
+          "how_far": 1
+        }
+      ],
+      "needs_a_person_to_look": false
+    },
+    {
+      "ticket_id": "NEW-00005",
+      "subject": "Dashboard showing outdated data",
+      "placed_at": 5,
+      "what_we_knew": {
+        "customer_pays_monthly_gbp": 0,
+        "customer_plan": "Free",
+        "times_they_have_asked": 1,
+        "monitoring_severity": 1,
+        "people_affected": 16,
+        "work_is_blocked": false,
+        "hours_promised": 72.0,
+        "hours_left": 62.2,
+        "already_late": false,
+        "customer_claimed_severity": 3
+      },
+      "where_each_way_of_ranking_put_it": {
+        "money": 5,
+        "damage": 3,
+        "deadline": 5,
+        "fairness": 5
+      },
+      "why_it_was_placed_there": "Dashboard showing stale data impacts few users and can wait behind higher\u2011impact issues.",
+      "how_solid": "solid",
+      "what_would_move_it": [],
+      "needs_a_person_to_look": false
+    }
+  ]
+}
