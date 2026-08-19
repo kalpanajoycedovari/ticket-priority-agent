@@ -574,40 +574,83 @@ output says so rather than overclaiming.
 decide, and deliberately kept from it. If the AI knew which decisions look
 solid, it would start aiming to look solid rather than aiming to be right.
 
-## What it produces
+## One complete run, start to finish
 
-```
-ORDER THE AGENT CHOSE
-  1. TICK-00171  Massive data loss affecting thousands and blocking work.
-  2. TICK-00982  Overdue by over two days and affecting dozens of users.
-  3. TICK-00771  Possible break-in, which policy lifts into the top three.
-  4. TICK-00266  Enterprise customer with a deadline 0.3 hours away.
-  5. TICK-00707  High-paying, but only 3 users affected and nothing blocked.
-  6. TICK-00135  Low impact password reset, plenty of time left.
+Five complaints, written the way people actually write them. None of these were
+in the practice data, and the wording is nothing like it.
 
-THE TRADE-OFF
-  We favoured damage over money, pushing high-paying but low-impact
-  complaints down the queue. This may disappoint our biggest spenders but
-  protects the people who are actually stuck.
+### 1. What the customers wrote
 
-HARDEST CALL
-  Placing the break-in third rather than second was closest. Its seriousness
-  could have justified a higher spot, but the export was already two days late.
+![Tickets as written](images/1-tickets-as-written.png)
 
-WHICH WAY OF RANKING IT LEANED CLOSEST TO
-  Leaned towards: damage
-  What money would have got right: correctly prioritised revenue, but would
-    have pushed the critical data loss for a free customer down the queue
-  What deadline would have got right: correctly surfaced overdue work, but
-    could have left the break-in below where policy requires
-  What fairness would have got right: correctly lifted the free customer, but
-    ranks on how often somebody has written in rather than how bad it is
-  What this leaning costs us: some high-paying customers wait longer, which
-    risks losing them
-```
+No forms, no dropdowns, no severity fields. Somebody locked out before a client
+demo. Somebody flagging a legal deletion request. Somebody whose checkout is
+rejecting cards. Somebody who noticed a login from a device they do not
+recognise and calls it "probably nothing". And somebody shouting in capitals
+about a chart.
 
-Note positions 4 and 5. Two customers paying £68,171 a month between them sit
-below a customer paying nothing. The agent says so, and says why.
+### 2. Intake turns them into tickets
+
+![Intake classifies them](images/2-intake-classifies.png)
+
+Each one gets a problem type worked out from what is described, not from the
+words the person reached for.
+
+The fourth is the one to look at. The customer downplayed it, and it came back
+as `security_incident` anyway. The fifth shouted, and came back as
+`dashboard_bug`. The problem type and the severity the customer claims are kept
+as two separate fields, so being loud does not make something urgent and being
+polite does not make it trivial.
+
+### 3. The order, with a reason for every place
+
+![The order](images/3-the-order.png)
+
+Payment failures first, blocking checkout for thousands. The team lockout
+second. Then the possible break-in, which the policy lifts into the top three.
+The legal request fourth. The dashboard bug last, overdue but with the least
+actual damage.
+
+### 4. The clashes it found, and which side it took
+
+![Conflicts](images/4-conflicts.png)
+
+This is the part I would point at first. Nothing here is pre-labelled.
+
+Look at the second and third entries. `NEW-00004` is a possible break-in:
+monitoring says Low, and the agent went with the policy instead, because
+monitoring cannot see a break-in. `NEW-00005` is the shouting customer: they
+claimed Critical, monitoring says Low, and the agent went with monitoring,
+noting that the upset tone does not change the low technical impact.
+
+Two tickets, the same disagreement on paper, opposite conclusions, and a
+different reason for each.
+
+### 5. All four strategies ranked, including what its own choice gets wrong
+
+![Strategy ranking](images/5-strategy-ranking.png)
+
+Damage first, and immediately after that: *it can undervalue high-paying
+customers whose issues have lower immediate impact*. Every one of the four gets
+a placing, a justification and a stated drawback.
+
+### 6. Both checks, then how solid the answer was
+
+![Checks and stability](images/6-checks-and-stability.png)
+
+Every reason verified against the source numbers. Every ticket back exactly
+once with no rule broken. Then one input changed at a time to see which
+placements were close calls.
+
+`NEW-00004` comes back shaky, moving under three of six changes. That is the
+break-in, and it is genuinely borderline on the numbers, which is exactly why
+the policy floor exists.
+
+### 7. Routed, with the uncertain one flagged
+
+![Routing](images/7-routing.png)
+
+Not every decision deserves the same trust, and the output says which is which.
 
 ---
 

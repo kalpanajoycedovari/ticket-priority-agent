@@ -605,3 +605,123 @@ Yes. Every reason matched the numbers we hold.
 - `NEW-00002` goes to a person **queued**
 - `NEW-00005` goes to a person **queued**
 
+
+---
+
+## Run on 19 August 2026 at 20:15:43
+
+*Recorded as DEC-20260819-201543*
+
+
+### Step 1  Pick up the waiting complaints
+
+5 complaints were waiting.
+
+- `NEW-00001`  Team locked out
+- `NEW-00002`  Customer data deletion request
+- `NEW-00003`  Payments failing at checkout
+- `NEW-00004`  Unrecognized device session
+- `NEW-00005`  Dashboard showing outdated data
+
+### Step 2  Look up the three separate systems
+
+Each system knows a different part of the story, and none of them can see what the others see.
+
+| Ticket | Customer records | Monitoring | The promise clock | They said |
+|---|---|---|---|---|
+| `NEW-00001` | Enterprise, £27,928/mo, asked 1x | Critical, 882 affected, blocked | 2.0h promised, 0.7h left | Critical |
+| `NEW-00002` | Pro, £540/mo, asked 1x | Low, 1 affected, not blocked | 8.0h promised, 4.1h left | High |
+| `NEW-00003` | Free, £0/mo, asked 1x | Critical, 2155 affected, blocked | 72.0h promised, 4.6h left | Critical |
+| `NEW-00004` | Free, £0/mo, asked 1x | Low, 3 affected, not blocked | 72.0h promised, -27.8h left, already late | Low |
+| `NEW-00005` | Free, £0/mo, asked 1x | Low, 10 affected, not blocked | 72.0h promised, -42.6h left, already late | Critical |
+
+### Step 3  Rank them four different ways
+
+Each way is reasonable on its own, and each one is wrong on its own. They are evidence for the agent to weigh, not instructions to follow.
+
+- **money**: NEW-00001 → NEW-00002 → NEW-00003 → NEW-00004 → NEW-00005
+- **damage**: NEW-00003 → NEW-00001 → NEW-00005 → NEW-00004 → NEW-00002
+- **deadline**: NEW-00005 → NEW-00004 → NEW-00003 → NEW-00001 → NEW-00002
+- **fairness**: NEW-00005 → NEW-00004 → NEW-00003 → NEW-00001 → NEW-00002
+
+Where the four disagreed most:
+
+- `NEW-00001` was placed as high as 1 and as low as 4. This is where judgement was needed.
+- `NEW-00002` was placed as high as 2 and as low as 5. This is where judgement was needed.
+- `NEW-00005` was placed as high as 1 and as low as 5. This is where judgement was needed.
+
+### Step 4  Read what the customer actually wrote
+
+The four ways above only look at numbers, so they cannot tell a password reset apart from a break-in. Both look like one person with nothing failing. The words are the difference.
+
+- `NEW-00001`: "our whole team is locked out. nobody can get in since about 6am. we have a client demo at 10 and I don't know what to tell them"
+- `NEW-00002`: "I need to flag something. one of our customers has asked us to delete everything we hold on them. I believe there's a legal time limit on this and we're already a few days in"
+- `NEW-00003`: "payments are failing at checkout. we've had maybe forty customers email us this morning saying their card was declined. our own test card fails too"
+- `NEW-00004`: "there is a session logged in from a device we don't recognise and I can't work out how to end it. probably nothing but thought I should mention it"
+- `NEW-00005`: "ABSOLUTELY UNACCEPTABLE. our dashboard chart is showing last month's figures. we pay you thousands every month and I expect better than this. I want someone to call me today"
+
+### Step 5  The AI decides, and says why
+
+**1. `NEW-00003`  Payments failing at checkout**  
+Critical payment failures affecting thousands and blocking checkout force it to the top.
+
+**2. `NEW-00001`  Team locked out**  
+Team lockout blocks a client demo and affects hundreds, making it the second most urgent.
+
+**3. `NEW-00004`  Unrecognized device session**  
+Possible security breach triggers policy requiring at least top‑3 placement.
+
+**4. `NEW-00002`  Customer data deletion request**  
+Legal GDPR deletion request must not fall below fourth per policy.
+
+**5. `NEW-00005`  Dashboard showing outdated data**  
+Low‑impact dashboard bug with overdue SLA but the least business damage.
+
+
+**The contradictions it spotted:**
+
+- `NEW-00002` customer claimed High severity vs monitoring Low severity. It believed monitoring (and legal policy), because Monitoring reflects actual system impact and the legal policy overrides the customer's inflated severity.
+- `NEW-00004` monitoring Low severity vs message suggesting a possible break‑in. It believed policy for suspected break‑in, because Monitoring cannot see security breaches, and the policy explicitly lifts such tickets.
+- `NEW-00005` customer claimed Critical severity vs monitoring Low severity. It believed monitoring, because The issue affects few users and does not block work; the upset tone does not change the low technical impact.
+
+**The trade-off it made:** We favoured immediate business impact and legal risk over pure revenue and fairness scores. This pushes a high‑paying Enterprise customer (NEW-00001) behind the payment failure, and a free‑plan security alert ahead of the legal request. The cost is a slight delay for the Enterprise demo and a perception of unfairness for the paying customer.
+
+**The closest call:** Placing the security incident (NEW-00004) ahead of the legal GDPR request (NEW-00002) was hardest, because both have policy lifts and overdue status, and one could argue legal compliance should outrank a suspected breach.
+
+
+**How it ranked the four ways of deciding:**
+
+| Place | Way | Why here | What it gets wrong |
+|---|---|---|---|
+| 1 | damage | Business impact (users affected, work blocked) directly determines revenue loss and customer trust, which we prioritized. | It can undervalue high‑paying customers whose issues have lower immediate impact. |
+| 2 | deadline | Legal and overdue tickets carry penalties and SLA breaches, so timing is the next priority. | Deadlines may push less damaging but time‑sensitive tickets ahead of higher‑impact problems. |
+| 3 | money | Revenue is important but secondary to preventing large‑scale outages or legal breaches. | It can unfairly deprioritise free‑plan users with serious issues. |
+| 4 | fairness | Ensuring equal treatment is valuable but was outweighed by impact, legal risk, and revenue considerations. | Relying on fairness alone could ignore critical business or compliance risks. |
+
+### Step 6  Check the answer before anything happens
+
+**Did every complaint come back, and were the written rules followed?**  
+Yes. Nothing was dropped and no rule was broken.
+
+**Were the reasons it gave actually true?**  
+Yes. Every reason matched the numbers we hold.
+
+
+**How solid was the answer?** One number was changed at a time and everything ranked again, to see which places were close calls.
+
+| Ticket | How solid | Changes that move it |
+|---|---|---|
+| `NEW-00001` | solid | 0 of 7 |
+| `NEW-00002` | solid | 0 of 6 |
+| `NEW-00003` | fairly solid | 1 of 6 |
+| `NEW-00004` | shaky | 3 of 6 |
+| `NEW-00005` | fairly solid | 2 of 6 |
+
+### Step 7  Hand them to a person
+
+- `NEW-00003` goes to a person **now**
+- `NEW-00001` goes to a person **next**
+- `NEW-00004` goes to a person **next**  *(the numbers were not settled about this one)*
+- `NEW-00002` goes to a person **queued**
+- `NEW-00005` goes to a person **queued**
+
