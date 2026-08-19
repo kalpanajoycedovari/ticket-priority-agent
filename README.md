@@ -3,6 +3,36 @@
 When several customer complaints are waiting at once, this decides which one a
 person should deal with first, and explains why it chose that order.
 
+A complaint arrives written in ordinary words. Three separate systems are
+consulted and they contradict each other. Four ranking strategies are scored and
+they disagree. A language model weighs all of it, commits to an order, and
+defends the choice. Then code verifies the answer and escalates when it cannot.
+
+Built with Python, FastAPI and `openai/gpt-oss-120b` on Groq.
+
+---
+
+## Where to start
+
+This is long, because most of it is a decision I made and would want to explain.
+If you are skimming, these are the parts worth your time.
+
+| If you want | Go to |
+|---|---|
+| The whole thing working, with screenshots | [One complete run, start to finish](#one-complete-run-start-to-finish) |
+| The single result the project turns on | [The four ways of deciding](#the-four-ways-of-deciding) — four fair strategies, no two agree on what comes first |
+| Where the code stops and the model starts | [Every file, and what it is for](#every-file-and-what-it-is-for) |
+| What happens when the model is wrong | [The two checks](#the-two-checks) |
+| How much to trust any given answer | [How solid is each decision?](#how-solid-is-each-decision) |
+| What is broken, weak or unfinished | [What is honest about this](#what-is-honest-about-this) |
+| Why there is no RAG and no Docker | [What I would do next](#what-i-would-do-next) |
+
+Two things I would point at first. The agent [names the contradictions it
+found](#one-complete-run-start-to-finish) rather than being handed them, and it
+[measures its own confidence](#how-solid-is-each-decision) by changing one input
+at a time and re-ranking, so a shaky placement gets flagged for a person instead
+of being quietly accepted.
+
 ---
 
 ## The problem
