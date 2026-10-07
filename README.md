@@ -698,7 +698,7 @@ cd ticket-priority-agent
 ```bash
 python -m venv venv
 venv\Scripts\activate
-pip install fastapi uvicorn groq python-dotenv python-docx
+pip install -r requirements.txt
 ```
 
 On Mac or Linux, use `source venv/bin/activate` instead.
@@ -713,6 +713,11 @@ GROQ_API_KEY=your_key_here
 **4. Run it**
 ```bash
 python decide.py
+```
+
+**To run the tests (no AI calls, no API key needed)**
+```bash
+python -m pytest tests -v
 ```
 
 **To ask why one complaint ended up where it did**
@@ -741,6 +746,28 @@ python build_demo_batch.py
 
 Those three build 1,000 pretend past complaints, count where the systems
 disagree, and pick the six hardest cases out of them.
+
+---
+
+## Tests
+
+There are 19 automated tests in the `tests` folder. None of them call the AI,
+so they need no API key, never hit Groq's rate limits, and run in about a second.
+
+```bash
+python -m pytest tests -v
+```
+
+| File | Tests | What it checks |
+|---|---|---|
+| `tests/test_scoring.py` | 8 | The four ways of scoring a ticket (money, damage, deadline, fairness) give the right numbers for small made-up tickets |
+| `tests/test_policy.py` | 8 | The message reading spots serious and leaving-soon wording, and the written rules flag a break-in, a legal request or a badly affected free customer ranked too low, and leave correct orders alone |
+| `tests/test_api.py` | 3 | `/health` and `/evidence` work through FastAPI's test client, and `/decide` passes back what the agent returns. A pretend agent stands in for the model here |
+
+**What the tests do not cover.** The model's own decision, the two checks on its
+reasons, and the two lookups are not tested here. They depend on a live model, so
+they are measured instead with the `measure_*.py` scripts, and those results are
+in the sections above.
 
 ---
 
@@ -1018,6 +1045,25 @@ often do we put paying customers behind free ones, and were we right to?" You
 cannot ask that today, because nothing is kept.
 
 ### What about RAG?
+
+**Update: two lookups have been added since this was first written.** The three
+main sources are still joined directly and in full every time, so the reasoning
+below still holds for them. The lookups are extra evidence on the side:
+
+- A support handbook of 20 entries (`data/handbook.json`, searched by
+  `handbook_search.py`). The right entry ranked first for 79.0% of tickets.
+- A past-ticket lookup (`history_search.py`) that finds similar past tickets.
+  The 1,000 tickets were split into 800 for lookup and 200 held back for
+  testing (`data/split.json`), so the lookup never sees the ticket it is
+  judging. It guessed the human priority to within one level for 94.0% of the
+  200 held-back tickets.
+
+For comparison, before the lookups the agent matched the human ordering on 90.4%
+of ticket pairs over 29 test batches. The test of the agent with and without the
+lookups is not finished yet, so there is no before-and-after number for the final
+decisions.
+
+The original reasoning, written before the lookups were added:
 
 There is no retrieval step in this project. That was a decision, not an
 oversight, so here is the reasoning.

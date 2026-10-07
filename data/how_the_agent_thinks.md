@@ -725,3 +725,122 @@ Yes. Every reason matched the numbers we hold.
 - `NEW-00002` goes to a person **queued**
 - `NEW-00005` goes to a person **queued**
 
+
+---
+
+## Run on 03 September 2026 at 10:12:05
+
+*Recorded as DEC-20260903-101204*
+
+
+### Step 1  Pick up the waiting complaints
+
+5 complaints were waiting.
+
+- `NEW-00001`  Team locked out
+- `NEW-00002`  Customer data deletion request
+- `NEW-00003`  Payments failing at checkout
+- `NEW-00004`  Unrecognized device session
+- `NEW-00005`  Dashboard showing outdated data
+
+### Step 2  Look up the three separate systems
+
+Each system knows a different part of the story, and none of them can see what the others see.
+
+| Ticket | Customer records | Monitoring | The promise clock | They said |
+|---|---|---|---|---|
+| `NEW-00001` | Enterprise, £27,928/mo, asked 1x | Critical, 882 affected, blocked | 2.0h promised, 0.7h left | Critical |
+| `NEW-00002` | Pro, £540/mo, asked 1x | Low, 1 affected, not blocked | 8.0h promised, 4.1h left | High |
+| `NEW-00003` | Free, £0/mo, asked 1x | Critical, 2155 affected, blocked | 72.0h promised, 4.6h left | Critical |
+| `NEW-00004` | Free, £0/mo, asked 1x | Low, 3 affected, not blocked | 72.0h promised, -27.8h left, already late | Low |
+| `NEW-00005` | Free, £0/mo, asked 1x | Low, 10 affected, not blocked | 72.0h promised, -42.6h left, already late | Critical |
+
+### Step 3  Rank them four different ways
+
+Each way is reasonable on its own, and each one is wrong on its own. They are evidence for the agent to weigh, not instructions to follow.
+
+- **money**: NEW-00001 → NEW-00002 → NEW-00003 → NEW-00004 → NEW-00005
+- **damage**: NEW-00003 → NEW-00001 → NEW-00005 → NEW-00004 → NEW-00002
+- **deadline**: NEW-00005 → NEW-00004 → NEW-00003 → NEW-00001 → NEW-00002
+- **fairness**: NEW-00005 → NEW-00004 → NEW-00003 → NEW-00001 → NEW-00002
+
+Where the four disagreed most:
+
+- `NEW-00001` was placed as high as 1 and as low as 4. This is where judgement was needed.
+- `NEW-00002` was placed as high as 2 and as low as 5. This is where judgement was needed.
+- `NEW-00005` was placed as high as 1 and as low as 5. This is where judgement was needed.
+
+### Step 4  Read what the customer actually wrote
+
+The four ways above only look at numbers, so they cannot tell a password reset apart from a break-in. Both look like one person with nothing failing. The words are the difference.
+
+- `NEW-00001`: "our whole team is locked out. nobody can get in since about 6am. we have a client demo at 10 and I don't know what to tell them"
+- `NEW-00002`: "I need to flag something. one of our customers has asked us to delete everything we hold on them. I believe there's a legal time limit on this and we're already a few days in"
+- `NEW-00003`: "payments are failing at checkout. we've had maybe forty customers email us this morning saying their card was declined. our own test card fails too"
+- `NEW-00004`: "there is a session logged in from a device we don't recognise and I can't work out how to end it. probably nothing but thought I should mention it"
+- `NEW-00005`: "ABSOLUTELY UNACCEPTABLE. our dashboard chart is showing last month's figures. we pay you thousands every month and I expect better than this. I want someone to call me today"
+
+### Step 5  The AI decides, and says why
+
+**1. `NEW-00001`  Team locked out**  
+Critical lockout affecting 882 users and a high‑value Enterprise customer with a looming demo forces it to the top.
+
+**2. `NEW-00003`  Payments failing at checkout**  
+Widespread payment failures block checkout for thousands, posing immediate revenue loss despite the customer being on a free plan.
+
+**3. `NEW-00002`  Customer data deletion request**  
+A GDPR deletion request is a legal obligation that must be handled within hours, so it cannot be placed lower than fourth.
+
+**4. `NEW-00004`  Unrecognized device session**  
+An overdue, low‑impact security session issue is less urgent than the above tickets.
+
+**5. `NEW-00005`  Dashboard showing outdated data**  
+Outdated dashboard data, while irritating, affects few users and is overdue but low severity, placing it last.
+
+
+**The contradictions it spotted:**
+
+- `NEW-00002` customer claimed High severity vs monitoring Low severity. It believed monitoring, because monitoring reflects the actual measured impact (one user, no work block) whereas the customer over‑stated urgency
+- `NEW-00005` customer claimed Critical severity vs monitoring Low severity. It believed monitoring, because monitoring shows only ten users affected and no work block, so the technical impact is low despite the angry tone
+
+**The trade-off it made:** We favored immediate business impact (damage) over strict legal timing and revenue considerations, pushing the compliance ticket behind the payment failure. This risks a regulatory fine but preserves revenue flow and customer demos.
+
+**The closest call:** Deciding whether the GDPR deletion request (NEW-00002) should outrank the massive payment failure (NEW-00003) was hardest; we placed it third, but a regulator could argue it deserves higher priority.
+
+
+**How it ranked the four ways of deciding:**
+
+| Place | Way | Why here | What it gets wrong |
+|---|---|---|---|
+| 1 | damage | Damage directly captures user‑blocking and revenue‑critical incidents, which dominate the urgency of this batch. | It can de‑prioritise legal deadlines and fairness to low‑paying customers |
+| 2 | money | Revenue potential influences priority, especially for the Enterprise lockout. | It may over‑value high‑paying customers at the expense of critical non‑paying issues |
+| 3 | deadline | Deadlines matter for overdue tickets and legal obligations. | Deadlines alone ignore the scale of impact |
+| 4 | fairness | Ensures paying‑nothing customers aren’t always last, but it was least decisive here. | Can elevate low‑impact tickets above more damaging ones |
+
+### Step 6  Check the answer before anything happens
+
+**Did every complaint come back, and were the written rules followed?**  
+Yes. Nothing was dropped and no rule was broken.
+
+**Were the reasons it gave actually true?**  
+Yes. Every reason matched the numbers we hold.
+
+
+**How solid was the answer?** One number was changed at a time and everything ranked again, to see which places were close calls.
+
+| Ticket | How solid | Changes that move it |
+|---|---|---|
+| `NEW-00001` | solid | 0 of 7 |
+| `NEW-00002` | solid | 0 of 6 |
+| `NEW-00003` | fairly solid | 1 of 6 |
+| `NEW-00004` | shaky | 3 of 6 |
+| `NEW-00005` | fairly solid | 2 of 6 |
+
+### Step 7  Hand them to a person
+
+- `NEW-00001` goes to a person **now**
+- `NEW-00003` goes to a person **next**
+- `NEW-00002` goes to a person **next**
+- `NEW-00004` goes to a person **queued**  *(the numbers were not settled about this one)*
+- `NEW-00005` goes to a person **queued**
+
