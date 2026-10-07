@@ -19,6 +19,8 @@ import brain
 import stability
 import decision_log
 import thinking_log
+import time
+import usage_tracker
 
 load_dotenv()
 
@@ -136,6 +138,7 @@ required.
 }}
 """
 
+    started = time.time()
     response = client.chat.completions.create(
         model=MODEL,
         messages=[
@@ -146,6 +149,7 @@ required.
         max_tokens=5000,
         response_format={"type": "json_object"},
     )
+    usage_tracker.note_a_call("decision", response, time.time() - started)
 
     text = response.choices[0].message.content
 
@@ -272,6 +276,7 @@ listed above:
 }}
 """
 
+    started = time.time()
     response = client.chat.completions.create(
         model=MODEL,
         messages=[
@@ -281,6 +286,7 @@ listed above:
         temperature=0.2,
         response_format={"type": "json_object"},
     )
+    usage_tracker.note_a_call("rewrite", response, time.time() - started)
 
     fixed = json.loads(response.choices[0].message.content).get("reasons", {})
 
@@ -345,6 +351,7 @@ def run_the_agent():
     The whole job, start to finish. Returns everything that happened,
     so it can be printed, saved, or sent back over the web.
     """
+    usage_tracker.reset()
     batch = brain.load_batch()
     evidence = brain.gather_evidence(batch)
     facts = [brain.read_facts(item) for item in batch]
@@ -400,6 +407,7 @@ def run_the_agent():
 
     # Keep a record of this decision, so somebody can ask later why
     # a complaint was placed where it was.
+    result["usage"] = usage_tracker.summary()
     record = decision_log.build_the_record(result, facts, orders)
     result["saved_to"] = decision_log.save_the_record(record)
     result["decision_id"] = record["decision_id"]
@@ -415,6 +423,13 @@ def run_the_agent():
 
 def print_the_result(result):
     """Shows the result on screen in a way a person can read."""
+    usage = result.get("usage")
+    if usage:
+        print("\nMODEL USAGE FOR THIS RUN")
+        print("-" * 60)
+        print(f"  {usage['number_of_calls']} model calls, {usage['tokens_in']} tokens in, "
+              f"{usage['tokens_out']} tokens out")
+        print(f"  {usage['seconds']} seconds, {usage['output_tokens_per_second']} output tokens per second")
 
     print("\nORDER THE AGENT CHOSE")
     print("-" * 60)

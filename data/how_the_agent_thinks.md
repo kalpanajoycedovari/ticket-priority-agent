@@ -844,3 +844,132 @@ Yes. Every reason matched the numbers we hold.
 - `NEW-00004` goes to a person **queued**  *(the numbers were not settled about this one)*
 - `NEW-00005` goes to a person **queued**
 
+
+---
+
+## Run on 07 October 2026 at 20:40:07
+
+*Recorded as DEC-20261007-204007*
+
+
+### Step 1  Pick up the waiting complaints
+
+6 complaints were waiting.
+
+- `TICK-00707`  The platform is very slow
+- `TICK-00171`  Deleted records we did not delete
+- `TICK-00771`  Possible breach
+- `TICK-00266`  Request for bulk actions
+- `TICK-00982`  Cannot download report
+- `TICK-00135`  Password reset needed
+
+### Step 2  Look up the three separate systems
+
+Each system knows a different part of the story, and none of them can see what the others see.
+
+| Ticket | Customer records | Monitoring | The promise clock | They said |
+|---|---|---|---|---|
+| `TICK-00707` | Enterprise, £39,127/mo, asked 2x | Low, 3 affected, not blocked | 2.0h promised, 1.1h left | Low |
+| `TICK-00171` | Free, £0/mo, asked 1x | Critical, 4940 affected, blocked | 72.0h promised, 29.6h left | Critical |
+| `TICK-00771` | Basic, £55/mo, asked 7x | Low, 1 affected, not blocked | 24.0h promised, 15.4h left | High |
+| `TICK-00266` | Enterprise, £29,044/mo, asked 4x | Low, 1 affected, not blocked | 2.0h promised, 0.3h left | High |
+| `TICK-00982` | Basic, £106/mo, asked 11x | Medium, 35 affected, not blocked | 24.0h promised, -49.8h left, already late | Medium |
+| `TICK-00135` | Basic, £41/mo, asked 1x | Low, 1 affected, not blocked | 24.0h promised, 19.3h left | Critical |
+
+### Step 3  Rank them four different ways
+
+Each way is reasonable on its own, and each one is wrong on its own. They are evidence for the agent to weigh, not instructions to follow.
+
+- **money**: TICK-00707 → TICK-00266 → TICK-00982 → TICK-00771 → TICK-00135 → TICK-00171
+- **damage**: TICK-00171 → TICK-00982 → TICK-00707 → TICK-00771 → TICK-00266 → TICK-00135
+- **deadline**: TICK-00982 → TICK-00266 → TICK-00171 → TICK-00707 → TICK-00771 → TICK-00135
+- **fairness**: TICK-00982 → TICK-00771 → TICK-00266 → TICK-00171 → TICK-00135 → TICK-00707
+
+Where the four disagreed most:
+
+- `TICK-00707` was placed as high as 1 and as low as 6. This is where judgement was needed.
+- `TICK-00171` was placed as high as 1 and as low as 6. This is where judgement was needed.
+- `TICK-00771` was placed as high as 2 and as low as 5. This is where judgement was needed.
+- `TICK-00266` was placed as high as 2 and as low as 5. This is where judgement was needed.
+
+### Step 4  Read what the customer actually wrote
+
+The four ways above only look at numbers, so they cannot tell a password reset apart from a break-in. Both look like one person with nothing failing. The words are the difference.
+
+- `TICK-00707`: "Hello, Pages take around thirty seconds to load. No rush, whenever you get a chance."
+- `TICK-00171`: "Hi there, A folder of client files is gone and nobody on our side removed it. Many thanks."
+- `TICK-00771`: "Hi, Someone has changed our admin email address and it was not us. Please could someone look at this."
+- `TICK-00266`: "This is now the third time I am writing. Being able to select several rows at once would save us a lot of time. We expect a reply today."
+- `TICK-00982`: "Hi, The export button spins for a while and then nothing happens. This is holding us up."
+- `TICK-00135`: "This is now the third time I am writing. The reset link never arrives in my inbox. Please escalate this immediately."
+
+### Step 5  The AI decides, and says why
+
+**1. `TICK-00171`  Deleted records we did not delete**  
+Critical data loss affecting thousands and blocking work forces immediate attention despite the customer’s free plan.
+
+**2. `TICK-00771`  Possible breach**  
+A suspected account takeover must be handled within the top three because monitoring can’t capture its true risk.
+
+**3. `TICK-00982`  Cannot download report**  
+The export failure is already overdue and impacts dozens, so it jumps ahead of lower‑impact tickets.
+
+**4. `TICK-00266`  Request for bulk actions**  
+An enterprise client’s near‑deadline bulk‑action request and high revenue make it urgent.
+
+**5. `TICK-00707`  The platform is very slow**  
+High‑paying enterprise experiencing slow pages under heavy load deserves prompt handling after the more critical issues.
+
+**6. `TICK-00135`  Password reset needed**  
+A single‑user password reset with low severity and ample time left can wait.
+
+
+**The contradictions it spotted:**
+
+- `TICK-00171` money ranking (6) vs damage ranking (1). It believed damage, because Actual user impact and work blockage are concrete harms, whereas revenue alone ignores the severity of data loss.
+- `TICK-00707` money ranking (1) vs damage ranking (3). It believed damage, because Monitoring shows only three users affected and no work block, so the low impact outweighs the high revenue.
+- `TICK-00982` deadline ranking (1) vs money ranking (3). It believed deadline, because The ticket is already overdue by 50 hours, making timeliness more critical than the modest revenue.
+
+**The trade-off it made:** We favoured damage, security and deadline urgency over pure revenue, sacrificing a strict money‑first ordering. This may delay a quick win for a big‑paying client, risking slight dissatisfaction.
+
+**The closest call:** Choosing TICK-00982 over TICK-00266 was close; the overdue deadline pushed the export failure ahead of a high‑paying enterprise request, but one could argue revenue should dominate.
+
+
+**How it ranked the four ways of deciding:**
+
+| Place | Way | Why here | What it gets wrong |
+|---|---|---|---|
+| 1 | damage | Actual user impact and work blockage directly reflect business harm and were decisive for the top tickets. | It can de‑prioritise high‑paying customers whose issues are less severe, risking revenue dissatisfaction. |
+| 2 | deadline | Overdue tickets create SLA breaches and legal risk, so timeliness is the next most important factor. | It may elevate low‑impact but late tickets above more critical but on‑time problems. |
+| 3 | money | Revenue is important for business health, but it should not override clear damage or deadline breaches. | Relying on money alone can ignore urgent technical or security issues. |
+| 4 | fairness | Fairness (e.g., repeat contacts) is a useful tie‑breaker but less decisive than concrete impact or commitments. | It is subjective and may not reflect actual severity or contractual obligations. |
+
+### Step 6  Check the answer before anything happens
+
+**Did every complaint come back, and were the written rules followed?**  
+Yes. Nothing was dropped and no rule was broken.
+
+**Were the reasons it gave actually true?**  
+Yes. Every reason matched the numbers we hold.
+
+
+**How solid was the answer?** One number was changed at a time and everything ranked again, to see which places were close calls.
+
+| Ticket | How solid | Changes that move it |
+|---|---|---|
+| `TICK-00707` | shaky | 3 of 7 |
+| `TICK-00171` | fairly solid | 1 of 6 |
+| `TICK-00771` | shaky | 3 of 6 |
+| `TICK-00266` | fairly solid | 2 of 6 |
+| `TICK-00982` | solid | 0 of 7 |
+| `TICK-00135` | fairly solid | 1 of 6 |
+
+### Step 7  Hand them to a person
+
+- `TICK-00171` goes to a person **now**
+- `TICK-00771` goes to a person **next**  *(the numbers were not settled about this one)*
+- `TICK-00982` goes to a person **next**
+- `TICK-00266` goes to a person **queued**
+- `TICK-00707` goes to a person **queued**  *(the numbers were not settled about this one)*
+- `TICK-00135` goes to a person **queued**
+
